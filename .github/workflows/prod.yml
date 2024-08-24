@@ -32,6 +32,6 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: pharmaconeg.com
           REMOTE_USER: ${{ secrets.SSH_USERNAME }}
-          REMOTE_PORT: 22
+          REMOTE_PORT: 24
           SOURCE: ./.next
           TARGET: public_next
