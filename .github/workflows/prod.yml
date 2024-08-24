@@ -35,3 +35,4 @@ jobs:
           REMOTE_PORT: 22
           SOURCE: ./.next
           TARGET: public_next
+          
