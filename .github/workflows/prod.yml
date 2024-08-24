@@ -26,12 +26,11 @@ jobs:
       - name: Build
         run: npm run build  # Or `yarn build` if you use Yarn
 
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v20
+      - name: Deploy to Bluehost
+        uses: easingthemes/ssh-deploy@v2.2.7
         with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROD_PROJECT_ID }}
-          vercel-args: '--prod'  # Deploy to production
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          server: pharmaconeg.com
+          username: pharmaconeg.com
+          password: ${{ secrets.BLUEHOST_PASSWORD }}
+          local_path: ./.next
+          remote_path: public_next
