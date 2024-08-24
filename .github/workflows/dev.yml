@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Deploy to vercel-dev
 
 on:
   pull_request:
