@@ -35,5 +35,6 @@ jobs:
           REMOTE_PORT: 22
           SOURCE: ./.next
           TARGET: public_next
+          SSH_OPTIONS: '-o IdentitiesOnly=yes'
           
 #{4Zv;UhA45lx
