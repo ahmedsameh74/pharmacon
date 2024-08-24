@@ -1,36 +1,30 @@
-name: CI/CD Pipeline
+name: Deploy to Bluehost
 
 on:
-  pull_request:
+  push:
     branches:
-      - prod
-    types: 
-      closed
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'  # Specify the Node.js version to use
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: npm install  # Or `yarn install` if you use Yarn
+        run: npm install
 
-      - name: Build
-        run: npm run build  # Or `yarn build` if you use Yarn
+      - name: Build application
+        run: npm run build
 
-      - name: Deploy to Bluehost
+      - name: Deploy to Bluehost via SSH
         uses: easingthemes/ssh-deploy@v2.2.7
         with:
           server: pharmaconeg.com
-          username: pharmaconeg.com
-          password: ${{ secrets.BLUEHOST_PASSWORD }}
+          port: 23
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: ./.next
           remote_path: public_next
