@@ -30,7 +30,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.2.7
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: https://pharmaconeg.com
+          REMOTE_HOST: pharmax3@pharmaconeg.com
           REMOTE_USER: pharmax3
           REMOTE_PORT: 22
           SOURCE: ./.next
