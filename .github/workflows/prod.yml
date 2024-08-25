@@ -34,5 +34,5 @@ jobs:
           REMOTE_USER: pharmax3
           REMOTE_PORT: 22
           SOURCE: ./.next
-          TARGET: public_next
+          TARGET: public_html
           ARGS: '-o IdentitiesOnly=yes'
