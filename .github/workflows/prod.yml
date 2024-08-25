@@ -1,38 +1,29 @@
-name: Deploy to Bluehost
+name: Deploy to Server
 
 on:
   pull_request:
     branches:
-      - prod
+      - main
     types: 
-      closed
+      - closed
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+    - name: Create SSH directory
+      run: mkdir -p ~/.ssh
 
-      - name: Install dependencies
-        run: npm install
+    - name: Add the deploy key
+      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+      shell: bash
 
-      - name: Build application
-        run: npm run build
+    - name: Set permissions for the deploy key
+      run: chmod 600 ~/.ssh/deploy_key
 
-      - name: Deploy to Bluehost via SSH
-        uses: easingthemes/ssh-deploy@v2.2.7
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: pharmaconeg.com
-          REMOTE_USER: pharmax3
-          REMOTE_PORT: 22
-          SOURCE: ./.next
-          TARGET: public_html
-          ARGS: '-o IdentitiesOnly=yes'
+    - name: SCP files to server
+      run: scp -i ~/.ssh/deploy_key -r .next pharmax3@pharmaconeg.com:public_html
