@@ -40,4 +40,4 @@ jobs:
       run: ssh-keyscan pharmaconeg.com >> ~/.ssh/known_hosts
 
     - name: SCP files to server
-      run: scp -i ~/.ssh/deploy_key -r / pharmax3@pharmaconeg.com:public_html
+      run: scp -i ~/.ssh/deploy_key -r . pharmax3@pharmaconeg.com:public_html
