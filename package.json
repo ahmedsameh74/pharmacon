@@ -2,6 +2,7 @@
   "name": "pharmacon",
   "version": "0.1.0",
   "private": true,
+  "author": "Ahmed Sameh",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
