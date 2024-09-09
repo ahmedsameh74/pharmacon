@@ -1,0 +1,43 @@
+name: Deploy to Server
+
+on:
+  pull_request:
+    branches:
+      - prod
+    types: 
+      - closed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+          node-version: '18'  # Specify the Node.js version to use
+
+    - name: Install dependencies
+      run: npm install  # Or `yarn install` if you use Yarn
+
+    - name: Build
+      run: npm run build
+
+    - name: Create SSH directory
+      run: mkdir -p ~/.ssh
+
+    - name: Add the deploy key
+      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+      shell: bash
+
+    - name: Set permissions for the deploy key
+      run: chmod 600 ~/.ssh/deploy_key
+
+    - name: Add server to known_hosts
+      run: ssh-keyscan pharmaconeg.com >> ~/.ssh/known_hosts
+
+    - name: SCP files to server
+      run: scp -i ~/.ssh/deploy_key -r . pharmax3@pharmaconeg.com:public_html
