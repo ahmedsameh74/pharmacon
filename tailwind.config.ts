@@ -16,6 +16,9 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
+				backgroundImage: {
+					'hero-pattern': "url('/public/assets/heroSection.png')", 
+				},
   			popover: {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
