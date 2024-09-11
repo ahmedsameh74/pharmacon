@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button"; // shadcn Button
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,7 +52,7 @@ export default function Navbar() {
             {/* Logo */}
             <div className="shrink-0">
               <a href="/" className="text-xl font-bold text-[#01547E]">
-                PHARMACON
+                <Image src="/assets/blueLogo.svg"  alt="Pharmacon Logo" style={{ width: 'auto', height: 'auto'}} width={100} height={100} />
               </a>
             </div>
           </div>

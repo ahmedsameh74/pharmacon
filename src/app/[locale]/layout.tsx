@@ -8,6 +8,23 @@ import Navbar from "@/components/custom/Navbar";
 export const metadata: Metadata = {
   title: "Pharmacon",
   description: "Because Health Deserves Quality",
+  icons: {
+    icon: "assets/logo icon.ico",
+    apple: "assets/logo icon.ico",
+  },
+  manifest: "/manifest.webmanifest",
+  keywords: ["Pharmacon", "Health", "Quality", "Products", "Pharmacy"],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
 };
 
 export default async function RootLayout({
