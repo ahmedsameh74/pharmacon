@@ -1,10 +1,11 @@
 'use client';
-import { useState, useRef, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button"; // shadcn Button
-import Image from "next/image";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useState, useRef, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+import { Button } from '@/components/ui/button'; // shadcn Button
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,6 @@ export default function Navbar() {
   // Extract the locale manually from the path (assuming locale is the first segment)
   const locale = pathname?.split('/')[1] || 'en'; // Default locale is 'en'
 
-  
   // Update the selected locale
   useEffect(() => {
     setSelectedLocale(locale);
@@ -44,21 +44,21 @@ export default function Navbar() {
 
   useEffect(() => {
     if (isOpen || dropdownOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener('mousedown', handleClickOutside);
     } else {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isOpen, dropdownOpen]);
 
   const menuItems = [
-    { name: t("home"), href: `/${selectedLocale}/` },
-    { name: t("aboutUs"), href: `/${selectedLocale}/about` },
-    { name: t("products"), href: `/${selectedLocale}/products` },
-    { name: t("contactUs"), href: `/${selectedLocale}/contact` },
+    { name: t('home'), href: `/${selectedLocale}/` },
+    { name: t('aboutUs'), href: `/${selectedLocale}/about` },
+    { name: t('products'), href: `/${selectedLocale}/products` },
+    { name: t('contactUs'), href: `/${selectedLocale}/contact` }
   ];
 
   const handleLocaleChange = (newLocale: string) => {
@@ -66,7 +66,6 @@ export default function Navbar() {
     setSelectedLocale(newLocale);
     setDropdownOpen(false); // Close the dropdown after selection
   };
-
 
   return (
     <nav className="bg-[#DCF0FA] shadow-md">
@@ -76,7 +75,10 @@ export default function Navbar() {
           <div className="flex items-center">
             {/* Logo */}
             <div className="shrink-0">
-              <Link href={`/${selectedLocale}/`} className="text-xl font-bold text-[#01547E]">
+              <Link
+                href={`/${selectedLocale}/`}
+                className="text-xl font-bold text-[#01547E]"
+              >
                 <Image
                   src="/assets/blueLogo.svg"
                   alt="Pharmacon Logo"
@@ -92,51 +94,74 @@ export default function Navbar() {
           <div className="hidden md:flex items-center justify-center space-x-8">
             {menuItems.map((item) => (
               <Link
-              key={item.name}
-              href={item.href}
-              className={`relative px-3 py-2 rounded-md text-sm font-medium group ${
-                pathname === item.href || (item.href === `/${locale}/` && pathname === `/${locale}`) ? "text-[#01547E]" : "text-gray-500"
-              }`}
-            >
-              {item.name}
-              <span
-                className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#01547E] transform ${
-                  pathname === item.href || (item.href === `/${locale}/` && pathname === `/${locale}`) ? "scale-x-100" : "scale-x-0"
-                } group-hover:scale-x-100 group-hover:-translate-y-0 transition-all duration-300 origin-left`}
-              />
+                key={item.name}
+                href={item.href}
+                className={`relative px-3 py-2 rounded-md text-sm font-medium group ${
+                  pathname === item.href ||
+                  (item.href === `/${locale}/` && pathname === `/${locale}`)
+                    ? 'text-[#01547E]'
+                    : 'text-gray-500'
+                }`}
+              >
+                {item.name}
+                <span
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-[#01547E] transform ${
+                    pathname === item.href ||
+                    (item.href === `/${locale}/` && pathname === `/${locale}`)
+                      ? 'scale-x-100'
+                      : 'scale-x-0'
+                  } group-hover:scale-x-100 group-hover:-translate-y-0 transition-all duration-300 origin-left`}
+                />
               </Link>
             ))}
           </div>
 
           {/* Right part of the navbar */}
-            {/* Language Dropdown */}
-            <div className="relative h-full flex" ref={dropdownRef}>
-              <button
-                type="button"
-                onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-              >
-                {selectedLocale.toUpperCase()}
-              </button>
-              {dropdownOpen && (
-                <div className="absolute right-0 mt-2 lg:w-48 md:w-24 top-10 bg-white border border-gray-300 rounded-md shadow-lg z-50">
-                  <div
-                    onClick={() => handleLocaleChange('en')}
-                    className="cursor-pointer px-4 py-2 hover:bg-gray-100"
-                  >
-                    English
-                  </div>
-                  <div
-                    onClick={() => handleLocaleChange('ar')}
-                    className="cursor-pointer px-4 py-2 hover:bg-gray-100"
-                  >
-                    العربية
-                  </div>
+          {/* Language Dropdown */}
+          <div className="relative h-full flex" ref={dropdownRef}>
+            <button
+              type="button"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
+              className="text-gray-500 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+            >
+              {selectedLocale.toUpperCase()}
+            </button>
+            {dropdownOpen && (
+              <div className="absolute right-0 mt-2 lg:w-48 md:w-24 top-10 bg-white border border-gray-300 rounded-md shadow-lg z-50">
+                <div
+                  onClick={() => handleLocaleChange('en')}
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100"
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      handleLocaleChange('en');
+                    }
+                  }}
+                >
+                  English
                 </div>
-              )}
-            </div>
+                <div
+                  onClick={() => handleLocaleChange('ar')}
+                  className="cursor-pointer px-4 py-2 hover:bg-gray-100"
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      handleLocaleChange('ar');
+                    }
+                  }}
+                >
+                  العربية
+                </div>
+              </div>
+            )}
+          </div>
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="default" className="text-white bg-[#01547E] hover:bg-[#088bcd]">
+            <Button
+              variant="default"
+              className="text-white bg-[#01547E] hover:bg-[#088bcd]"
+            >
               {t('contactNow')}
             </Button>
           </div>
@@ -153,48 +178,65 @@ export default function Navbar() {
             >
               <span className="sr-only">Open main menu</span>
               <svg
-                className={`${isOpen ? "hidden" : "block"} h-6 w-6`}
+                className={`${isOpen ? 'hidden' : 'block'} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
               <svg
-                className={`${isOpen ? "block" : "hidden"} h-6 w-6`}
+                className={`${isOpen ? 'block' : 'hidden'} h-6 w-6`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
                 aria-hidden="true"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
-            
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden`} id="mobile-menu" ref={menuRef}>
+      <div
+        className={`${isOpen ? 'block' : 'hidden'} md:hidden`}
+        id="mobile-menu"
+        ref={menuRef}
+      >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
-                pathname === item.href ? "text-[#01547E]" : "text-gray-500"
+                pathname === item.href ? 'text-[#01547E]' : 'text-gray-500'
               }`}
             >
               {item.name}
             </Link>
           ))}
           <div className="block px-3 py-2">
-            <Button value={t("contactNow")} variant="default" className="w-full text-white bg-[#01547E] hover:bg-[#088bcd]">
-              {t("contactNow")}
+            <Button
+              value={t('contactNow')}
+              variant="default"
+              className="w-full text-white bg-[#01547E] hover:bg-[#088bcd]"
+            >
+              {t('contactNow')}
             </Button>
           </div>
         </div>

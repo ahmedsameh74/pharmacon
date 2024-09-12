@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
-import "../globals.css";
+import type { Metadata } from 'next';
+import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
-import Navbar from "@/components/custom/home/Navbar";
-import Footer from "@/components/custom/home/Footer";
 
+import Navbar from '@/components/custom/home/Navbar';
+import Footer from '@/components/custom/home/Footer';
 
 export const metadata: Metadata = {
-  title: "Pharmacon",
-  description: "Because Health Deserves Quality",
+  title: 'Pharmacon',
+  description: 'Because Health Deserves Quality',
   icons: {
-    icon: "assets/logo icon.ico",
-    apple: "assets/logo icon.ico",
+    icon: 'assets/logo icon.ico',
+    apple: 'assets/logo icon.ico'
   },
-  manifest: "/manifest.webmanifest",
-  keywords: ["Pharmacon", "Health", "Quality", "Products", "Pharmacy"],
+  manifest: '/manifest.webmanifest',
+  keywords: ['Pharmacon', 'Health', 'Quality', 'Products', 'Pharmacy'],
   robots: {
     index: true,
     follow: true,
@@ -23,33 +23,30 @@ export const metadata: Metadata = {
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
+      'max-snippet': -1
+    }
   },
   openGraph: {
-		title: "Pharmacon",
-		description: "Because Health Deserves Quality",
-		url: "https://pharmaconeg-dev.vercel.app/",
-		siteName: "Pharmacon",
-		images: [
-			{
-				url: "assets/blueLogo.svg",
-				width: 800,
-				height: 600,
-			},
-		],
-		locale: "en-US",
-		type: "website",
-	},
-  twitter: {
-    title: "Pharmacon",
-    description: "Because Health Deserves Quality",
-    card: "summary_large_image",
+    title: 'Pharmacon',
+    description: 'Because Health Deserves Quality',
+    url: 'https://pharmaconeg-dev.vercel.app/',
+    siteName: 'Pharmacon',
     images: [
-      "assets/blueLogo.svg",
+      {
+        url: 'assets/blueLogo.svg',
+        width: 800,
+        height: 600
+      }
     ],
+    locale: 'en-US',
+    type: 'website'
   },
-  
+  twitter: {
+    title: 'Pharmacon',
+    description: 'Because Health Deserves Quality',
+    card: 'summary_large_image',
+    images: ['assets/blueLogo.svg']
+  }
 };
 
 export default async function RootLayout({
@@ -76,4 +73,3 @@ export default async function RootLayout({
     </html>
   );
 }
-
