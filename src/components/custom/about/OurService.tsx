@@ -47,7 +47,7 @@ export default function OurService() {
           variant="default"
           className="text-white bg-[#01547E] hover:bg-[#088bcd]"
         >
-          {t('contactNow')}
+          {t('ourProducts')}
         </Button>
       </div>
     </section>
