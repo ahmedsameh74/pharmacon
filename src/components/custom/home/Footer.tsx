@@ -29,44 +29,87 @@ export default function Footer() {
           <div>
             {/* <h3 className="font-bold mb-2 text-center lg:text-left">Company</h3> */}
             <ul className="text-center lg:text-left">
-              <li><Link href="/about" className="hover:underline">About Us</Link></li>
-              <li><Link href="/careers" className="hover:underline">Careers</Link></li>
-              <li><Link href="/blog" className="hover:underline">Blog</Link></li>
+              <li>
+                <Link href="/about" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className="hover:underline">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <Link href="/blog" className="hover:underline">
+                  Blog
+                </Link>
+              </li>
             </ul>
           </div>
           {/* Column 2 */}
           <div>
             {/* <h3 className="font-bold mb-2 text-center lg:text-left">Support</h3> */}
             <ul className="text-center lg:text-left">
-              <li><Link href="/contact" className="hover:underline">Contact Us</Link></li>
-              <li><Link href="/faq" className="hover:underline">FAQ</Link></li>
-              <li><Link href="/help" className="hover:underline">Help Center</Link></li>
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:underline">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/help" className="hover:underline">
+                  Help Center
+                </Link>
+              </li>
             </ul>
           </div>
           {/* Column 3 */}
           <div>
             {/* <h3 className="font-bold mb-2 text-center lg:text-left">Resources</h3> */}
             <ul className="text-center lg:text-left">
-              <li><Link href="/terms" className="hover:underline">Terms of Service</Link></li>
-              <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
-              <li><Link href="/cookies" className="hover:underline">Cookie Policy</Link></li>
+              <li>
+                <Link href="/terms" className="hover:underline">
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="hover:underline">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies" className="hover:underline">
+                  Cookie Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-
       {/* White Line Separator */}
-      <hr className="border-t-2 border-white my-6 mx-auto max-w-7xl" /> {/* Half width line */}
-
+      <hr className="border-t-2 border-white my-6 mx-auto max-w-7xl" />{' '}
+      {/* Half width line */}
       {/* Second Row: Policies */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center text-sm">
-        <p className="mb-4 lg:mb-0 text-center lg:text-left">&copy; 2024 PHARMACON. All Rights Reserved.</p>
+        <p className="mb-4 lg:mb-0 text-center lg:text-left">
+          &copy; 2024 PHARMACON. All Rights Reserved.
+        </p>
         <div className="flex space-x-2">
-          <Link href="/terms" className="hover:underline">Terms of Service</Link>
-					<p>|</p>
-          <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
-					<p>|</p>
-          <Link href="/cookies" className="hover:underline">Cookie Policy</Link>
+          <Link href="/terms" className="hover:underline">
+            Terms of Service
+          </Link>
+          <p>|</p>
+          <Link href="/privacy" className="hover:underline">
+            Privacy Policy
+          </Link>
+          <p>|</p>
+          <Link href="/cookies" className="hover:underline">
+            Cookie Policy
+          </Link>
         </div>
       </div>
     </footer>
