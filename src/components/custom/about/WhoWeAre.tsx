@@ -34,11 +34,13 @@ export default function WhoWeAre() {
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-								Our Vision
+                  Our Vision
                 </h1>
               </div>
               <p className="text-gray-600">
-                Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+                maecenas accumsan. Quis ipsoum suspendises uitrices gravida
+                rusus commodo viverra maecenas accumsan
               </p>
             </div>
           </div>
@@ -52,11 +54,13 @@ export default function WhoWeAre() {
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-								Our Mission
+                  Our Mission
                 </h1>
               </div>
               <p className="text-gray-600 text-start">
-                Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+                maecenas accumsan. Quis ipsoum suspendises uitrices gravida
+                rusus commodo viverra maecenas accumsan
               </p>
             </div>
 
@@ -96,7 +100,9 @@ export default function WhoWeAre() {
                 </h1>
               </div>
               <p className="text-gray-600">
-                Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+                maecenas accumsan. Quis ipsoum suspendises uitrices gravida
+                rusus commodo viverra maecenas accumsan
               </p>
             </div>
           </div>
