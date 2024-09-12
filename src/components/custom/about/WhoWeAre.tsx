@@ -21,7 +21,7 @@ export default function WhoWeAre() {
             {/* Image Half (60%) */}
             <div className="relative w-full h-64 md:h-auto">
               <Image
-                src="/assets/dr.png"
+                src="/assets/place.png"
                 alt="Card Image"
                 layout="fill"
                 objectFit="cover"
@@ -34,12 +34,11 @@ export default function WhoWeAre() {
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-                  The Company
+								Our Vision
                 </h1>
               </div>
-              <p className="text-gray-600 ml-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              <p className="text-gray-600">
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan
               </p>
             </div>
           </div>
@@ -53,19 +52,18 @@ export default function WhoWeAre() {
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-                  The Company
+								Our Mission
                 </h1>
               </div>
-              <p className="text-gray-600 ml-20 text-start">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              <p className="text-gray-600 text-start">
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan
               </p>
             </div>
 
             {/* Image Half (60%) */}
             <div className="relative w-full h-64 md:h-auto">
               <Image
-                src="/assets/dr.png"
+                src="/assets/placee.png"
                 alt="Card Image"
                 layout="fill"
                 objectFit="cover"
@@ -81,7 +79,7 @@ export default function WhoWeAre() {
             {/* Image Half (60%) */}
             <div className="relative w-full h-64 md:h-auto">
               <Image
-                src="/assets/dr.png"
+                src="/assets/placeee.png"
                 alt="Card Image"
                 layout="fill"
                 objectFit="cover"
@@ -94,12 +92,11 @@ export default function WhoWeAre() {
               <div className="flex items-center mb-4 md:mb-6">
                 <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-                  The Company
+                  Our Value
                 </h1>
               </div>
-              <p className="text-gray-600 ml-20">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              <p className="text-gray-600">
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus commodo viverra maecenas accumsan
               </p>
             </div>
           </div>
