@@ -1,5 +1,7 @@
 {
-  "HomePage": {
-    "title": "مرحبا"
-  }
+  "home": "الرئيسية",
+  "aboutUs": "عنا",
+  "products": "المنتجات",
+  "contactUs": "اتصل بنا",
+  "contactNow": "اتصل الآن"
 }
