@@ -7,7 +7,7 @@ import WhoWeAre from '@/components/custom/about/WhoWeAre';
 import ContactSection from '@/components/custom/home/ContactSection';
 
 export const metadata: Metadata = {
-  title: 'About Pharmacon',
+  title: 'About | Pharmacon',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/logo icon.ico',
