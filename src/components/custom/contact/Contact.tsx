@@ -1,4 +1,5 @@
 'use client';
+import axios from 'axios';
 import { useState } from 'react';
 import {
   FaPhoneAlt,
@@ -8,6 +9,8 @@ import {
   FaFacebookF,
   FaLinkedinIn
 } from 'react-icons/fa';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -25,6 +28,28 @@ export default function ContactSection() {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post(
+        'http://localhost:3001/send-email',
+        formData
+      );
+      if (response.status === 200) {
+        toast.success('Email sent successfully');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+      }
+    } catch (error) {
+      toast.error('Failed to send email');
+    }
   };
 
   return (
@@ -67,7 +92,7 @@ export default function ContactSection() {
 
       {/* Right Column - Contact Form */}
       <div className="bg-white shadow-lg rounded-r-lg lg:w-1/2 p-10">
-        <form className="space-y-6">
+        <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="firstName">
@@ -147,11 +172,25 @@ export default function ContactSection() {
           </div>
 
           <div className="text-right">
-            <button className="bg-[#3B5998] text-white py-3 px-8 rounded-lg hover:bg-blue-900 transition">
+            <button
+              className="bg-[#3B5998] text-white py-3 px-8 rounded-lg hover:bg-blue-900 transition"
+              type="submit"
+            >
               SEND MESSAGE
             </button>
           </div>
         </form>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </div>
     </div>
   );
