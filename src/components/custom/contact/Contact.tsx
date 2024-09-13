@@ -34,14 +34,14 @@ export default function ContactSection() {
         <div>
           <h2 className="text-3xl font-semibold mb-8">Contact Information</h2>
           <div className="space-y-6">
-            <div className="flex items-center">
+            <a href="tel:+201094743313" className="flex items-center">
               <FaPhoneAlt className="text-xl mr-4" />
-              <p>+1012 3456 789</p>
-            </div>
-            <div className="flex items-center">
+              <p>+201094743313</p>
+            </a>
+            <a href="mailto:demo@gmail.com" className="flex items-center">
               <FaEnvelope className="text-xl mr-4" />
               <p>demo@gmail.com</p>
-            </div>
+            </a>
             <div className="flex items-center">
               <FaMapMarkerAlt className="text-xl mr-4" />
               <p>
@@ -124,7 +124,7 @@ export default function ContactSection() {
                 value={formData.phone}
                 onChange={handleInputChange}
                 className="w-full border-b-2 border-black p-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="+201100272451"
+                placeholder="+201094743313"
                 id="phone"
               />
             </div>
