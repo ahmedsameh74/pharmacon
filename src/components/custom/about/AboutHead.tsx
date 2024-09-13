@@ -2,7 +2,13 @@ import { useTranslations } from 'next-intl';
 
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
-export default function AboutHead({ image }: { image: string }) {
+export default function AboutHead({
+  image,
+  title
+}: {
+  image: string;
+  title: string;
+}) {
   const t = useTranslations();
   return (
     <section
@@ -15,7 +21,7 @@ export default function AboutHead({ image }: { image: string }) {
         <div>
           <div className="flex items-center mb-4">
             <p className="text-2xl md:text-4xl lg:text-6xl mb-6 w-full">
-              {t('about')}
+              {t(title)}
             </p>{' '}
             {/* Text adjusted for various screens */}
           </div>
