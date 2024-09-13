@@ -34,7 +34,7 @@ export default function ContactSection() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:3001/send-email',
+        'https://pharmacon-server.vercel.app/send-email',
         formData
       );
       if (response.status === 200) {
