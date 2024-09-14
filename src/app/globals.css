@@ -90,3 +90,24 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+.product-body h2 {
+  @apply text-2xl lg:text-3xl font-bold text-[#01547E] mt-8 lg:mt-10; /* Adds responsive font size and margin */
+}
+
+.product-body h3 {
+  @apply text-xl lg:text-2xl font-bold text-[#01547E] mt-6 lg:mt-8; /* Adds responsive font size and margin */
+}
+
+.product-body p {
+  @apply text-base lg:text-lg text-gray-600 mt-6 lg:mt-8 leading-relaxed; /* Adds spacing and makes sure text is easier to read */
+}
+
+.product-body ul {
+  @apply list-disc pl-5 lg:pl-7 mt-6 lg:mt-8; /* Adjusts padding and margin for responsiveness */
+}
+
+.product-body li {
+  @apply text-base lg:text-lg text-gray-600 mt-2 lg:mt-3; /* Adds space between list items */
+}
