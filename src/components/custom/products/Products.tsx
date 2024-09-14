@@ -16,8 +16,8 @@ interface Product {
 export default function ProductsComponent() {
   const [activeTab, setActiveTab] = useState('all');
   const [products, setProducts] = useState<Product[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
   // Fetch the products from the JSON file
@@ -62,8 +62,8 @@ export default function ProductsComponent() {
           Learn About Our Products
         </h1>
         <p className="text-[#01547E] font-light max-w-xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          We serve a diversified therapeutic area with a unique portfolio from
+          high standard European sources.
         </p>
       </div>
 
