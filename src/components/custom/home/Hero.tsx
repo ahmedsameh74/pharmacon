@@ -1,7 +1,7 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from 'next-intl';
 
 export default function Hero({ image }: { image: string }) {
-  const t = useTranslations();
+  // const t = useTranslations();
   const locale = useLocale();
   return (
     <section
@@ -13,7 +13,9 @@ export default function Hero({ image }: { image: string }) {
         {/* Text Content */}
         <div>
           <div className="flex items-center mb-4">
-            <div className={`w-8 h-[2px] md:w-16 bg-blue-500 ${locale === 'en' ? 'mr-2 md:mr-4' : 'ml-2 md:ml-4'}`}></div>{' '}
+            <div
+              className={`w-8 h-[2px] md:w-16 bg-blue-500 ${locale === 'en' ? 'mr-2 md:mr-4' : 'ml-2 md:ml-4'}`}
+            ></div>{' '}
             {/* Adjusted for smaller screens */}
             <h1 className="text-base md:text-lg lg:text-xl font-bold">
               PHARMACON

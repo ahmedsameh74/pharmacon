@@ -9,7 +9,9 @@ export default function About() {
     <>
       <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-xl">
         <div className="flex items-center mb-4 md:mb-6">
-          <div className={`w-16 h-[2px] bg-blue-500 ${locale === 'ar' ? 'ml-4' : 'mr-4'}`}></div>
+          <div
+            className={`w-16 h-[2px] bg-blue-500 ${locale === 'ar' ? 'ml-4' : 'mr-4'}`}
+          ></div>
           <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
             {t('company')}
           </h1>
