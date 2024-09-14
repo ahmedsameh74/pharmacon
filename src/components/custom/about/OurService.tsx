@@ -1,12 +1,10 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
-
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function OurService() {
   const t = useTranslations();
-  const locale = useLocale()
+  const locale = useLocale();
 
   return (
     <section className="max-w-7xl mx-auto p-6 bg-white rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8 lg:my-8 md:my-0">

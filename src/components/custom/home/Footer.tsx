@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
-  const locale = useLocale()
+  const locale = useLocale();
   return (
     <footer className="bg-[#01547E] text-white py-8">
       {/* First Row */}
