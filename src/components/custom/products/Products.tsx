@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { useLocale } from 'next-intl'; // Import useLocale for locale-based direction handling
 
 import Loader from '@/components/ui/Loader';
 
@@ -14,6 +15,7 @@ interface Product {
 }
 
 export default function ProductsComponent() {
+  const locale = useLocale(); // Get the current locale
   const [activeTab, setActiveTab] = useState('all');
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -54,7 +56,10 @@ export default function ProductsComponent() {
   );
 
   return (
-    <div className="w-full py-12 flex flex-col justify-center items-center space-y-6">
+    <div
+      className="w-full py-12 flex flex-col justify-center items-center space-y-6"
+      dir={locale === 'ar' ? 'rtl' : 'ltr'} // Set direction based on locale
+    >
       {/* Section Title */}
       <div className="text-center">
         <h4 className="text-[#2CA6D5] uppercase text-sm">Products</h4>
@@ -68,7 +73,7 @@ export default function ProductsComponent() {
       </div>
 
       {/* Tabs for product categories */}
-      <div className="flex flex-wrap justify-center gap-4 mt-8 ">
+      <div className="flex flex-wrap justify-center gap-4 mt-8">
         {[
           'all',
           'Vitamins',
@@ -143,7 +148,11 @@ export default function ProductsComponent() {
           )}
 
           {/* Pagination */}
-          <div className="flex justify-center space-x-2 mt-8">
+          <div
+            className={`flex justify-center mt-8 ${
+              locale === 'ar' ? 'space-x-reverse space-x-2' : 'space-x-2'
+            }`}
+          >
             {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
               <button
                 key={page}

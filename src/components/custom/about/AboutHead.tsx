@@ -16,7 +16,7 @@ export default function AboutHead({
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="relative z-10 text-left text-white px-4 md:px-16 flex items-center">
+      <div className="relative z-10 text-white px-4 md:px-16 flex items-center">
         {/* Text Content */}
         <div>
           <div className="flex items-center mb-4">

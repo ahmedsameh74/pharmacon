@@ -1,6 +1,6 @@
 export default function StatsBanner() {
   return (
-    <div className="w-full bg-[#01547E] text-white py-4 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+    <div className="w-full bg-[#01547E] gap-6 text-white py-4 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
       <div className="flex items-center flex-col text-center">
         <p className="text-xl md:text-2xl font-bold">3.5</p>{' '}
         {/* Font size adjusted */}

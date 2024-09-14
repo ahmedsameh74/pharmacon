@@ -4,8 +4,12 @@ import Link from 'next/link';
 
 export default function Footer() {
   const locale = useLocale();
+
   return (
-    <footer className="bg-[#01547E] text-white py-8">
+    <footer
+      className="bg-[#01547E] text-white py-8"
+      dir={locale === 'ar' ? 'rtl' : 'ltr'}
+    >
       {/* First Row */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-start lg:items-center">
         {/* Left Section: Logo and Description */}
@@ -13,10 +17,10 @@ export default function Footer() {
           <div className="mb-4">
             {/* Logo */}
             <Image
-              src="/assets/whiteLogo.svg" // Ensure path is correct
+              src="/assets/whiteLogo.svg"
               alt="Logo"
               className="w-auto h-auto"
-              width={100} // Adjusted width for better logo size on all screens
+              width={100}
               height={100}
             />
           </div>
@@ -29,7 +33,6 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full lg:w-auto">
           {/* Column 1 */}
           <div>
-            {/* <h3 className="font-bold mb-2 text-center lg:text-left">Company</h3> */}
             <ul className="text-center lg:text-left">
               <li>
                 <Link href={`/${locale}/about`} className="hover:underline">
@@ -48,9 +51,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
           {/* Column 2 */}
           <div>
-            {/* <h3 className="font-bold mb-2 text-center lg:text-left">Support</h3> */}
             <ul className="text-center lg:text-left">
               <li>
                 <Link href={`/${locale}/contact`} className="hover:underline">
@@ -69,9 +72,9 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+
           {/* Column 3 */}
           <div>
-            {/* <h3 className="font-bold mb-2 text-center lg:text-left">Resources</h3> */}
             <ul className="text-center lg:text-left">
               <li>
                 <Link href="/terms" className="hover:underline">
@@ -92,15 +95,18 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
       {/* White Line Separator */}
-      <hr className="border-t-2 border-white my-6 mx-auto max-w-7xl" />{' '}
-      {/* Half width line */}
+      <hr className="border-t-2 border-white my-6 mx-auto max-w-7xl" />
+
       {/* Second Row: Policies */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center text-sm">
         <p className="mb-4 lg:mb-0 text-center lg:text-left">
           &copy; 2024 PHARMACON. All Rights Reserved.
         </p>
-        <div className="flex space-x-2">
+        <div
+          className={`flex ${locale === 'ar' ? 'space-x-reverse' : ''} space-x-2`}
+        >
           <Link href="/terms" className="hover:underline">
             Terms of Service
           </Link>
