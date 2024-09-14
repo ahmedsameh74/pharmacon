@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function About() {
-  const locale = useLocale()
+  const locale = useLocale();
   return (
     <>
       <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-xl">
@@ -42,7 +42,10 @@ export default function About() {
               ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
               luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <Link href={`/${locale}/about`}  className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300">
+            <Link
+              href={`/${locale}/about`}
+              className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
+            >
               Learn More
             </Link>
           </div>
@@ -59,7 +62,10 @@ export default function About() {
               ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
               luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <Link href={`/${locale}/about`}  className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300">
+            <Link
+              href={`/${locale}/about`}
+              className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
+            >
               Learn More
             </Link>
           </div>

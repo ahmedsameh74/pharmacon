@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { Button } from '@/components/ui/button'; // shadcn Button
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -236,7 +234,7 @@ export default function Navbar() {
           ))}
           <div className="block px-3 py-2">
             <Link
-            href="mailto:demo@gmail.com"
+              href="mailto:demo@gmail.com"
               onClick={() => setIsOpen(false)}
               className="w-full text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >

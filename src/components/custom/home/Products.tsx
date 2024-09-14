@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+
 import MedicineBox from './MidicineBox';
 
 interface Product {
@@ -12,19 +13,20 @@ interface Product {
 
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchProducts = async () => {
-      setLoading(true); // Start loading
+      // setLoading(true); // Start loading
       try {
         const response = await fetch('/products.json');
         const data = await response.json();
         setProducts(data);
       } catch (error) {
         console.error('Failed to fetch products:', error);
-      } finally {
-        setLoading(false); // End loading
       }
+      // finally {
+      //   // setLoading(false); // End loading
+      // }
     };
 
     fetchProducts();
@@ -44,14 +46,16 @@ export default function Products() {
         </p>
       </div>
       <div className="flex justify-center items-center mt-8 flex-wrap">
-        {products?.slice(0, 3).map((product) => (
-          <MedicineBox
-            key={product.id}
-            medicineName={product.title}
-            description={product.description}
-            imageUrl={product.image}
-          />
-        ))}
+        {products
+          ?.slice(0, 3)
+          .map((product) => (
+            <MedicineBox
+              key={product.id}
+              medicineName={product.title}
+              description={product.description}
+              imageUrl={product.image}
+            />
+          ))}
       </div>
     </div>
   );
