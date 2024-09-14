@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 
-import { Button } from '@/components/ui/button'; // shadcn Button
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -158,12 +156,12 @@ export default function Navbar() {
             )}
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="default"
-              className="text-white bg-[#01547E] hover:bg-[#088bcd]"
+            <Link
+              href="mailto:demo@gmail.com"
+              className="text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >
               {t('contactNow')}
-            </Button>
+            </Link>
           </div>
 
           {/* Burger menu for small screens */}
@@ -224,20 +222,24 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
-                pathname === item.href ? 'text-[#01547E]' : 'text-gray-500'
+                pathname === item.href ||
+                (item.href === `/${locale}/` && pathname === `/${locale}`)
+                  ? 'text-[#01547E]'
+                  : 'text-gray-500'
               }`}
+              onClick={() => setIsOpen(false)}
             >
               {item.name}
             </Link>
           ))}
           <div className="block px-3 py-2">
-            <Button
-              value={t('contactNow')}
-              variant="default"
-              className="w-full text-white bg-[#01547E] hover:bg-[#088bcd]"
+            <Link
+              href="mailto:demo@gmail.com"
+              onClick={() => setIsOpen(false)}
+              className="w-full text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >
               {t('contactNow')}
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

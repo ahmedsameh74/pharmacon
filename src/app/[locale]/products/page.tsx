@@ -1,20 +1,24 @@
 import { Metadata } from 'next';
 
 import AboutHead from '@/components/custom/about/AboutHead';
-import StatsBanner from '@/components/custom/home/StatsBanner';
-import OurService from '@/components/custom/about/OurService';
-import WhoWeAre from '@/components/custom/about/WhoWeAre';
-import ContactSection from '@/components/custom/home/ContactSection';
+import ProductsComponent from '@/components/custom/products/Products';
 
 export const metadata: Metadata = {
-  title: 'About | Pharmacon',
+  title: 'Products | Pharmacon',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/logo icon.ico',
     apple: '../assets/logo icon.ico'
   },
   manifest: '/manifest.webmanifest',
-  keywords: ['Pharmacon', 'Health', 'Quality', 'Products', 'Pharmacy', 'About'],
+  keywords: [
+    'Pharmacon',
+    'Health',
+    'Quality',
+    'Products',
+    'Pharmacy',
+    'Products'
+  ],
   robots: {
     index: true,
     follow: true,
@@ -49,14 +53,11 @@ export const metadata: Metadata = {
   }
 };
 
-export default function About() {
+export default function Products() {
   return (
     <>
-      <AboutHead image={'../../assets/aboutUsSection.png'} title={'about'} />
-      <StatsBanner />
-      <OurService />
-      <WhoWeAre />
-      <ContactSection />
+      <AboutHead image={'../../assets/products.png'} title={'products'} />
+      <ProductsComponent />
     </>
   );
 }
