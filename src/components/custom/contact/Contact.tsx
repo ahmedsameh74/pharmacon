@@ -28,6 +28,7 @@ export default function ContactSection() {
     phone: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
 
   const validateField = (name: string, value: string) => {
     switch (name) {
@@ -101,6 +102,7 @@ export default function ContactSection() {
           'https://pharmacon-server.vercel.app/send-email',
           formData
         );
+        setLoading(true);
         if (response.status === 200) {
           toast.success('Email sent successfully');
           setFormData({
@@ -110,12 +112,15 @@ export default function ContactSection() {
             phone: '',
             message: ''
           });
+          setLoading(false);
         }
       } catch (error) {
         toast.error('Failed to send email');
+        setLoading(false);
       }
     } else {
       toast.error('Please fix the errors in the form');
+      setLoading(false);
     }
   };
 
@@ -270,6 +275,7 @@ export default function ContactSection() {
 
           <div className="text-right">
             <button
+              disabled={loading}
               className="bg-[#3B5998] text-white py-3 px-8 rounded-lg hover:bg-blue-900 transition"
               type="submit"
             >
