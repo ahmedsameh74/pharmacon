@@ -89,7 +89,9 @@ export default function Navbar() {
           </div>
 
           {/* Center part of the navbar - Links */}
-          <div className={`hidden md:flex items-center justify-center ${locale === 'en' ? 'space-x-8' : 'space-x-reverse space-x-8'}`}>
+          <div
+            className={`hidden md:flex items-center justify-center ${locale === 'en' ? 'space-x-8' : 'space-x-reverse space-x-8'}`}
+          >
             {menuItems.map((item) => (
               <Link
                 key={item.name}

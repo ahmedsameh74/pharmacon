@@ -15,7 +15,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactSection() {
-	const locale = useLocale();
+  const locale = useLocale();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
