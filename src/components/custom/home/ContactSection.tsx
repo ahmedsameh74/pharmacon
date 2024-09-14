@@ -1,8 +1,4 @@
-import { useLocale } from 'next-intl';
-import Link from 'next/link';
-
 export default function ContactSection() {
-  const locale = useLocale();
   return (
     <div className="max-w-4xl mx-auto my-8 p-6 bg-[#01547E] flex flex-col justify-center items-center">
       {/* Title */}
@@ -17,12 +13,9 @@ export default function ContactSection() {
       </p>
 
       {/* Button */}
-      <Link
-        href={`/${locale}/contact`}
-        className="bg-white hover:bg-[#3b6980] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg my-4 transition duration-300"
-      >
+      <button className="bg-white hover:bg-[#3b6980] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg my-4 transition duration-300">
         Contact Us
-      </Link>
+      </button>
     </div>
   );
 }

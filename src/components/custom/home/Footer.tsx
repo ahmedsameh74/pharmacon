@@ -1,9 +1,7 @@
-import { useLocale } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
-  const locale = useLocale();
   return (
     <footer className="bg-[#01547E] text-white py-8">
       {/* First Row */}
@@ -32,7 +30,7 @@ export default function Footer() {
             {/* <h3 className="font-bold mb-2 text-center lg:text-left">Company</h3> */}
             <ul className="text-center lg:text-left">
               <li>
-                <Link href={`/${locale}/about`} className="hover:underline">
+                <Link href="/about" className="hover:underline">
                   About Us
                 </Link>
               </li>
@@ -53,7 +51,7 @@ export default function Footer() {
             {/* <h3 className="font-bold mb-2 text-center lg:text-left">Support</h3> */}
             <ul className="text-center lg:text-left">
               <li>
-                <Link href={`/${locale}/contact`} className="hover:underline">
+                <Link href="/contact" className="hover:underline">
                   Contact Us
                 </Link>
               </li>

@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
-      <AboutHead image={'../../assets/aboutUsSection.png'} title={'about'} />
+      <AboutHead image={'../../assets/aboutUsSection.png'} />
       <StatsBanner />
       <OurService />
       <WhoWeAre />

@@ -1,10 +1,10 @@
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
+
+import { Button } from '@/components/ui/button';
 
 export default function OurService() {
   const t = useTranslations();
-  const locale = useLocale();
 
   return (
     <section className="max-w-7xl mx-auto p-6 bg-white rounded-lg grid grid-cols-1 md:grid-cols-2 gap-8 lg:my-8 md:my-0">
@@ -14,8 +14,7 @@ export default function OurService() {
           {t('ourService')}
         </h2>
         <p className="text-gray-600 font-light text-base md:text-lg">
-          We serve a diversified therapeutic area with a unique portfolio from
-          high standard European sources.
+          {t('serviceOffer')}
         </p>
         <div className="w-full">
           <Image
@@ -40,19 +39,16 @@ export default function OurService() {
           />
         </div>
         <p className="text-gray-600 font-light text-base md:text-lg">
-          Pharmacon is Germany -Egyptian promising pharmaceutical company
-          dedicated to promote under license high quality products in the
-          Egyptian market. Pharmacon founded in the Egyptian pharmaceutical
-          market since 2004. Our aim is to improve the health of the Egyptian
-          patients through providing alternative medical solutions as well as
-          fulfilling gabs of the Egyptian pharma market.
+          Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+          maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus
+          commodo viverra maecenas accumsan.
         </p>
-        <Link
-          href={`/${locale}/products`}
-          className="text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-lg text-sm font-semibold"
+        <Button
+          variant="default"
+          className="text-white bg-[#01547E] hover:bg-[#088bcd]"
         >
           {t('ourProducts')}
-        </Link>
+        </Button>
       </div>
     </section>
   );

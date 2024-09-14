@@ -1,9 +1,6 @@
-import { useLocale } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function About() {
-  const locale = useLocale();
   return (
     <>
       <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-xl">
@@ -14,9 +11,9 @@ export default function About() {
           </h1>
         </div>
         <p className="text-gray-600 ml-4 md:ml-20">
-          Pharmacon is Germany -Egyptian promising pharmaceutical company
-          dedicated to promote under license high quality products in the
-          Egyptian market.
+          This is a paragraph inside a card banner. You can use this space to
+          give an introduction or highlight important information for your
+          users.
         </p>
       </div>
 
@@ -42,12 +39,9 @@ export default function About() {
               ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
               luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <Link
-              href={`/${locale}/about`}
-              className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
-            >
+            <button className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300">
               Learn More
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -62,12 +56,9 @@ export default function About() {
               ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
               luctus nec ullamcorper mattis, pulvinar dapibus leo.
             </p>
-            <Link
-              href={`/${locale}/about`}
-              className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
-            >
+            <button className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300">
               Learn More
-            </Link>
+            </button>
           </div>
 
           <div className="flex justify-center">

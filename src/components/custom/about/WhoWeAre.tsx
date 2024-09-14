@@ -38,10 +38,9 @@ export default function WhoWeAre() {
                 </h1>
               </div>
               <p className="text-gray-600">
-                expanding our presence in the Egyptian pharmaceutical market
-                across the various therapeutic areas and meeting the growing
-                healthcare needs. We aim to be among the top players in the
-                Egyptian pharma market.
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+                maecenas accumsan. Quis ipsoum suspendises uitrices gravida
+                rusus commodo viverra maecenas accumsan
               </p>
             </div>
           </div>
@@ -59,11 +58,9 @@ export default function WhoWeAre() {
                 </h1>
               </div>
               <p className="text-gray-600 text-start">
-                to have a role in improving quality of life in the community
-                through providing access to affordable high-quality
-                pharmaceutical solutions. To recruit and develop high caliber
-                employees who share our values and beliefs. And to work with our
-                partners to achieve our goals.
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+                maecenas accumsan. Quis ipsoum suspendises uitrices gravida
+                rusus commodo viverra maecenas accumsan
               </p>
             </div>
 
@@ -103,10 +100,9 @@ export default function WhoWeAre() {
                 </h1>
               </div>
               <p className="text-gray-600">
-                to provide the Egyptian patient by a pharmaceutical product with
-                a high standard of safety and efficacy profile and competitive
-                price. Our goal is to be one of the best pharmaceutical
-                companies in the Egyptian market.
+                Quis ipsoum suspendises uitrices gravida rusus commodo viverra
+                maecenas accumsan. Quis ipsoum suspendises uitrices gravida
+                rusus commodo viverra maecenas accumsan
               </p>
             </div>
           </div>
