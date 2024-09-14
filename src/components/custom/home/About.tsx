@@ -14,9 +14,9 @@ export default function About() {
           </h1>
         </div>
         <p className="text-gray-600 ml-4 md:ml-20">
-          This is a paragraph inside a card banner. You can use this space to
-          give an introduction or highlight important information for your
-          users.
+          Pharmacon is Germany -Egyptian promising pharmaceutical company
+          dedicated to promote under license high quality products in the
+          Egyptian market.
         </p>
       </div>
 

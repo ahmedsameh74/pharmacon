@@ -14,7 +14,8 @@ export default function OurService() {
           {t('ourService')}
         </h2>
         <p className="text-gray-600 font-light text-base md:text-lg">
-          {t('serviceOffer')}
+          We serve a diversified therapeutic area with a unique portfolio from
+          high standard European sources.
         </p>
         <div className="w-full">
           <Image
@@ -39,9 +40,12 @@ export default function OurService() {
           />
         </div>
         <p className="text-gray-600 font-light text-base md:text-lg">
-          Quis ipsoum suspendises uitrices gravida rusus commodo viverra
-          maecenas accumsan. Quis ipsoum suspendises uitrices gravida rusus
-          commodo viverra maecenas accumsan.
+          Pharmacon is Germany -Egyptian promising pharmaceutical company
+          dedicated to promote under license high quality products in the
+          Egyptian market. Pharmacon founded in the Egyptian pharmaceutical
+          market since 2004. Our aim is to improve the health of the Egyptian
+          patients through providing alternative medical solutions as well as
+          fulfilling gabs of the Egyptian pharma market.
         </p>
         <Link
           href={`/${locale}/products`}

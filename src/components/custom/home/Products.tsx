@@ -41,8 +41,8 @@ export default function Products() {
           Learn about our products
         </p>
         <p className="text-sm md:text-lg font-light text-gray-600 mt-4 w-3/4">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          We serve a diversified therapeutic area with a unique portfolio from
+          high standard European sources.
         </p>
       </div>
       <div className="flex justify-center items-center mt-8 flex-wrap">

@@ -142,9 +142,9 @@ export default function ContactSection() {
             <div className="flex items-center">
               <FaMapMarkerAlt className="text-xl mr-4" />
               <p>
-                132 Dartmouth Street Boston,
+                Nasr City,
                 <br />
-                Massachusetts 02156 United States
+                Egypt, EG
               </p>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default function ContactSection() {
           <a href="#" className="text-2xl">
             <FaFacebookF />
           </a>
-          <a href="#" className="text-2xl">
+          <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer">
             <FaLinkedinIn />
           </a>
         </div>
