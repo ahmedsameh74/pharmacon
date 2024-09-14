@@ -1,12 +1,16 @@
+import { useLocale } from 'next-intl';
 import Image from 'next/image';
 
 export default function WhoWeAre() {
+  const locale = useLocale();
   return (
     <div className="w-full bg-[#DCF0FA] py-12 flex flex-col justify-center items-center space-y-6 md:space-y-12">
       {/* Section Title */}
       <div className="flex flex-col items-start text-start max-w-4xl w-full">
         <div className="flex items-center mb-4 md:mb-6">
-          <div className="w-16 h-[2px] bg-blue-500 mr-6"></div>
+          <div
+            className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-6' : 'ml-6'}`}
+          ></div>
           <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
             Who We Are
           </h1>
@@ -32,7 +36,9 @@ export default function WhoWeAre() {
             {/* Text Half (40%) */}
             <div className="p-6 flex flex-col justify-center">
               <div className="flex items-center mb-4 md:mb-6">
-                <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
+                <div
+                  className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-4' : 'ml-4'}`}
+                ></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
                   Our Vision
                 </h1>
@@ -53,7 +59,9 @@ export default function WhoWeAre() {
             {/* Text Half (40%) */}
             <div className="p-6 flex flex-col justify-center">
               <div className="flex items-center mb-4 md:mb-6">
-                <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
+                <div
+                  className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-4' : 'ml-4'}`}
+                ></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
                   Our Mission
                 </h1>
@@ -97,7 +105,9 @@ export default function WhoWeAre() {
             {/* Text Half (40%) */}
             <div className="p-6 flex flex-col justify-center">
               <div className="flex items-center mb-4 md:mb-6">
-                <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
+                <div
+                  className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-4' : 'ml-4'}`}
+                ></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
                   Our Value
                 </h1>
