@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 'use client';
 import axios from 'axios';
 import { useState } from 'react';
@@ -41,13 +42,13 @@ export default function ContactSection() {
       if (!/\S+@\S+\.\S+/.test(value)) {
         return 'Email address is invalid';
       }
-        return '';
+      return '';
     case 'phone':
-        return value.trim() === '' ? 'Phone number is required' : '';
+      return value.trim() === '' ? 'Phone number is required' : '';
     case 'message':
-        return value.trim() === '' ? 'Message is required' : '';
+      return value.trim() === '' ? 'Message is required' : '';
     default:
-        return '';
+      return '';
     }
   };
 
