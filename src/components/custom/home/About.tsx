@@ -1,16 +1,17 @@
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function About() {
   const locale = useLocale();
+  const t = useTranslations();
   return (
     <>
       <div className="max-w-4xl mx-auto my-8 p-6 bg-white rounded-lg shadow-xl">
         <div className="flex items-center mb-4 md:mb-6">
-          <div className="w-16 h-[2px] bg-blue-500 mr-4"></div>
+          <div className={`w-16 h-[2px] bg-blue-500 ${locale === 'ar' ? 'ml-4' : 'mr-4'}`}></div>
           <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-            The Company
+            {t('company')}
           </h1>
         </div>
         <p className="text-gray-600 ml-4 md:ml-20">

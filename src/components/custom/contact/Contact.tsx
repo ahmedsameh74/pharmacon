@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 'use client';
 import axios from 'axios';
+import { useLocale } from 'next-intl';
 import { useState } from 'react';
 import {
   FaPhoneAlt,
@@ -14,6 +15,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactSection() {
+	const locale = useLocale();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -132,15 +134,15 @@ export default function ContactSection() {
           <h2 className="text-3xl font-semibold mb-8">Contact Information</h2>
           <div className="space-y-6">
             <a href="tel:+201094743313" className="flex items-center">
-              <FaPhoneAlt className="text-xl mr-4" />
+              <FaPhoneAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               <p>+201094743313</p>
             </a>
             <a href="mailto:demo@gmail.com" className="flex items-center">
-              <FaEnvelope className="text-xl mr-4" />
+              <FaEnvelope className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               <p>demo@gmail.com</p>
             </a>
             <div className="flex items-center">
-              <FaMapMarkerAlt className="text-xl mr-4" />
+              <FaMapMarkerAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               <p>
                 Nasr City,
                 <br />
@@ -149,7 +151,7 @@ export default function ContactSection() {
             </div>
           </div>
         </div>
-        <div className="flex space-x-4 mt-8">
+        <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8`}>
           <a href="#" className="text-2xl">
             <FaWhatsapp />
           </a>
