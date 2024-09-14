@@ -89,12 +89,12 @@ export default function Navbar() {
           </div>
 
           {/* Center part of the navbar - Links */}
-          <div className="hidden md:flex items-center justify-center space-x-8">
+          <div className={`hidden md:flex items-center justify-center ${locale === 'en' ? 'space-x-8' : 'space-x-reverse space-x-8'}`}>
             {menuItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`relative px-3 py-2 mx-2 rounded-md text-sm font-medium group ${
+                className={`relative px-3 py-2 rounded-md text-sm font-medium group ${
                   pathname === item.href ||
                   (item.href === `/${locale}/` && pathname === `/${locale}`)
                     ? 'text-[#01547E]'
