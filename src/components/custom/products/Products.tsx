@@ -1,33 +1,32 @@
 'use client';
+// import { useLocale } from 'next-intl';
 import Image from 'next/image';
-import { useState } from 'react';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+}
 
 export default function ProductsComponent() {
   const [activeTab, setActiveTab] = useState('all');
+  // const locale = useLocale()
 
-  const products = [
-    {
-      id: 1,
-      title: 'Pharmacon Vitamins',
-      description:
-        'Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan.',
-      image: '/assets/dr.png'
-    },
-    {
-      id: 2,
-      title: 'Pharmacon Vitamins',
-      description:
-        'Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan.',
-      image: '/assets/dr.png'
-    },
-    {
-      id: 3,
-      title: 'Pharmacon Vitamins',
-      description:
-        'Quis ipsum suspendisse ultrices gravida risus commodo viverra maecenas accumsan.',
-      image: '/assets/dr.png'
-    }
-  ];
+  const [products, setProducts] = useState<Product[]>([]);
+
+  // Fetch the products from the JSON file
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch('/products.json');
+      const data = await response.json();
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <div className="w-full py-12 flex flex-col justify-center items-center space-y-6">
@@ -91,13 +90,13 @@ export default function ProductsComponent() {
                 {product.title}
               </h2>
               <p className="text-gray-500 mb-4">{product.description}</p>
-              <a
-                href="#"
+              <Link
+                href={`products/${product.id}`}
                 className="text-sm text-[#01547E] inline-flex items-center hover:underline"
               >
                 Learn More
                 <span>→</span>
-              </a>
+              </Link>
             </div>
           </div>
         ))}
