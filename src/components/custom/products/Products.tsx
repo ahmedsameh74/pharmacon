@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
+import Loader from '@/components/ui/Loader';
+
 interface Product {
   id: number;
   title: string;
@@ -95,9 +97,7 @@ export default function ProductsComponent() {
 
       {/* Loader */}
       {loading ? (
-        <div className="flex justify-center items-center mt-12">
-          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#00557C]"></div>
-        </div>
+        <Loader />
       ) : (
         <>
           {/* No Products Case */}
