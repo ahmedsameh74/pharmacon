@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl'; // Import useTranslations for localization
 
-const Breadcrumb = () => {
+const Breadcrumb = ({ titleColor }: { titleColor?: string }) => {
   const pathname = usePathname();
   const locale = pathname.split('/')[1] || 'en'; // Extract locale from pathname
   const t = useTranslations(); // Access translations for breadcrumbs
@@ -50,7 +50,8 @@ const Breadcrumb = () => {
             ) : (
               <Link
                 href={item.href}
-                className="text-white hover:text-blue-600 text-base md:text-lg lg:text-xl font-bold"
+                className="text-white hover:text-[#088bcd] text-base md:text-lg lg:text-xl font-bold"
+                style={{ color: titleColor ? titleColor : 'white' }}
               >
                 {item.label}
               </Link>
