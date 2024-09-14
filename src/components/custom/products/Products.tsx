@@ -62,8 +62,8 @@ export default function ProductsComponent() {
           Learn About Our Products
         </h1>
         <p className="text-[#01547E] font-light max-w-xl mx-auto">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          We serve a diversified therapeutic area with a unique portfolio from
+          high standard European sources.
         </p>
       </div>
 
