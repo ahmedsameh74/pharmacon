@@ -224,8 +224,12 @@ export default function Navbar() {
               key={item.name}
               href={item.href}
               className={`block px-3 py-2 rounded-md text-base font-medium ${
-                pathname === item.href ? 'text-[#01547E]' : 'text-gray-500'
+                pathname === item.href ||
+                (item.href === `/${locale}/` && pathname === `/${locale}`)
+                  ? 'text-[#01547E]'
+                  : 'text-gray-500'
               }`}
+              onClick={() => setIsOpen(false)}
             >
               {item.name}
             </Link>
