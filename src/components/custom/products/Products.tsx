@@ -16,8 +16,8 @@ interface Product {
 export default function ProductsComponent() {
   const [activeTab, setActiveTab] = useState('all');
   const [products, setProducts] = useState<Product[]>([]);
-  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
   // Fetch the products from the JSON file

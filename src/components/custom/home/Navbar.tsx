@@ -158,12 +158,12 @@ export default function Navbar() {
             )}
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="default"
-              className="text-white bg-[#01547E] hover:bg-[#088bcd]"
+            <Link
+              href="mailto:demo@gmail.com"
+              className="text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >
               {t('contactNow')}
-            </Button>
+            </Link>
           </div>
 
           {/* Burger menu for small screens */}
@@ -235,13 +235,13 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="block px-3 py-2">
-            <Button
-              value={t('contactNow')}
-              variant="default"
-              className="w-full text-white bg-[#01547E] hover:bg-[#088bcd]"
+            <Link
+            href="mailto:demo@gmail.com"
+              onClick={() => setIsOpen(false)}
+              className="w-full text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >
               {t('contactNow')}
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

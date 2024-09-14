@@ -1,6 +1,34 @@
+'use client';
+import { useEffect, useState } from 'react';
 import MedicineBox from './MidicineBox';
 
+interface Product {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
+
 export default function Products() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setLoading(true); // Start loading
+      try {
+        const response = await fetch('/products.json');
+        const data = await response.json();
+        setProducts(data);
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
+      } finally {
+        setLoading(false); // End loading
+      }
+    };
+
+    fetchProducts();
+  }, []);
   return (
     <div className="w-full bg-[#DCF0FA] py-12 flex flex-col md:flex-col justify-center items-center space-y-6 md:space-y-12 md:space-x-12">
       <div className="flex items-center flex-col text-center">
@@ -16,12 +44,12 @@ export default function Products() {
         </p>
       </div>
       <div className="flex justify-center items-center mt-8 flex-wrap">
-        {Array.from({ length: 3 }).map((_, index) => (
+        {products?.slice(0, 3).map((product) => (
           <MedicineBox
-            key={index}
-            medicineName="Aspirin"
-            description="Aspirin is used to reduce fever and relieve mild to moderate pain."
-            imageUrl="/assets/dr.png"
+            key={product.id}
+            medicineName={product.title}
+            description={product.description}
+            imageUrl={product.image}
           />
         ))}
       </div>
