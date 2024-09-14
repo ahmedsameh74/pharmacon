@@ -20,35 +20,101 @@ export default function ContactSection() {
     phone: '',
     message: ''
   });
+  const [errors, setErrors] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const validateField = (name: string, value: string) => {
+    switch (name) {
+    case 'firstName':
+      return value.trim() === '' ? 'First name is required' : '';
+    case 'lastName':
+      return value.trim() === '' ? 'Last name is required' : '';
+    case 'email':
+      if (value.trim() === '') {
+        return 'Email is required';
+      }
+      if (!/\S+@\S+\.\S+/.test(value)) {
+        return 'Email address is invalid';
+      }
+        return '';
+    case 'phone':
+        return value.trim() === '' ? 'Phone number is required' : '';
+    case 'message':
+        return value.trim() === '' ? 'Message is required' : '';
+    default:
+        return '';
+    }
+  };
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
+    });
+
+    // Validate field on input change
+    setErrors({
+      ...errors,
+      [name]: validateField(name, value)
+    });
+  };
+
+  const handleBlur = (
+    e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setErrors({
+      ...errors,
+      [name]: validateField(name, value)
     });
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const response = await axios.post(
-        'https://pharmacon-server.vercel.app/send-email',
-        formData
-      );
-      if (response.status === 200) {
-        toast.success('Email sent successfully');
-        setFormData({
-          firstName: '',
-          lastName: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
+
+    // Validate all fields before submitting
+    const newErrors = {
+      firstName: validateField('firstName', formData.firstName),
+      lastName: validateField('lastName', formData.lastName),
+      email: validateField('email', formData.email),
+      phone: validateField('phone', formData.phone),
+      message: validateField('message', formData.message)
+    };
+
+    setErrors(newErrors);
+
+    // Check if there are any errors
+    const isValid = !Object.values(newErrors).some((error) => error);
+
+    if (isValid) {
+      try {
+        const response = await axios.post(
+          'https://pharmacon-server.vercel.app/send-email',
+          formData
+        );
+        if (response.status === 200) {
+          toast.success('Email sent successfully');
+          setFormData({
+            firstName: '',
+            lastName: '',
+            email: '',
+            phone: '',
+            message: ''
+          });
+        }
+      } catch (error) {
+        toast.error('Failed to send email');
       }
-    } catch (error) {
-      toast.error('Failed to send email');
+    } else {
+      toast.error('Please fix the errors in the form');
     }
   };
 
@@ -103,10 +169,16 @@ export default function ContactSection() {
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleInputChange}
-                className="w-full border-b-2 border-black p-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onBlur={handleBlur}
+                className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
+                  errors.firstName ? 'border-red-500' : 'border-black'
+                }`}
                 placeholder="Ahmed"
                 id="firstName"
               />
+              {errors.firstName && (
+                <p className="text-red-500 text-sm">{errors.firstName}</p>
+              )}
             </div>
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="lastName">
@@ -117,10 +189,16 @@ export default function ContactSection() {
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleInputChange}
-                className="w-full border-b-2 border-black p-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onBlur={handleBlur}
+                className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
+                  errors.lastName ? 'border-red-500' : 'border-black'
+                }`}
                 placeholder="Sameh"
                 id="lastName"
               />
+              {errors.lastName && (
+                <p className="text-red-500 text-sm">{errors.lastName}</p>
+              )}
             </div>
           </div>
 
@@ -134,10 +212,16 @@ export default function ContactSection() {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full border-b-2 border-black p-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onBlur={handleBlur}
+                className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
+                  errors.email ? 'border-red-500' : 'border-black'
+                }`}
                 placeholder="asameh1500@gmail.com"
                 id="email"
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email}</p>
+              )}
             </div>
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="phone">
@@ -148,10 +232,16 @@ export default function ContactSection() {
                 name="phone"
                 value={formData.phone}
                 onChange={handleInputChange}
-                className="w-full border-b-2 border-black p-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onBlur={handleBlur}
+                className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
+                  errors.phone ? 'border-red-500' : 'border-black'
+                }`}
                 placeholder="+201094743313"
                 id="phone"
               />
+              {errors.phone && (
+                <p className="text-red-500 text-sm">{errors.phone}</p>
+              )}
             </div>
           </div>
 
@@ -163,12 +253,18 @@ export default function ContactSection() {
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              className="w-full border-b-2 border-black p-3 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              onBlur={handleBlur}
+              className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
+                errors.message ? 'border-red-500' : 'border-black'
+              }`}
               rows={4}
               placeholder="Write your message.."
               id="message"
               style={{ resize: 'none' }}
             ></textarea>
+            {errors.message && (
+              <p className="text-red-500 text-sm">{errors.message}</p>
+            )}
           </div>
 
           <div className="text-right">
