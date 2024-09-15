@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description: 'Because Health Deserves Quality',
   icons: {
     icon: 'assets/logo icon.ico',
-    apple: 'assets/logo icon.ico'
+    apple: 'assets/blueLogo.png'
   },
   manifest: '/manifest.webmanifest',
   keywords: [
