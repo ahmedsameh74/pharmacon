@@ -12,10 +12,10 @@ export default function Footer() {
       dir={locale === 'ar' ? 'rtl' : 'ltr'}
     >
       {/* First Row */}
-      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-start lg:items-center">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center md:items-start">
         {/* Left Section: Logo and Description */}
-        <div className="flex flex-col mb-8 lg:mb-0">
-          <div className="mb-4">
+        <div className="flex flex-col items-center md:items-start mb-8 lg:mb-0">
+          <div className="mb-4 flex justify-center items-center">
             {/* Logo */}
             <Image
               src="/assets/whiteLogo.svg"
