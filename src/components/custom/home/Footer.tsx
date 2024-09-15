@@ -26,7 +26,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-sm text-center lg:text-left">
-            Your trusted source for medication reviews and health advice.
+            {t('footerPara')}
           </p>
         </div>
 
