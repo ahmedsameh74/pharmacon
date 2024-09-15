@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   title: 'Pharmacon',
   description: 'Because Health Deserves Quality',
   icons: {
-    icon: 'assets/logo icon.ico',
-    apple: 'assets/blueLogo.png'
+    icon: '/assets/logo icon.ico',
+    apple: '/assets/blueLogo.png'
   },
   manifest: '/manifest.webmanifest',
   keywords: [
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: 'Pharmacon',
     images: [
       {
-        url: 'assets/blueLogo.svg',
+        url: '/assets/blueLogo.svg',
         width: 800,
         height: 600
       }
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: 'Pharmacon',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
-    images: ['assets/blueLogo.svg']
+    images: ['/assets/blueLogo.svg']
   }
 };
 
