@@ -13,8 +13,7 @@ export default function ContactSection() {
 
       {/* Paragraph */}
       <p className="text-white text-center font-light my-4 px-4 md:px-20">
-        This is a paragraph inside a card banner. You can use this space to give
-        an introduction or highlight important information for your users.
+        {t('contactSection')}
       </p>
 
       {/* Button */}
