@@ -27,9 +27,7 @@ export default function Hero({ image }: { image: string }) {
           </p>{' '}
           {/* Text adjusted for various screens */}
           <p className="text-sm md:text-lg lg:text-xl font-light w-full md:w-3/4 text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
-            ipsum dolor sit amet.
+            {t('heroPara')}
           </p>
         </div>
       </div>

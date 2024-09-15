@@ -1,9 +1,10 @@
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
   const locale = useLocale();
+  const t = useTranslations();
 
   return (
     <footer
@@ -33,20 +34,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full lg:w-auto">
           {/* Column 1 */}
           <div>
-            <ul className="text-center lg:text-left">
+            <ul
+              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
+            >
               <li>
                 <Link href={`/${locale}/about`} className="hover:underline">
-                  About Us
+                  {t('aboutUs')}
                 </Link>
               </li>
               <li>
                 <Link href="/careers" className="hover:underline">
-                  Careers
+                  {t('careers')}
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="hover:underline">
-                  Blog
+                  {t('blog')}
                 </Link>
               </li>
             </ul>
@@ -54,20 +57,22 @@ export default function Footer() {
 
           {/* Column 2 */}
           <div>
-            <ul className="text-center lg:text-left">
+            <ul
+              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
+            >
               <li>
                 <Link href={`/${locale}/contact`} className="hover:underline">
-                  Contact Us
+                  {t('contactUs')}
                 </Link>
               </li>
               <li>
                 <Link href="/faq" className="hover:underline">
-                  FAQ
+                  {t('faq')}
                 </Link>
               </li>
               <li>
                 <Link href="/help" className="hover:underline">
-                  Help Center
+                  {t('helpCenter')}
                 </Link>
               </li>
             </ul>
@@ -75,20 +80,22 @@ export default function Footer() {
 
           {/* Column 3 */}
           <div>
-            <ul className="text-center lg:text-left">
+            <ul
+              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
+            >
               <li>
                 <Link href="/terms" className="hover:underline">
-                  Terms of Service
+                  {t('termsOfService')}
                 </Link>
               </li>
               <li>
                 <Link href="/privacy" className="hover:underline">
-                  Privacy Policy
+                  {t('privacyPolicy')}
                 </Link>
               </li>
               <li>
                 <Link href="/cookies" className="hover:underline">
-                  Cookie Policy
+                  {t('cookiePolicy')}
                 </Link>
               </li>
             </ul>
@@ -102,21 +109,21 @@ export default function Footer() {
       {/* Second Row: Policies */}
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center text-sm">
         <p className="mb-4 lg:mb-0 text-center lg:text-left">
-          &copy; 2024 PHARMACON. All Rights Reserved.
+          {t('copyright')}
         </p>
         <div
           className={`flex ${locale === 'ar' ? 'space-x-reverse' : ''} space-x-2`}
         >
           <Link href="/terms" className="hover:underline">
-            Terms of Service
+            {t('termsOfService')}
           </Link>
           <p>|</p>
           <Link href="/privacy" className="hover:underline">
-            Privacy Policy
+            {t('privacyPolicy')}
           </Link>
           <p>|</p>
           <Link href="/cookies" className="hover:underline">
-            Cookie Policy
+            {t('cookiePolicy')}
           </Link>
         </div>
       </div>

@@ -33,14 +33,9 @@ export default function About() {
           </div>
           <div>
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
-              Not just a regular pharmaceutical agency
+              {t('NotJust')}
             </h1>
-            <p className="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
+            <p className="text-gray-600 mb-4">{t('lorem')}</p>
             <Link
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
@@ -53,14 +48,9 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
-              Not just a regular pharmaceutical agency
+              {t('NotJust')}
             </h1>
-            <p className="text-gray-600 mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-              luctus nec ullamcorper mattis, pulvinar dapibus leo.
-            </p>
+            <p className="text-gray-600 mb-4">{t('lorem')}</p>
             <Link
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"

@@ -267,7 +267,7 @@ export default function ContactSection() {
                 errors.message ? 'border-red-500' : 'border-black'
               }`}
               rows={4}
-              placeholder="Write your message.."
+              placeholder={t('message') + '...'}
               id="message"
               style={{ resize: 'none' }}
             ></textarea>
