@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { useLocale } from 'next-intl'; // Import useLocale for locale-based direction handling
+import { useLocale, useTranslations } from 'next-intl'; // Import useLocale for locale-based direction handling
 
 import Loader from '@/components/ui/Loader';
 
@@ -16,6 +16,7 @@ interface Product {
 
 export default function ProductsComponent() {
   const locale = useLocale(); // Get the current locale
+  const t = useTranslations();
   const [activeTab, setActiveTab] = useState('all');
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
@@ -62,13 +63,12 @@ export default function ProductsComponent() {
     >
       {/* Section Title */}
       <div className="text-center">
-        <h4 className="text-[#2CA6D5] uppercase text-sm">Products</h4>
+        <h4 className="text-[#2CA6D5] uppercase text-sm">{t('products')}</h4>
         <h1 className="text-3xl font-bold text-[#01547E] my-2">
-          Learn About Our Products
+          {t('learnProducts')}
         </h1>
         <p className="text-[#01547E] font-light max-w-xl mx-auto">
-          We serve a diversified therapeutic area with a unique portfolio from
-          high standard European sources.
+          {t('ourServParagraph')}
         </p>
       </div>
 
@@ -138,8 +138,8 @@ export default function ProductsComponent() {
                       href={`products/${product.id}`}
                       className="text-sm text-[#01547E] inline-flex items-center hover:underline"
                     >
-                      Learn More
-                      <span>→</span>
+                      {t('learnMore')}
+                      <span>{t('arrowIcon')}</span>
                     </Link>
                   </div>
                 </div>

@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 'use client';
 import axios from 'axios';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 import {
   FaPhoneAlt,
@@ -16,6 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function ContactSection() {
   const locale = useLocale();
+  const t = useTranslations()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -131,7 +132,7 @@ export default function ContactSection() {
       {/* Left Column - Contact Information */}
       <div className="bg-[#3B5998] text-white p-10 lg:w-1/2 rounded-l-lg flex flex-col justify-between space-y-8">
         <div>
-          <h2 className="text-3xl font-semibold mb-8">Contact Information</h2>
+          <h2 className="text-3xl font-semibold mb-8">{t('contactInfo')}</h2>
           <div className="space-y-6">
             <a href="tel:+201094743313" className="flex items-center">
               <FaPhoneAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
@@ -144,9 +145,9 @@ export default function ContactSection() {
             <div className="flex items-center">
               <FaMapMarkerAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               <p>
-                Nasr City,
+                {t('address')}
                 <br />
-                Egypt, EG
+                {t('address2')}
               </p>
             </div>
           </div>
@@ -170,7 +171,7 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="firstName">
-                First Name
+                {t('firstName')}
               </label>
               <input
                 type="text"
@@ -190,7 +191,7 @@ export default function ContactSection() {
             </div>
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="lastName">
-                Last Name
+                {t('lastName')}
               </label>
               <input
                 type="text"
@@ -213,7 +214,7 @@ export default function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="email">
-                Email
+                {t('email')}
               </label>
               <input
                 type="email"
@@ -233,7 +234,7 @@ export default function ContactSection() {
             </div>
             <div>
               <label className="block text-gray-700 mb-2" htmlFor="phone">
-                Phone Number
+                {t('phone')}
               </label>
               <input
                 type="tel"
@@ -255,7 +256,7 @@ export default function ContactSection() {
 
           <div>
             <label className="block text-gray-700 mb-2" htmlFor="message">
-              Write your message
+              {t('message')}
             </label>
             <textarea
               name="message"
@@ -281,7 +282,7 @@ export default function ContactSection() {
               className="bg-[#3B5998] text-white py-3 px-8 rounded-lg hover:bg-blue-900 transition"
               type="submit"
             >
-              SEND MESSAGE
+              {t('send')}
             </button>
           </div>
         </form>

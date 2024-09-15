@@ -1,7 +1,7 @@
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function Hero({ image }: { image: string }) {
-  // const t = useTranslations();
+  const t = useTranslations();
   const locale = useLocale();
   return (
     <section
@@ -18,12 +18,12 @@ export default function Hero({ image }: { image: string }) {
             ></div>{' '}
             {/* Adjusted for smaller screens */}
             <h1 className="text-base md:text-lg lg:text-xl font-bold">
-              PHARMACON
+              {t('heroTitle')}
             </h1>{' '}
             {/* Font size adjusted */}
           </div>
           <p className="text-2xl md:text-4xl lg:text-6xl mb-6 w-full md:w-2/3 text-start">
-            Best Pharmaceutical Company for Your Healthcare
+            {t('heroDesc')}
           </p>{' '}
           {/* Text adjusted for various screens */}
           <p className="text-sm md:text-lg lg:text-xl font-light w-full md:w-3/4 text-start">
