@@ -3,9 +3,9 @@
   "name": "Pharmacon",
   "icons": [
     {
-      "src": "assets/logo icon.ico",
+      "src": "assets/blueLogo.png",
       "sizes": "192x192",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
       "src": "assets/blueLogo.png",
