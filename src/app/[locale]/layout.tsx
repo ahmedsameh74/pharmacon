@@ -2,9 +2,17 @@ import type { Metadata } from 'next';
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { Cairo } from 'next/font/google';
 
 import Navbar from '@/components/custom/home/Navbar';
 import Footer from '@/components/custom/home/Footer';
+
+const cairo = Cairo({
+  weight: ['400', '500', '600', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   title: 'Pharmacon',
@@ -62,7 +70,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
-        className={`bg-background text-foreground font-sans antialiased`}
+        className={`${cairo.className} bg-background text-foreground antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />

@@ -16,11 +16,7 @@ export default function About() {
             {t('company')}
           </h1>
         </div>
-        <p className="text-gray-600 ml-4 md:ml-20">
-          Pharmacon is Germany -Egyptian promising pharmaceutical company
-          dedicated to promote under license high quality products in the
-          Egyptian market.
-        </p>
+        <p className="text-gray-600 ml-4 md:ml-20">{t('homeDesc')}</p>
       </div>
 
       <div className="max-w-4xl mx-auto my-8 p-2 bg-white rounded-lg space-y-6 md:space-y-8">
@@ -49,7 +45,7 @@ export default function About() {
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
-              Learn More
+              {t('learnMore')}
             </Link>
           </div>
         </div>
@@ -69,7 +65,7 @@ export default function About() {
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
-              Learn More
+              {t('learnMore')}
             </Link>
           </div>
 

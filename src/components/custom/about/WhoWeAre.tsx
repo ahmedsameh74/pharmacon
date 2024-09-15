@@ -1,8 +1,9 @@
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 export default function WhoWeAre() {
   const locale = useLocale();
+  const t = useTranslations();
   return (
     <div className="w-full bg-[#DCF0FA] py-12 flex flex-col justify-center items-center space-y-6 md:space-y-12">
       {/* Section Title */}
@@ -12,7 +13,7 @@ export default function WhoWeAre() {
             className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-6' : 'ml-6'}`}
           ></div>
           <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-            Who We Are
+            {t('whoWeAre')}
           </h1>
         </div>
       </div>
@@ -40,15 +41,10 @@ export default function WhoWeAre() {
                   className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-4' : 'ml-4'}`}
                 ></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-                  Our Vision
+                  {t('ourVision')}
                 </h1>
               </div>
-              <p className="text-gray-600">
-                expanding our presence in the Egyptian pharmaceutical market
-                across the various therapeutic areas and meeting the growing
-                healthcare needs. We aim to be among the top players in the
-                Egyptian pharma market.
-              </p>
+              <p className="text-gray-600">{t('ourVisionDesc')}</p>
             </div>
           </div>
         </div>
@@ -63,16 +59,10 @@ export default function WhoWeAre() {
                   className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-4' : 'ml-4'}`}
                 ></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-                  Our Mission
+                  {t('ourMission')}
                 </h1>
               </div>
-              <p className="text-gray-600 text-start">
-                to have a role in improving quality of life in the community
-                through providing access to affordable high-quality
-                pharmaceutical solutions. To recruit and develop high caliber
-                employees who share our values and beliefs. And to work with our
-                partners to achieve our goals.
-              </p>
+              <p className="text-gray-600 text-start">{t('ourMissionDesc')}</p>
             </div>
 
             {/* Image Half (60%) */}
@@ -109,15 +99,10 @@ export default function WhoWeAre() {
                   className={`w-16 h-[2px] bg-blue-500 ${locale === 'en' ? 'mr-4' : 'ml-4'}`}
                 ></div>
                 <h1 className="text-lg md:text-xl font-bold text-[#01547E]">
-                  Our Value
+                  {t('ourValues')}
                 </h1>
               </div>
-              <p className="text-gray-600">
-                to provide the Egyptian patient by a pharmaceutical product with
-                a high standard of safety and efficacy profile and competitive
-                price. Our goal is to be one of the best pharmaceutical
-                companies in the Egyptian market.
-              </p>
+              <p className="text-gray-600">{t('ourValuesDesc')}</p>
             </div>
           </div>
         </div>

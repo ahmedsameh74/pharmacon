@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 import MedicineBox from './MidicineBox';
 
@@ -13,6 +14,7 @@ interface Product {
 
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([]);
+  const t = useTranslations();
   // const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchProducts = async () => {
@@ -35,14 +37,13 @@ export default function Products() {
     <div className="w-full bg-[#DCF0FA] py-12 flex flex-col md:flex-col justify-center items-center space-y-6 md:space-y-12 md:space-x-12">
       <div className="flex items-center flex-col text-center">
         <p className="text-base md:text-lg font-semibold text-[#2CA6D5] mb-2">
-          PRODUCTS
+          {t('products')}
         </p>
         <p className="text-base md:text-2xl font-bold text-[#01547E]">
-          Learn about our products
+          {t('learnProducts')}
         </p>
         <p className="text-sm md:text-lg font-light text-gray-600 mt-4 w-3/4">
-          We serve a diversified therapeutic area with a unique portfolio from
-          high standard European sources.
+          {t('ourServParagraph')}
         </p>
       </div>
       <div className="flex justify-center items-center mt-8 flex-wrap">
