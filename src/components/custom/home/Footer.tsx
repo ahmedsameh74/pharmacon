@@ -25,9 +25,7 @@ export default function Footer() {
               height={100}
             />
           </div>
-          <p className="text-sm text-center lg:text-left">
-            {t('footerPara')}
-          </p>
+          <p className="text-sm text-center lg:text-left">{t('footerPara')}</p>
         </div>
 
         {/* Right Section: 3 Columns of Links */}
