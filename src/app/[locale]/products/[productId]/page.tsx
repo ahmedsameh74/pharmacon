@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   return {
     title: `${product.title} | Pharmacon`,
     description: product.description,
-    keywords: [product.title, 'Pharmacon', 'Health', 'Quality'],
+    keywords: [product.title, 'Pharmacon', 'PharmaconEG', 'EG', 'eg', 'Health', 'Quality'],
     icons: {
       icon: '../../assets/logo icon.ico',
       apple: '../../assets/logo icon.ico'

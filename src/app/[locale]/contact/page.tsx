@@ -14,6 +14,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.webmanifest',
   keywords: [
     'Pharmacon',
+    'PharmaconEG', 'EG', 'eg',
     'Health',
     'Quality',
     'Products',

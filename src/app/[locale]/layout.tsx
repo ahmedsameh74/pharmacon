@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     apple: 'assets/logo icon.ico'
   },
   manifest: '/manifest.webmanifest',
-  keywords: ['Pharmacon', 'Health', 'Quality', 'Products', 'Pharmacy'],
+  keywords: ['Pharmacon', 'PharmaconEG', 'EG', 'eg', 'Health', 'Quality', 'Products', 'Pharmacy'],
   robots: {
     index: true,
     follow: true,

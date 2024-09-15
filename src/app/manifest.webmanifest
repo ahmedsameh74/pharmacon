@@ -8,9 +8,9 @@
       "type": "image/x-icon"
     },
     {
-      "src": "assets/logo icon.ico",
+      "src": "assets/whiteLogo.svg",
       "sizes": "512x512",
-      "type": "image/x-icon"
+      "type": "image/svg+xml"
     },
 		{
 			"src": "assets/logo icon.ico",
