@@ -23,6 +23,16 @@ export default function ProductsComponent() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
+  const categories = [
+    { name: t('all'), slug: 'all' },
+    { name: t('medicines'), slug: 'Medicines' },
+    { name: t('supplements'), slug: 'Supplements' },
+    { name: t('vitamins'), slug: 'vitamins' },
+    { name: t('cosmetics'), slug: 'Cosmetics' },
+    { name: t('skinCare'), slug: 'Skin Care' },
+    { name: t('women'), slug: 'For Woman' }
+  ];
+
   // Fetch the products from the JSON file
   useEffect(() => {
     const fetchProducts = async () => {
@@ -74,28 +84,20 @@ export default function ProductsComponent() {
 
       {/* Tabs for product categories */}
       <div className="flex flex-wrap justify-center gap-4 mt-8">
-        {[
-          'all',
-          'Vitamins',
-          'Cosmetics',
-          'Supplements',
-          'Medicines',
-          'Skin Care',
-          'For Woman'
-        ].map((category) => (
+        {categories.map((category) => (
           <button
-            key={category}
+            key={category.name}
             onClick={() => {
-              setActiveTab(category);
+              setActiveTab(category.slug);
               setCurrentPage(1); // Reset to first page when switching categories
             }}
             className={`px-4 py-2 rounded-full border transition ${
-              activeTab === category
+              activeTab === category.slug
                 ? 'bg-[#00557C] text-white'
                 : 'border-gray-300 text-gray-600 hover:bg-[#00557C] hover:text-white'
             }`}
           >
-            {category}
+            {category.name}
           </button>
         ))}
       </div>
@@ -108,7 +110,7 @@ export default function ProductsComponent() {
           {/* No Products Case */}
           {paginatedProducts.length === 0 ? (
             <div className="text-center text-gray-500 mt-12">
-              <p>No products available in this category.</p>
+              <p>{t('noProducts')}</p>
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 max-w-5xl mx-auto">
@@ -130,10 +132,12 @@ export default function ProductsComponent() {
                   </div>
                   {/* Product Details */}
                   <div className="flex-1">
-                    <h2 className="text-2xl font-semibold text-[#01547E] mb-2">
+                    <h2 className="text-xl lg:text-2xl font-semibold text-[#01547E] mb-2">
                       {product.title}
                     </h2>
-                    <p className="text-gray-500 mb-4">{product.description}</p>
+                    <p className="text-gray-500 mb-4 text-sm">
+                      {product.description}
+                    </p>
                     <Link
                       href={`products/${product.id}`}
                       className="text-sm text-[#01547E] inline-flex items-center hover:underline"
