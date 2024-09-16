@@ -20,7 +20,7 @@ interface Params {
 
 // Function to fetch product data from the local JSON file
 async function getProduct(productId: string): Promise<Product> {
-  const filePath = path.join(process.cwd(), 'public', 'products.json'); // Adjust the path based on the location of your file
+  const filePath = path.join(process.cwd(), 'public', 'products.json');
   const fileContents = await fs.readFile(filePath, 'utf-8');
 
   const products: Product[] = JSON.parse(fileContents);
