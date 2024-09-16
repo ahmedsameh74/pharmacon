@@ -64,7 +64,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:underline">
+                <Link href={`/${locale}/faq`} className="hover:underline">
                   {t('faq')}
                 </Link>
               </li>
@@ -82,20 +82,26 @@ export default function Footer() {
               className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
             >
               <li>
-                <Link href="/terms" className="hover:underline">
+                <Link
+                  href={`/${locale}/terms-and-conditions`}
+                  className="hover:underline"
+                >
                   {t('termsOfService')}
                 </Link>
               </li>
               <li>
-                <Link href="/privacy" className="hover:underline">
+                <Link
+                  href={`/${locale}/privacy-policy`}
+                  className="hover:underline"
+                >
                   {t('privacyPolicy')}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/cookies" className="hover:underline">
                   {t('cookiePolicy')}
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -112,16 +118,15 @@ export default function Footer() {
         <div
           className={`flex ${locale === 'ar' ? 'space-x-reverse' : ''} space-x-2`}
         >
-          <Link href="/terms" className="hover:underline">
+          <Link
+            href={`/${locale}/terms-and-conditions`}
+            className="hover:underline"
+          >
             {t('termsOfService')}
           </Link>
           <p>|</p>
-          <Link href="/privacy" className="hover:underline">
+          <Link href={`/${locale}/privacy-policy`} className="hover:underline">
             {t('privacyPolicy')}
-          </Link>
-          <p>|</p>
-          <Link href="/cookies" className="hover:underline">
-            {t('cookiePolicy')}
           </Link>
         </div>
       </div>
