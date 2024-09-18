@@ -11,30 +11,6 @@
   "faq": "FAQ",
   "termsOfService": "Terms of Service",
   "privacyPolicy": "Privacy Policy",
-  "Overview": "Overview",
-  "privacyOver": "Pharmacon is strongly committed to respecting the privacy of all persons using our websites and mobile applications and the protection of any personally identifiable information we collect. Personal information will be used in accordance with this Privacy Policy, part of the Terms of Use of the Web Sites/Apps.",
-  "yourAgree": "Your Express Consent to Collection and Use of Information",
-  "pharmaSave": "Pharmacon reserves the right to collect personally identifiable information like your name, address, telephone number, and email, as well as demographic data. All such information is treated confidentially.",
-  "byAgree": "By accessing our websites/apps or communicating with us through other channels, you consent to the collection, use, and storage of your personal information in accordance with this Privacy Policy.",
-  "noSell": "We Will Not Sell Your Personal Information",
-  "changePrivacyDesc": "We reserve the right to revise this Privacy Policy at any time. Continued use of our websites or services following any changes signifies your acceptance of the updated policy.",
-  "changePrivacyTitle": "Changes to Privacy Policy",
-  "dataObjection": "Object to data processing",
-  "dataRestrict": "Restrict processing of your data",
-  "deleteRequest": "Request deletion",
-  "correctionRequest": "Request corrections",
-  "accessCopy": "Access a copy of your personal information",
-  "yourRights":"Your Rights",
-  "Cookies": "Cookies",
-  "cookieDesc": "Our website uses cookies to track sessions and enhance your browsing experience. By using our websites, you agree to the placing of cookies on your device. You can opt-out by changing your browser settings.",
-  
-  "retentionAndSecurity": "Retention and Security",
-  "retentionAndSecurityDesc": "We retain personal information as long as legally required and for business purposes. We use secure servers and implement measures to protect your data from unauthorized access or accidental disclosure.",
-  "noSellGroupCompanies": "Our group companies",
-  "noSellFranchisors": "Our franchisors",
-  "noSellPaymentProviders": "Payment service providers and delivery companies",
-  "noSellGovernmentBodies": "Government bodies or authorities for regulatory compliance",
-  "noSellAgencies": "Agencies for traffic, sales, and demographic statistics",
   "cookiePolicy": "Cookie Policy",
   "copyright": "Copyright © 2024 Pharmacon. All rights reserved.",
   "rating": "Job Done Successfully",
@@ -84,66 +60,5 @@
   "skinCare": "Skin Care",
   "women": "For Women",
   "vitamins": "Vitamins",
-  "cosmetics": "Cosmetics",
-  "termsAndConditions": "Terms & Conditions",
-  "termsAndConditionsDesc1": "This page tells you information about us and the legal terms and conditions (“Terms & Conditions”) under which we sell any of the products (“Products”) listed on our website, mobile or tablet application, or any other platform (collectively referred to as “Website”) to you.",
-  
-  "informationAboutUs": "Information about us",
-  "informationAboutUsDesc": "This Website is owned and operated by Pharmacon. (“We” or “Us” as the case may be). For the purposes of these Terms & Conditions, the terms \"We\" and \"Us\" refer to Pharmacon or to one of its affiliated companies in your territory of residence. When you purchase Products from our Website, you will be entering into a contract with either Pharmacon or its relevant affiliated company in your territory of residence.",
-  
-  "termsAndConditionsHeader": "Terms and conditions",
-  "termsAndConditionsDesc": "These Terms & Conditions apply to your use of the Website. By accessing, browsing, using or registering on our Website, you confirm that you have read, understood and agree to these Terms & Conditions in their entirety. Please check this page regularly to determine whether our Terms & Conditions have been updated - any new terms will automatically be effective when they are published on this Website.",
-  
-  "reserveRight": "We reserve the right to:",
-  "reserveRightAmend": "amend our Terms & Conditions;",
-  "reserveRightRefuse": "refuse any user access to our Website;",
-  "reserveRightTerminate": "terminate user accounts;",
-  "reserveRightModify": "modify or withdraw (temporarily or permanently) this Website without notice; or",
-  "reserveRightCancel": "cancel customer orders at our discretion.",
-  
-  "registration": "Registration",
-  "registrationDesc": "You may register as a customer of the Website and as part of the registration process you will need to select a password which is in accordance with our password policy. You are solely responsible for the security of your password and account. You agree to notify us immediately if you suspect any unauthorised use of your account or access to your password. We would be storing your information to be able to make your experience with our brand better.",
-  
-  "yourInformation": "Your Information",
-  "yourInformationDesc": "You grant Us a non-exclusive, worldwide, perpetual, irrevocable, royalty-free, sub-licensable (through multiple tiers) right to use any information or material, personal or otherwise, that you provide to us or other users of the Website in the registration, buying process, in the feedback area or through any e-mail or by way of any other feature or use of the Website (the \"Information\") for the purposes of operating and promoting the Website. You are solely responsible for the Information.",
-  
-  "intellectualProperty": "Intellectual property",
-  "intellectualPropertyDesc": "All copyright, trademarks and other intellectual property rights in all material, content or software supplied as part of our Website, including emails or any other form of communication with you is protected by international copyright and database right laws and shall remain at all times vested in Us or, where relevant, our franchisors/licensors.",
-  
-  "intellectualPropertyUse": "You are permitted to use this material only as expressly authorised by Us or our franchisors/licensors. You may not extract and/or utilise the whole or any part the Website without our express written consent.",
-  
-  "brandNames": "The brand names and logos indicated on our Website and all related emails are owned either by Us or by our franchisors/licensors in the territories in which we operate.",
-  
-  "userContent": "We may provide the functionality to allow customers to provide Product ratings and reviews (“User Content”) in relation to the Products. If so, customers are solely responsible for such User Content, and you warrant that any User Content you post is accurate and that you are the sole author. We do not necessarily review User Content prior to it being posting and it may not reflect our views or opinions. You hereby assign to us all intellectual property rights in any User Content you post on the Website. We make no warranty as to the accuracy or reliability of such User Content. We reserve the right to remove User Content which in our sole opinion is deemed to be incorrect, offensive, illegal or otherwise unacceptable. User Content which provides negative reviews of Products will generally be deemed acceptable when objective, not otherwise in breach of these Terms & Conditions and posted by a verified customer.",
-  
-  "transferOfRights": "Transfer of Rights and Obligations",
-  "transferOfRightsDesc": "You hereby grant Us the right to, and irrevocably acknowledge and agree that We may at any time, transfer all or any part of the rights, benefits, obligations or liabilities (whether express or assumed) under these Terms & Conditions to any of our affiliates without requiring your further specific agreement. We agree to use all reasonable endeavours to provide notice to you of any transfer by way of a posting on the Website or other platforms.",
-  
-  "viruses": "VIRUSES",
-  "virusesDesc": "We do not guarantee that our Website will be secure or free from bugs or viruses. You are responsible for configuring your information technology, computer programmes and platform in order to access our Website. You should use your own virus protection software. You must not misuse our Website by knowingly introducing viruses, trojans, worms, logic bombs or other material which is malicious or technologically harmful. You must not attempt to gain unauthorised access to our Website, the server on which our Website is stored or any server, computer or database connected to our Website. You must not attack our Website via a denial-of-service attack or a distributed denial-of-service attack. We will report any such breach to the relevant law enforcement authorities and we will co-operate with those authorities by disclosing your identity to them. In the event of such a breach, your right to use our Website will cease immediately.",
-  
-  "limitationOfLiability": "Limitation of liability",
-  "limitationOfLiabilityDesc": "While we will use reasonable endeavours to verify the accuracy of any information we place on our Website, we make no warranties, whether express or implied in relation to its accuracy or in relation to any transaction that may be conducted on or through the Website, in our stores or with customer services (including but not limited to, implied warranties of non-infringement, compatibility, security, accuracy, conditions of completeness, or any implied warranty arising from course of dealing or usage or trade).",
-  
-  "websiteSecurity": "Although our Website follows high levels of Information Security Standards, we make no warranty that our Website will meet your requirements or will be uninterrupted, timely or error-free, that defects will be corrected, or that the site or the server that makes it available are free of viruses or bugs or represents the full functionality, accuracy or reliability of the Website. We will not be responsible or liable to you for any loss of content or material uploaded or transmitted through the Website.",
-  
-  "disclaimer": "To the fullest extent permissible under applicable law, We disclaim any and all warranties of any kind, whether express or implied, in relation to the Products. We will not be liable, in contract, tort (including, without limitation, negligence), pre-contract or other representations (other than fraudulent or negligent misrepresentations) or otherwise out of or in connection with these Terms & Conditions for:",
-  "disclaimerEconomicLoss": "any economic losses (including without limitation loss of revenues, profits, contracts, business or anticipated savings); or",
-  "disclaimerGoodwill": "any loss of goodwill or reputation; or",
-  "disclaimerSpecialLosses": "any special or indirect losses suffered or incurred by that party arising out of or in connection with the provisions of any matter under these Terms & Conditions.",
-  
-  "liabilityExclusion": "Nothing in these Terms & Conditions shall exclude or limit our liability for death or personal injury resulting from our negligence or that of our servants, agents or employees.",
-  
-  "general": "General",
-  "entireAgreement": "Entire Agreement",
-  "entireAgreementDesc": "These Terms & Conditions set out the entire agreement between you and Us and supersede any and all prior terms, conditions, warranties and/or representations to the fullest extent permitted by law.",
-  
-  "law": "Law",
-  "lawDesc": "Any matter that arises out of your use of our Website shall be governed by the applicable laws in the territory in which you are registered to use our Website (assuming it is a territory in which we operate) and shall be subject to the exclusive jurisdiction of the courts of that relevant territory.",
-  
-  "waiver": "Waiver",
-  "waiverDesc": "If you breach these Terms & Conditions and we take no immediate action, this does not mean that We will not be entitled to assert our rights and remedies at a later date.",
-  
-  "survival": "Survival",
-  "survivalDesc": "Each provision of these Terms & Conditions shall be construed as separately applying and surviving even if for any reason one or other of those provisions is held to be inapplicable or unenforceable in any circumstances."
+  "cosmetics": "Cosmetics"
 }
