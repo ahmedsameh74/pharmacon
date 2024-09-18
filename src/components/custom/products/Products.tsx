@@ -8,14 +8,10 @@ import Loader from '@/components/ui/Loader';
 
 interface Product {
   id: number;
-  titleEn: string;
-  titleAr: string;
-  descriptionEn: string;
-  descriptionAr: string;
+  title: string;
+  description: string;
   image: string;
   tags: string[];
-  bodyAr: string;
-  bodyEn: string;
 }
 
 export default function ProductsComponent() {
@@ -128,7 +124,7 @@ export default function ProductsComponent() {
                   <div className="w-36 h-36 flex-shrink-0 relative">
                     <Image
                       src={product.image}
-                      alt={product.titleEn}
+                      alt={product.title}
                       width={160}
                       height={160}
                       className="rounded-full object-cover border border-gray-200 p-1"
@@ -137,12 +133,10 @@ export default function ProductsComponent() {
                   {/* Product Details */}
                   <div className="flex-1">
                     <h2 className="text-xl lg:text-2xl font-semibold text-[#01547E] mb-2">
-                      {locale === 'ar' ? product.titleAr : product.titleEn}
+                      {product.title}
                     </h2>
                     <p className="text-gray-500 mb-4 text-sm">
-                      {locale === 'ar'
-                        ? product.descriptionAr
-                        : product.descriptionEn}
+                      {product.description}
                     </p>
                     <Link
                       href={`products/${product.id}`}
