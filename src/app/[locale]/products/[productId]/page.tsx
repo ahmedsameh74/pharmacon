@@ -2,18 +2,14 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 import { Metadata } from 'next';
+import Image from 'next/image';
 
-import ProductDetails from '@/components/custom/product/Product';
-
-export interface Product {
+interface Product {
   id: number;
-  titleEn: string;
-  titleAr: string;
-  descriptionEn: string;
-  descriptionAr: string;
+  title: string;
+  description: string;
   image: string;
-  bodyEn: string;
-  bodyAr: string;
+  body: string;
 }
 
 interface Params {
@@ -42,11 +38,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const product = await getProduct(params.productId);
 
   return {
-    title: `${product.titleEn} | Pharmacon`,
-    description: product.descriptionEn,
+    title: `${product.title} | Pharmacon`,
+    description: product.description,
     keywords: [
-      product.titleEn,
-      product.titleAr,
+      product.title,
       'Pharmacon',
       'PharmaconEG',
       'EG',
@@ -59,8 +54,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       apple: '../../assets/logo icon.ico'
     },
     openGraph: {
-      title: `${product.titleEn} | Pharmacon`,
-      description: product.descriptionEn,
+      title: `${product.title} | Pharmacon`,
+      description: product.description,
       url: `https://your-site.com/products/${params.productId}`,
       images: [
         {
@@ -83,8 +78,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.titleEn} | Pharmacon`,
-      description: product.descriptionEn,
+      title: `${product.title} | Pharmacon`,
+      description: product.description,
       images: [product.image]
     }
   };
@@ -94,5 +89,28 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function ProductPage({ params }: Params) {
   const product = await getProduct(params.productId);
 
-  return <ProductDetails product={product} />;
+  return (
+    <div className="container mx-auto px-6 lg:px-0 pt-12 pb-6 flex flex-col items-center justify-center lg:flex-col space-y-8">
+      <h1 className="text-3xl font-bold text-center lg:text-center text-[#01547E]">
+        {product.title}
+      </h1>
+      <p className="text-center font-light text-gray-500">
+        {product.description}
+      </p>
+      <Image
+        src={product.image}
+        alt={product.title}
+        width={800}
+        height={300}
+        objectFit="cover"
+        className="w-auto h-auto"
+      />
+      {product.body ? (
+        <div
+          dangerouslySetInnerHTML={{ __html: product.body }}
+          className="product-body"
+        />
+      ) : null}
+    </div>
+  );
 }
