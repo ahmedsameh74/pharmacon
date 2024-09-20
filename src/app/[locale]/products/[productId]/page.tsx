@@ -103,8 +103,7 @@ export default async function ProductPage({ params }: Params) {
         width={800}
         height={300}
         loading="lazy"
-        objectFit="cover"
-        className="w-auto h-auto"
+        className="w-auto h-auto object-cover"
       />
       {product.body ? (
         <div

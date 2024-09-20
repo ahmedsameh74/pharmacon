@@ -28,10 +28,12 @@ export default function WhoWeAre() {
               <Image
                 src="/assets/place.png"
                 alt="Card Image"
-                layout="fill"
+                // layout="fill"
+                // objectFit="cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 loading="lazy"
-                objectFit="cover"
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
 
@@ -71,10 +73,12 @@ export default function WhoWeAre() {
               <Image
                 src="/assets/placee.png"
                 alt="Card Image"
-                layout="fill"
+                // layout="fill"
+                // objectFit="cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                fill
                 loading="lazy"
-                objectFit="cover"
-                className="absolute inset-0 w-full h-full"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
           </div>
@@ -88,10 +92,12 @@ export default function WhoWeAre() {
               <Image
                 src="/assets/placeee.png"
                 alt="Card Image"
-                layout="fill"
+                // layout="fill"
+                fill
                 loading="lazy"
-                objectFit="cover"
-                className="absolute inset-0 w-full h-full"
+                // objectFit="cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
 
