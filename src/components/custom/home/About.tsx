@@ -28,6 +28,7 @@ export default function About() {
               style={{ width: 'auto', height: 'auto' }}
               width={300}
               height={300}
+              loading="lazy"
               className="rounded-lg"
             />
           </div>
@@ -66,6 +67,7 @@ export default function About() {
               style={{ width: 'auto', height: 'auto' }}
               width={300}
               height={300}
+              loading="lazy"
               className="rounded-lg"
             />
           </div>

@@ -1,6 +1,6 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
@@ -12,7 +12,7 @@ export default function Navbar() {
   const menuRef = useRef<HTMLDivElement | null>(null); // Ref for mobile menu
   const buttonRef = useRef<HTMLButtonElement | null>(null); // Ref for burger button
   const dropdownRef = useRef<HTMLDivElement | null>(null); // Ref for language dropdown
-  const router = useRouter();
+  // const router = useRouter();
   const pathname = usePathname(); // Get the current pathname
   const t = useTranslations();
 
@@ -59,11 +59,11 @@ export default function Navbar() {
     { name: t('contactUs'), href: `/${selectedLocale}/contact` }
   ];
 
-  const handleLocaleChange = (newLocale: string) => {
-    router.push(`/${newLocale}${pathname.replace(`/${locale}`, '')}`);
-    setSelectedLocale(newLocale);
-    setDropdownOpen(false); // Close the dropdown after selection
-  };
+  // const handleLocaleChange = (newLocale: string) => {
+  //   router.push(`/${newLocale}${pathname.replace(`/${locale}`, '')}`);
+  //   setSelectedLocale(newLocale);
+  //   setDropdownOpen(false); // Close the dropdown after selection
+  // };
 
   return (
     <nav className="bg-[#DCF0FA] shadow-md">
@@ -83,6 +83,7 @@ export default function Navbar() {
                   style={{ width: 'auto', height: 'auto' }}
                   width={100}
                   height={100}
+                  loading="lazy"
                 />
               </Link>
             </div>
@@ -118,7 +119,7 @@ export default function Navbar() {
 
           {/* Right part of the navbar */}
           {/* Language Dropdown */}
-          <div className="relative h-full flex" ref={dropdownRef}>
+          {/* <div className="relative h-full flex" ref={dropdownRef}>
             <button
               type="button"
               onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -156,7 +157,7 @@ export default function Navbar() {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
               href="mailto:demo@gmail.com"

@@ -3,12 +3,12 @@
   "name": "Pharmacon",
   "icons": [
     {
-      "src": "assets/blueLogo.png",
+      "src": "assets/192_192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "assets/blueLogo.png",
+      "src": "assets/512_512.png",
       "sizes": "512x512",
       "type": "image/png"
     },

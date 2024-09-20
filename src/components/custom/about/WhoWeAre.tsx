@@ -29,6 +29,7 @@ export default function WhoWeAre() {
                 src="/assets/place.png"
                 alt="Card Image"
                 layout="fill"
+                loading="lazy"
                 objectFit="cover"
                 className="absolute inset-0 w-full h-full"
               />
@@ -71,6 +72,7 @@ export default function WhoWeAre() {
                 src="/assets/placee.png"
                 alt="Card Image"
                 layout="fill"
+                loading="lazy"
                 objectFit="cover"
                 className="absolute inset-0 w-full h-full"
               />
@@ -87,6 +89,7 @@ export default function WhoWeAre() {
                 src="/assets/placeee.png"
                 alt="Card Image"
                 layout="fill"
+                loading="lazy"
                 objectFit="cover"
                 className="absolute inset-0 w-full h-full"
               />

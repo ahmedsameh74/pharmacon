@@ -102,7 +102,7 @@ export default function ContactSection() {
     if (isValid) {
       try {
         const response = await axios.post(
-          'https://pharmacon-server.vercel.app/send-email',
+          'https://pharmacon-server.vercel.app/api/send-email',
           formData
         );
         setLoading(true);

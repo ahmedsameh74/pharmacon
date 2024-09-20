@@ -102,13 +102,14 @@ export default async function ProductPage({ params }: Params) {
         alt={product.title}
         width={800}
         height={300}
+        loading="lazy"
         objectFit="cover"
         className="w-auto h-auto"
       />
       {product.body ? (
         <div
           dangerouslySetInnerHTML={{ __html: product.body }}
-          className="product-body"
+          className="product-body container wrap"
         />
       ) : null}
     </div>

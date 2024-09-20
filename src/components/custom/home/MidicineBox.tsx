@@ -22,6 +22,7 @@ const MedicineBox: React.FC<MedicineBoxProps> = ({
           src={imageUrl}
           alt={medicineName}
           width={200}
+          loading="lazy"
           height={200}
           className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-auto h-auto object-contain rounded-lg"
         />

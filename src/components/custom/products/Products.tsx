@@ -11,6 +11,7 @@ interface Product {
   title: string;
   description: string;
   image: string;
+  body: string;
   tags: string[];
 }
 
@@ -127,6 +128,7 @@ export default function ProductsComponent() {
                       alt={product.title}
                       width={160}
                       height={160}
+                      loading="lazy"
                       className="rounded-full object-cover border border-gray-200 p-1"
                     />
                   </div>
