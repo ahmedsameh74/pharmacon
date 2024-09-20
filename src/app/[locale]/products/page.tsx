@@ -59,7 +59,7 @@ export const metadata: Metadata = {
 export default function Products() {
   return (
     <>
-      <AboutHead image={'../../assets/products.png'} title={'products'} />
+      <AboutHead image={'../../assets/products.webp'} title={'products'} />
       <ProductsComponent />
     </>
   );

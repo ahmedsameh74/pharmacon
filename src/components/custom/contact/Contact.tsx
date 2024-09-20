@@ -139,12 +139,18 @@ export default function ContactSection() {
               <p>+201094743313</p>
             </a> */}
             <a href="mailto:demo@gmail.com" className="flex items-center">
-              <FaEnvelope className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
+              <div className="text-xl">
+                <FaEnvelope className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
+              </div>
+              {/* <FaEnvelope style={{ fontSize: '1.25rem !important' }}  className={`text-xl sm:text-xl md:text-xl lg:text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} /> */}
               <p>info@pharmaconeg.com</p>
             </a>
             <div className="flex items-center">
-              <FaMapMarkerAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
-              <p className="text-sm">
+              <div className="text-xl">
+                <FaMapMarkerAlt className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
+              </div>
+              {/* <FaMapMarkerAlt style={{ fontSize: '1.25rem !important' }}  className={`text-xl sm:text-xl md:text-xl lg:text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} /> */}
+              <p>
               2 Mohamed Abdelhalim Abdullah, From Hassanen Hekal St, From Abbas El Akkad St, Beside Dar El Hekma Hospital, 5th Floor, Cairo, Egypt
               </p>
             </div>
