@@ -21,6 +21,7 @@ export default function OurService() {
             src="/assets/drr.png"
             width={500}
             height={500}
+            loading="lazy"
             alt="Our Service"
             className="w-full h-auto"
           />
@@ -34,6 +35,7 @@ export default function OurService() {
             src="/assets/drrr.png"
             width={500}
             height={500}
+            loading="lazy"
             alt="Our Service"
             className="w-full h-auto"
           />

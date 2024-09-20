@@ -93,23 +93,52 @@ body {
 }
 
 
-
+/* globals.css */
 .product-body h2 {
-  @apply text-2xl lg:text-3xl font-bold text-[#01547E] mt-8 lg:mt-10; /* Adds responsive font size and margin */
+  @apply text-2xl lg:text-3xl font-bold text-[#01547E] mt-8 lg:mt-10; /* Responsive font size and margin */
 }
 
 .product-body h3 {
-  @apply text-xl lg:text-2xl font-bold text-[#01547E] mt-6 lg:mt-8; /* Adds responsive font size and margin */
+  @apply text-xl lg:text-2xl font-bold text-[#01547E] mt-6 lg:mt-8; /* Responsive font size and margin */
 }
 
 .product-body p {
-  @apply text-base lg:text-lg text-gray-600 mt-6 lg:mt-8 leading-relaxed; /* Adds spacing and makes sure text is easier to read */
+  @apply text-base lg:text-lg text-gray-600 mt-6 lg:mt-8 leading-relaxed; /* Spacing for readability */
+}
+
+.product-body a {
+  @apply text-[#01547E] font-bold hover:text-[#01547E] underline; /* Underline for readability */
 }
 
 .product-body ul {
-  @apply list-disc pl-5 lg:pl-7 mt-6 lg:mt-8; /* Adjusts padding and margin for responsiveness */
+  @apply list-disc pl-5 lg:pl-7 mt-6 lg:mt-8; /* Padding and margin adjustments */
 }
 
 .product-body li {
-  @apply text-base lg:text-lg text-gray-600 mt-2 lg:mt-3; /* Adds space between list items */
+  @apply text-base lg:text-lg text-gray-600 mt-2 lg:mt-3; /* Spacing between list items */
+}
+
+.product-body td {
+  @apply px-4 py-2 md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
+}
+
+.product-body tbody {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.product-body th {
+  @apply px-4 py-2 md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
+}
+
+.product-body thead {
+  @apply bg-gray-50;
+}
+
+.product-body table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+/* Additional responsive adjustments for small screens */
+.product-body {
+  @apply px-4 md:px-6; /* Adds padding for better spacing on smaller screens */
 }

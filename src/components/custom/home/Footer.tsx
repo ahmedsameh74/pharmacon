@@ -23,6 +23,7 @@ export default function Footer() {
               className="w-auto h-auto"
               width={100}
               height={100}
+              loading="lazy"
             />
           </div>
           <p className="text-sm text-center lg:text-left">{t('footerPara')}</p>
