@@ -3,6 +3,7 @@ import path from 'path';
 
 import { Metadata } from 'next';
 import Image from 'next/image';
+//align stage with dev
 
 interface Product {
   id: number;
