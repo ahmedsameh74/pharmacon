@@ -4,10 +4,10 @@ import axios from 'axios';
 import { useLocale, useTranslations } from 'next-intl';
 import { useState } from 'react';
 import {
-  FaPhoneAlt,
+  // FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
-  FaWhatsapp,
+  // FaWhatsapp,
   FaFacebookF,
   FaLinkedinIn
 } from 'react-icons/fa';
@@ -102,7 +102,7 @@ export default function ContactSection() {
     if (isValid) {
       try {
         const response = await axios.post(
-          'https://pharmacon-server.vercel.app/api/send-email',
+          'https://pharmacon-server.vercel.app/send-email',
           formData
         );
         setLoading(true);
@@ -122,7 +122,7 @@ export default function ContactSection() {
         setLoading(false);
       }
     } else {
-      toast.error('Please fix the errors in the form');
+      toast.error('Please fill all required data');
       setLoading(false);
     }
   };
@@ -134,29 +134,27 @@ export default function ContactSection() {
         <div>
           <h2 className="text-3xl font-semibold mb-8">{t('contactInfo')}</h2>
           <div className="space-y-6">
-            <a href="tel:+201094743313" className="flex items-center">
+            {/* <a href="tel:+201094743313" className="flex items-center">
               <FaPhoneAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               <p>+201094743313</p>
-            </a>
+            </a> */}
             <a href="mailto:demo@gmail.com" className="flex items-center">
               <FaEnvelope className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
-              <p>demo@gmail.com</p>
+              <p>info@pharmaconeg.com</p>
             </a>
             <div className="flex items-center">
               <FaMapMarkerAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
-              <p>
-                {t('address')}
-                <br />
-                {t('address2')}
+              <p className="text-sm">
+              2 Mohamed Abdelhalim Abdullah, From Hassanen Hekal St, From Abbas El Akkad St, Beside Dar El Hekma Hospital, 5th Floor, Cairo, Egypt
               </p>
             </div>
           </div>
         </div>
         <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8`}>
-          <a href="#" className="text-2xl">
+          {/* <a href="#" className="text-2xl">
             <FaWhatsapp />
-          </a>
-          <a href="#" className="text-2xl">
+          </a> */}
+          <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer">
             <FaFacebookF />
           </a>
           <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer">
