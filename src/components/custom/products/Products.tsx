@@ -138,7 +138,7 @@ export default function ProductsComponent() {
                       {product.title}
                     </h2>
                     <p className="text-gray-500 mb-4 text-sm">
-                      {product.description}
+                      {product.description.slice(0, 100).concat('...')}
                     </p>
                     <Link
                       href={`products/${product.id}`}
