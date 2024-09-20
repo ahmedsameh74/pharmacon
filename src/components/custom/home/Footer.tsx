@@ -42,24 +42,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/careers" className="hover:underline">
-                  {t('careers')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/blog" className="hover:underline">
-                  {t('blog')}
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Column 2 */}
-          <div>
-            <ul
-              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
-            >
-              <li>
                 <Link href={`/${locale}/contact`} className="hover:underline">
                   {t('contactUs')}
                 </Link>
@@ -69,15 +51,21 @@ export default function Footer() {
                   {t('faq')}
                 </Link>
               </li>
-              <li>
-                <Link href="/help" className="hover:underline">
-                  {t('helpCenter')}
+
+              {/* <li>
+                <Link href="/careers" className="hover:underline">
+                  {t('careers')}
                 </Link>
-              </li>
+              </li> */}
+              {/* <li>
+                <Link href="/blog" className="hover:underline">
+                  {t('blog')}
+                </Link>
+              </li> */}
             </ul>
           </div>
 
-          {/* Column 3 */}
+          {/* Column 2 */}
           <div>
             <ul
               className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
@@ -99,12 +87,41 @@ export default function Footer() {
                 </Link>
               </li>
               {/* <li>
-                <Link href="/cookies" className="hover:underline">
-                  {t('cookiePolicy')}
+                <Link href="/help" className="hover:underline">
+                  {t('helpCenter')}
                 </Link>
               </li> */}
             </ul>
           </div>
+
+          {/* Column 3 */}
+          {/* <div>
+            <ul
+              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
+            > */}
+          {/* <li>
+                <Link
+                  href={`/${locale}/terms-and-conditions`}
+                  className="hover:underline"
+                >
+                  {t('termsOfService')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/${locale}/privacy-policy`}
+                  className="hover:underline"
+                >
+                  {t('privacyPolicy')}
+                </Link>
+              </li> */}
+          {/* <li>
+                <Link href="/cookies" className="hover:underline">
+                  {t('cookiePolicy')}
+                </Link>
+              </li> */}
+          {/* </ul>
+          </div> */}
         </div>
       </div>
 

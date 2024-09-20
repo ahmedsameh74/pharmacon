@@ -1,43 +1,37 @@
-name: Deploy to Server
+name: Deploy to vercel-prod
 
 on:
   pull_request:
     branches:
       - prod
     types: 
-      - closed
+      closed
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
           node-version: '18'  # Specify the Node.js version to use
 
-    - name: Install dependencies
-      run: npm install  # Or `yarn install` if you use Yarn
+      - name: Install dependencies
+        run: npm install  # Or `yarn install` if you use Yarn
 
-    - name: Build
-      run: npm run build
+      - name: Build
+        run: npm run build  # Or `yarn build` if you use Yarn
 
-    - name: Create SSH directory
-      run: mkdir -p ~/.ssh
-
-    - name: Add the deploy key
-      run: echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-      shell: bash
-
-    - name: Set permissions for the deploy key
-      run: chmod 600 ~/.ssh/deploy_key
-
-    - name: Add server to known_hosts
-      run: ssh-keyscan pharmaconeg.com >> ~/.ssh/known_hosts
-
-    - name: SCP files to server
-      run: scp -i ~/.ssh/deploy_key -r . pharmax3@pharmaconeg.com:public_html
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_STAGE_PROJECT_ID }}
+          vercel-args: '--prod'  # Deploy to production
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
