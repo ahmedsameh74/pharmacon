@@ -13,7 +13,9 @@ export default function ContactSection() {
 
       {/* Paragraph */}
       <p className="text-white text-center font-light my-4 px-4 md:px-20">
-        {t('contactSection')}
+        {/* {t('contactSection')} */}
+        We&apos;re here to help! If you have any questions, feedback, or need
+        assistance, feel free to reach out to us.
       </p>
 
       {/* Button */}
