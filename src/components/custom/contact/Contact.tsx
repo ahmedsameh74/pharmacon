@@ -130,36 +130,38 @@ export default function ContactSection() {
   return (
     <div className="container mx-auto px-6 lg:px-0 py-12 lg:py-12 flex flex-col lg:flex-row">
       {/* Left Column - Contact Information */}
-      <div className="bg-[#3B5998] text-white p-10 lg:w-1/2 rounded-l-lg flex flex-col justify-between space-y-8">
-        <div>
+      <div className="relative bg-[#01547E] text-white p-10 lg:w-1/2 rounded-l-lg flex flex-col justify-between space-y-8">
+        {/* Circles background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute w-60 h-60 bg-white opacity-10 rounded-full bottom-[-40px] right-[-40px]"></div>
+          <div className="absolute w-40 h-40 bg-white opacity-10 rounded-full bottom-20 right-20"></div>
+        </div>
+
+        <div className="relative">
           <h2 className="text-3xl font-semibold mb-8">{t('contactInfo')}</h2>
           <div className="space-y-6">
-            {/* <a href="tel:+201094743313" className="flex items-center">
-              <FaPhoneAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
-              <p>+201094743313</p>
-            </a> */}
+            {/* Email */}
             <a href="mailto:info@pharmaconeg.com" className="flex items-center">
               <div className="text-xl">
                 <FaEnvelope className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               </div>
-              {/* <FaEnvelope style={{ fontSize: '1.25rem !important' }}  className={`text-xl sm:text-xl md:text-xl lg:text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} /> */}
               <p>info@pharmaconeg.com</p>
             </a>
+            {/* Address */}
             <div className="flex items-center">
               <div className="text-xl">
                 <FaMapMarkerAlt className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               </div>
-              {/* <FaMapMarkerAlt style={{ fontSize: '1.25rem !important' }}  className={`text-xl sm:text-xl md:text-xl lg:text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} /> */}
               <p>
-              2 Mohamed Abdelhalim Abdullah, From Hassanen Hekal St, From Abbas El Akkad St, Beside Dar El Hekma Hospital, 5th Floor, Cairo, Egypt
+          2 Mohamed Abdelhalim Abdullah, From Hassanen Hekal St, From Abbas El Akkad St,
+          Beside Dar El Hekma Hospital, 5th Floor, Cairo, Egypt
               </p>
             </div>
           </div>
         </div>
+
         <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8`}>
-          {/* <a href="#" className="text-2xl">
-            <FaWhatsapp />
-          </a> */}
+          {/* Social Links */}
           <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer">
             <FaFacebookF />
           </a>
@@ -168,6 +170,7 @@ export default function ContactSection() {
           </a>
         </div>
       </div>
+
 
       {/* Right Column - Contact Form */}
       <div className="bg-white shadow-lg rounded-r-lg lg:w-1/2 p-10">
@@ -283,7 +286,7 @@ export default function ContactSection() {
           <div className="text-right">
             <button
               disabled={loading}
-              className="bg-[#3B5998] text-white py-3 px-8 rounded-lg hover:bg-blue-900 transition"
+              className="bg-[#01547E] text-white py-3 px-8 rounded-lg hover:bg-blue-900 transition"
               type="submit"
             >
               {t('send')}
