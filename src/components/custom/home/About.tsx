@@ -36,7 +36,12 @@ export default function About() {
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
               {t('NotJust')}
             </h1>
-            <p className="text-gray-600 mb-4">{t('lorem')}</p>
+            <p className="text-gray-600 mb-4">
+              Pharmacon is Germany -Egyptian promising pharmaceutical company
+              dedicated to promote under license high quality products in the
+              Egyptian market. Pharmacon founded in the Egyptian pharmaceutical
+              market since 2004. Our aim is to improve...
+            </p>
             <Link
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
@@ -51,7 +56,12 @@ export default function About() {
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
               {t('NotJust')}
             </h1>
-            <p className="text-gray-600 mb-4">{t('lorem')}</p>
+            <p className="text-gray-600 mb-4">
+              Our mission is to have a role in improving quality of life in the
+              community through providing access to affordable high-quality
+              pharmaceutical solutions. To recruit and develop high caliber
+              employees who share our values and beliefs. And to work wit...
+            </p>
             <Link
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
