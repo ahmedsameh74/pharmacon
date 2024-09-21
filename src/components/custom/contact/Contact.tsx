@@ -138,7 +138,7 @@ export default function ContactSection() {
               <FaPhoneAlt className={`text-xl ${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               <p>+201094743313</p>
             </a> */}
-            <a href="mailto:demo@gmail.com" className="flex items-center">
+            <a href="mailto:info@pharmaconeg.com" className="flex items-center">
               <div className="text-xl">
                 <FaEnvelope className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               </div>
