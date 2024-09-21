@@ -119,7 +119,7 @@ body {
 }
 
 .product-body td {
-  @apply px-4 py-2 md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
+  @apply px-4 py-2 text-center md:text-start md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
 }
 
 .product-body tbody {
@@ -127,11 +127,11 @@ body {
 }
 
 .product-body th {
-  @apply px-4 py-2 md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
+  @apply px-4 py-2 text-center md:text-start md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
 }
 
 .product-body thead {
-  @apply bg-gray-50;
+  @apply bg-gray-500 divide-y divide-black;
 }
 
 .product-body table {
@@ -141,4 +141,25 @@ body {
 /* Additional responsive adjustments for small screens */
 .product-body {
   @apply px-4 md:px-6; /* Adds padding for better spacing on smaller screens */
+}
+
+.product-body table {
+  @apply min-w-full divide-y divide-gray-200;
+  /* @apply block;  */
+}
+
+
+.product-body td,
+.product-body th {
+  @apply block; /* Block layout only on small screens */
+  @apply md:table-cell;
+  @apply px-4 py-2 md:px-6 md:py-4 whitespace-nowrap; /* Responsive padding */
+}
+
+.product-body th {
+  @apply bg-[#DCF0FA]; /* Header background */
+}
+
+.product-body tbody {
+  @apply bg-white divide-y divide-gray-300; /* Body background and dividers */
 }
