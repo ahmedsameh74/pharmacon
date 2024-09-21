@@ -27,7 +27,8 @@ export default function Hero({ image }: { image: string }) {
           </p>{' '}
           {/* Text adjusted for various screens */}
           <p className="text-sm md:text-lg lg:text-xl font-light w-full md:w-3/4 text-start">
-            {t('heroPara')}
+            {/* {t('heroPara')} */}
+            Because Health Deserves Quality
           </p>
         </div>
       </div>
