@@ -53,7 +53,7 @@ export default function Products() {
             <MedicineBox
               key={product.id}
               medicineName={product.title}
-              description={product.description.slice(0, 100).concat('...')}
+              description={product.tags.join(', ')}
               imageUrl={product.image}
             />
           ))}
