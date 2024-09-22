@@ -5,7 +5,7 @@ export default function Hero({ image }: { image: string }) {
   const locale = useLocale();
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center flex items-center justify-start"
+      className="relative w-full h-svh bg-cover bg-center flex items-center justify-start"
       style={{ backgroundImage: `url(${image})` }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
