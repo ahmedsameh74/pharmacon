@@ -11,7 +11,7 @@ export default function Navbar() {
   const [selectedLocale, setSelectedLocale] = useState('en'); // Default locale
   const menuRef = useRef<HTMLDivElement | null>(null); // Ref for mobile menu
   const buttonRef = useRef<HTMLButtonElement | null>(null); // Ref for burger button
-  const dropdownRef = useRef<HTMLDivElement | null>(null); // Ref for language dropdown
+  // const dropdownRef = useRef<HTMLDivElement | null>(null); // Ref for language dropdown
   // const router = useRouter();
   const pathname = usePathname(); // Get the current pathname
   const t = useTranslations();
@@ -30,13 +30,15 @@ export default function Navbar() {
     if (
       menuRef.current &&
       buttonRef.current &&
-      dropdownRef.current &&
+      // dropdownRef.current &&
       !menuRef.current.contains(target) &&
-      !buttonRef.current.contains(target) &&
-      !dropdownRef.current.contains(target)
+      !buttonRef.current.contains(target)
+      // &&
+      // !dropdownRef.current.contains(target)
     ) {
       setIsOpen(false); // Close the menu if clicked outside
       setDropdownOpen(false); // Close the dropdown if clicked outside
+      // console.log('first')
     }
   };
 

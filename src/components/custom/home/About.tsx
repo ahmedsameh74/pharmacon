@@ -32,7 +32,7 @@ export default function About() {
               className="rounded-lg"
             />
           </div>
-          <div>
+          <div className="p-4">
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
               {t('NotJust')}
             </h1>
@@ -52,7 +52,7 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          <div>
+          <div className="p-4">
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
               {t('NotJust')}
             </h1>

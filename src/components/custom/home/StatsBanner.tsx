@@ -5,7 +5,7 @@ export default function StatsBanner() {
   const t = useTranslations();
   return (
     <div
-      className={`w-full bg-[#01547E] text-white py-4 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 ${locale === 'en' ? 'md:space-x-12' : 'md:space-x-reverse md:space-x-12'}`}
+      className={`w-full bg-[#01547E] text-white py-12 md:py-8 flex flex-col md:flex-row gap-[70px] justify-center items-center space-y-6 md:space-y-0 ${locale === 'en' ? 'md:space-x-12' : 'md:space-x-reverse md:space-x-12'}`}
     >
       <div className="flex items-center flex-col text-center">
         <p className="text-xl md:text-2xl font-bold">3.5</p>{' '}
