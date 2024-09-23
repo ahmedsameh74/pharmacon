@@ -39,18 +39,18 @@ const Breadcrumb = ({ titleColor }: { titleColor?: string }) => {
             }
           >
             {index > 0 && (
-              <span className="text-gray-500 text-base md:text-lg lg:text-xl font-bold">
+              <span className="text-gray-500 text-base md:text-lg lg:text-xl font-light">
                 /{' '}
               </span>
             )}
             {index === breadcrumbItems.length - 1 ? (
-              <span className="font-bold text-base md:text-lg lg:text-xl text-gray-400">
+              <span className="font-light text-base md:text-lg lg:text-xl text-gray-400">
                 {item.label}
               </span>
             ) : (
               <Link
                 href={item.href}
-                className="text-white hover:text-[#088bcd] text-base md:text-lg lg:text-xl font-bold"
+                className="text-white hover:text-[#088bcd] text-base md:text-lg lg:text-xl font-light"
                 style={{ color: titleColor ? titleColor : 'white' }}
               >
                 {item.label}
