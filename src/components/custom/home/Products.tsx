@@ -46,7 +46,13 @@ export default function Products() {
           {t('ourServParagraph')}
         </p>
       </div>
-      <div className="flex justify-center items-center mt-8 flex-wrap">
+      <div
+        className={`grid gap-4 w-full max-w-4xl px-4 mt-8 ${
+          products?.length === 1
+            ? 'place-items-center'
+            : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+        }`}
+      >
         {products
           ?.slice(0, 3)
           .map((product) => (
@@ -55,6 +61,7 @@ export default function Products() {
               medicineName={product.title}
               description={product.tags.join(', ')}
               imageUrl={product.image}
+              id={product.id}
             />
           ))}
       </div>

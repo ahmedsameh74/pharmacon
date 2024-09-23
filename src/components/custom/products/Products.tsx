@@ -26,12 +26,13 @@ export default function ProductsComponent() {
 
   const categories = [
     { name: t('all'), slug: 'all' },
-    { name: t('medicines'), slug: 'Medicines' },
-    { name: t('supplements'), slug: 'Supplements' },
-    { name: t('vitamins'), slug: 'vitamins' },
-    { name: t('cosmetics'), slug: 'Cosmetics' },
-    { name: t('skinCare'), slug: 'Skin Care' },
-    { name: t('women'), slug: 'For Woman' }
+    // { name: t('medicines'), slug: 'Medicines' },
+    // { name: t('supplements'), slug: 'Supplements' },
+    // { name: t('vitamins'), slug: 'vitamins' },
+    // { name: t('cosmetics'), slug: 'Cosmetics' },
+    // { name: t('skinCare'), slug: 'Skin Care' },
+    // { name: t('women'), slug: 'For Woman' }
+    { name: 'antibiotic', slug: 'antibiotic' }
   ];
 
   // Fetch the products from the JSON file
