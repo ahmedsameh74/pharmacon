@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 
 import Navbar from '@/components/custom/home/Navbar';
 import Footer from '@/components/custom/home/Footer';
@@ -91,6 +92,7 @@ export default async function RootLayout({
           <Navbar />
           {children}
           <SpeedInsights />
+          <Analytics />
           <Footer />
         </NextIntlClientProvider>
       </body>
