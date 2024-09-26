@@ -43,6 +43,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     description: product.description,
     keywords: [
       product.title,
+      `${product.title} | Pharmacon`,
+      `${product.title} Pharmacon`,
       'Pharmacon',
       'PharmaconEG',
       'EG',
