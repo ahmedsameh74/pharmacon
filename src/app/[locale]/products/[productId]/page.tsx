@@ -48,7 +48,10 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       'EG',
       'eg',
       'Health',
-      'Quality'
+      'Quality',
+      'Products',
+      'Pharmacy',
+      'فارماكون'
     ],
     icons: {
       icon: '../../assets/logo icon.ico',

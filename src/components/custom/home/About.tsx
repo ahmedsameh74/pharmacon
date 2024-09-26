@@ -46,7 +46,8 @@ export default function About() {
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
-              {t('learnMore')}
+              {/* {t('learnMore')} */}
+              More About Us
             </Link>
           </div>
         </div>
@@ -66,7 +67,8 @@ export default function About() {
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] mt-2 text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
-              {t('learnMore')}
+              {/* {t('learnMore')} */}
+              More About Us
             </Link>
           </div>
 

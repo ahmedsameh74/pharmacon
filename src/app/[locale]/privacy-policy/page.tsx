@@ -19,7 +19,8 @@ export const metadata: Metadata = {
     'Products',
     'Pharmacy',
     'Privacy Policy',
-    'policy'
+    'policy',
+    'فارماكون'
   ],
   robots: {
     index: true,
