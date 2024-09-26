@@ -23,6 +23,10 @@ jobs:
       - name: Install dependencies
         run: npm install  # Or `yarn install` if you use Yarn
 
+      - name: Set ENV variables
+        run: |
+            echo NEXT_PUBLIC_SITE_URL=${{ secrets.NEXT_PUBLIC_SITE_DEV_URL }} >> .env
+
       - name: Build
         run: npm run build  # Or `yarn build` if you use Yarn
 
