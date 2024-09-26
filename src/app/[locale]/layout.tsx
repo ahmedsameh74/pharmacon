@@ -77,6 +77,10 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <meta
+        name="google-site-verification"
+        content="zeFFPMAlwtdB6-JRNEsunhx-99Bf53J8Gdhc-HynS1E"
+      />
       <body
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
         className={`${cairo.className} bg-background text-foreground antialiased`}
