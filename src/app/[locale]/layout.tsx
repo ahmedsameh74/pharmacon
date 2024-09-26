@@ -3,6 +3,7 @@ import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import Navbar from '@/components/custom/home/Navbar';
 import Footer from '@/components/custom/home/Footer';
@@ -89,6 +90,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           {children}
+          <SpeedInsights />
           <Footer />
         </NextIntlClientProvider>
       </body>
