@@ -26,6 +26,9 @@ jobs:
       - name: Set ENV variables
         run: |
             echo NEXT_PUBLIC_SITE_URL=${{ secrets.NEXT_PUBLIC_SITE_STAGE_URL }} >> .env
+
+      - name: lint
+        run: npm run lint
       - name: Build
         run: npm run build  # Or `yarn build` if you use Yarn
 
