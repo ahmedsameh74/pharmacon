@@ -18,9 +18,9 @@ export const metadata: Metadata = {
     'eg',
     'Health',
     'Quality',
-    'Products',
     'Pharmacy',
-    'Products'
+    'Products',
+    'فارماكون'
   ],
   robots: {
     index: true,

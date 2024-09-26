@@ -40,7 +40,7 @@ const MedicineBox: React.FC<MedicineBoxProps> = ({
         {medicineName}
       </Link>
 
-      <p className="text-[#2CA6D5] text-center mt-2">{description}</p>
+      <p className="text-[#11546E] text-center mt-2">{description}</p>
     </div>
   );
 };

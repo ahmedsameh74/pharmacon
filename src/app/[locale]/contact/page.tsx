@@ -22,7 +22,8 @@ export const metadata: Metadata = {
     'Products',
     'Pharmacy',
     'Contact',
-    'Contact Us'
+    'Contact Us',
+    'فارماكون'
   ],
   robots: {
     index: true,

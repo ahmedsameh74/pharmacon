@@ -30,7 +30,8 @@ export const metadata: Metadata = {
     'Health',
     'Quality',
     'Products',
-    'Pharmacy'
+    'Pharmacy',
+    'فارماكون'
   ],
   robots: {
     index: true,
