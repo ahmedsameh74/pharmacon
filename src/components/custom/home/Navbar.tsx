@@ -103,7 +103,7 @@ export default function Navbar() {
                   pathname === item.href ||
                   (item.href === `/${locale}/` && pathname === `/${locale}`)
                     ? 'text-[#01547E]'
-                    : 'text-gray-500'
+                    : 'text-[#494B4B]'
                 }`}
               >
                 {item.name}
@@ -230,7 +230,7 @@ export default function Navbar() {
                 pathname === item.href ||
                 (item.href === `/${locale}/` && pathname === `/${locale}`)
                   ? 'text-[#01547E]'
-                  : 'text-gray-500'
+                  : 'text-[#494B4B]'
               }`}
               onClick={() => setIsOpen(false)}
             >

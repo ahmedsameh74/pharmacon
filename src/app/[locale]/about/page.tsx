@@ -50,7 +50,8 @@ export const metadata: Metadata = {
     'Quality',
     'Products',
     'Pharmacy',
-    'About'
+    'About',
+    'فارماكون'
   ],
   robots: {
     index: true,

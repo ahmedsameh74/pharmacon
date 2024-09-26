@@ -36,7 +36,7 @@ export default function Products() {
   return (
     <div className="w-full bg-[#DCF0FA] py-12 flex flex-col md:flex-col justify-center items-center space-y-6 md:space-y-12 md:space-x-12">
       <div className="flex items-center flex-col text-center">
-        <p className="text-base md:text-lg font-semibold text-[#2CA6D5] mb-2">
+        <p className="text-base md:text-lg font-semibold text-[#11546E] mb-2">
           {t('products')}
         </p>
         <p className="text-base md:text-2xl font-bold text-[#01547E]">
