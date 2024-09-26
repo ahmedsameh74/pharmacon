@@ -107,7 +107,7 @@ body {
 }
 
 .product-body a {
-  @apply text-[#01547E] font-bold hover:text-[#01547E] underline; /* Underline for readability */
+  @apply text-[#01547E] font-bold text-sm sm:text-base hover:text-[#01547E] underline break-words; /* Responsive text sizes */
 }
 
 .product-body ul {
