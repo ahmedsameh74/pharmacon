@@ -62,7 +62,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     openGraph: {
       title: `${product.title} | Pharmacon`,
       description: product.description,
-      url: `https://your-site.com/products/${params.productId}`,
+      url: `${process.env.NEXT_PUBLIC_APP_URL}/products/${params.productId}`,
       images: [
         {
           url: product.image, // Product-specific image
