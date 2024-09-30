@@ -3,6 +3,8 @@ import path from 'path';
 
 import { Metadata } from 'next';
 import Image from 'next/image';
+import Head from 'next/head';
+// import Loader from '@/components/ui/Loader';
 //align stage with dev
 
 interface Product {
@@ -11,6 +13,7 @@ interface Product {
   description: string;
   image: string;
   body: string;
+  tags: string[];
 }
 
 interface Params {
@@ -53,7 +56,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       'Quality',
       'Products',
       'Pharmacy',
-      'فارماكون'
+      'فارماكون',
+      product.tags.join(', ')
     ],
     icons: {
       icon: '../../assets/logo icon.ico',
@@ -63,11 +67,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       title: `${product.title} | Pharmacon`,
       description: product.description,
       url: `${process.env.NEXT_PUBLIC_APP_URL}/products/${params.productId}`,
+      type: 'article',
       images: [
         {
           url: product.image, // Product-specific image
           width: 800,
-          height: 600
+          height: 600,
+          alt: `Image of ${product.title}`
         }
       ]
     },
@@ -96,27 +102,62 @@ export default async function ProductPage({ params }: Params) {
   const product = await getProduct(params.productId);
 
   return (
-    <div className="container mx-auto px-6 lg:px-0 pt-12 pb-6 flex flex-col items-center justify-center lg:flex-col space-y-8">
-      <h1 className="text-3xl font-bold text-center lg:text-center text-[#01547E]">
-        {product.title}
-      </h1>
-      <p className="text-center font-light text-gray-500">
-        {product.description}
-      </p>
-      <Image
-        src={product.image}
-        alt={product.title}
-        width={800}
-        height={300}
-        loading="lazy"
-        className="w-auto h-auto object-cover"
-      />
-      {product.body ? (
-        <div
-          dangerouslySetInnerHTML={{ __html: product.body }}
-          className="product-body container wrap"
+    <>
+      <Head>
+        {/* <link rel="preload" href="../../assets/logo icon.ico" as="image" />
+        <link
+          rel="preload"
+          href="/fonts/Cairo-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        /> */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org/',
+              '@type': 'Product',
+              name: product.title,
+              image: product.image,
+              description: product.description,
+              brand: {
+                '@type': 'Brand',
+                name: 'Pharmacon'
+              }
+            })
+          }}
         />
-      ) : null}
-    </div>
+      </Head>
+      <div className="container mx-auto px-6 lg:px-0 pt-12 pb-6 flex flex-col items-center justify-center lg:flex-col space-y-8">
+        {/* <div className="animate-pulse space-y-4">
+          <div className="bg-gray-300 h-4 w-1/4 rounded"></div>
+          <div className="bg-gray-300 h-4 w-1/2 rounded"></div>
+          <div className="bg-gray-300 h-6 w-full rounded"></div>
+          <div className="bg-gray-300 h-4 w-3/4 rounded"></div>
+        </div> */}
+        <h1 className="text-3xl font-bold text-center lg:text-center text-[#01547E]">
+          {product.title}
+        </h1>
+        <p className="text-center font-light text-gray-500">
+          {product.description}
+        </p>
+        <Image
+          src={product.image}
+          alt={`Image of ${product.title}`}
+          width={800}
+          height={300}
+          loading={params.productId === '1' ? 'eager' : 'lazy'}
+          className="w-auto h-auto object-cover"
+        />
+        {product.body ? (
+          <div
+            dangerouslySetInnerHTML={{ __html: product.body }}
+            className="product-body container wrap"
+          />
+        ) : null}
+      </div>
+    </>
   );
 }
