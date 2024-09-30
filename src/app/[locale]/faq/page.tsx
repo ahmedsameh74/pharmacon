@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import Accordion from '@/components/ui/Accordion';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Pharmacon',
+  title: 'FAQ | Pharmacon',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/logo icon.ico',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pharmacon',
     description: 'Because Health Deserves Quality',
-    url: 'https://pharmaconeg-dev.vercel.app/',
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/faq`,
     siteName: 'Pharmacon',
     images: [
       {

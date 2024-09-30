@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pharmacon',
     description: 'Because Health Deserves Quality',
-    url: 'https://pharmaconeg-dev.vercel.app/',
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/contact`,
     siteName: 'Pharmacon',
     images: [
       {
