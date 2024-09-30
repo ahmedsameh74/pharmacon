@@ -23,6 +23,13 @@ jobs:
       - name: Install dependencies
         run: npm install  # Or `yarn install` if you use Yarn
 
+      - name: Set ENV variables
+        run: |
+            echo NEXT_PUBLIC_SITE_URL=${{ secrets.NEXT_PUBLIC_SITE_PROD_URL }} >> .env
+
+      - name: lint
+        run: npm run lint
+        
       - name: Build
         run: npm run build  # Or `yarn build` if you use Yarn
 
@@ -31,7 +38,7 @@ jobs:
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_STAGE_PROJECT_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROD_PROJECT_ID }}
           vercel-args: '--prod'  # Deploy to production
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
