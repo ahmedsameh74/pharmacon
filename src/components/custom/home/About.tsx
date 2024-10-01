@@ -62,8 +62,7 @@ export default function About() {
               medical device leaders from Germany, Switzerland, Italy, Romania,
               and other regions enable us to provide you with cutting-edge
               healthcare solutions. We offer Egyptian patients access to the
-              most advanced healthcare technologies. Our tailored solutions
-              bridge the gap between international advancements and local needs.
+              most advanced healthcare technologies. 
             </p>
             <Link
               href={`/${locale}/about`}
@@ -75,9 +74,9 @@ export default function About() {
 
           <div className="flex justify-center">
             <Image
-              src="/assets/dr.jpg"
+              src="/assets/pharma.png"
               alt="About"
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ width: 'auto', height: '296px' }}
               width={300}
               height={300}
               loading="lazy"

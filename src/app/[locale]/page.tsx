@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Hero image={'../assets/heroSection.webp'} />
+      <Hero image={'../assets/headerback.webp'} />
       <StatsBanner />
       <AboutDynamic />
       <Partners />
