@@ -23,7 +23,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div className="flex justify-center">
             <Image
-              src="/assets/dr.png"
+              src="/assets/drrr.png"
               alt="About"
               style={{ width: 'auto', height: 'auto' }}
               width={300}
@@ -74,7 +74,7 @@ export default function About() {
 
           <div className="flex justify-center">
             <Image
-              src="/assets/dr.png"
+              src="/assets/dr.jpg"
               alt="About"
               style={{ width: 'auto', height: 'auto' }}
               width={300}
