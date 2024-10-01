@@ -9,7 +9,8 @@ import {
   FaMapMarkerAlt,
   // FaWhatsapp,
   FaFacebookF,
-  FaLinkedinIn
+  FaLinkedinIn,
+  FaYoutube
 } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -167,6 +168,9 @@ export default function ContactSection() {
           </a>
           <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer">
             <FaLinkedinIn />
+          </a>
+          <a href="https://www.youtube.com/@pharmaconpharmaceuticals6630" target='_blank' className="text-2xl" rel="noreferrer">
+            <FaYoutube />
           </a>
         </div>
       </div>
