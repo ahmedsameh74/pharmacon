@@ -82,7 +82,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <meta
         name="google-site-verification"
-        content="zeFFPMAlwtdB6-JRNEsunhx-99Bf53J8Gdhc-HynS1E"
+        content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
       />
       <body
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
