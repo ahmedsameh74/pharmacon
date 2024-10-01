@@ -52,7 +52,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div className="p-4">
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
               {t('NotJust')}
@@ -67,7 +67,6 @@ export default function About() {
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] mt-2 text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
-              {/* {t('learnMore')} */}
               More About Us
             </Link>
           </div>
@@ -83,7 +82,7 @@ export default function About() {
               className="rounded-lg"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

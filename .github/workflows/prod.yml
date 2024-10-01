@@ -6,9 +6,9 @@ on:
       - prod
     types: 
       closed
-  push:
-    branches:
-      - prod
+  # push:
+  #   branches:
+  #     - prod
 
 jobs:
   build:
