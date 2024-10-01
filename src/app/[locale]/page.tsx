@@ -6,6 +6,7 @@ import { Metadata } from 'next';
 import Hero from '@/components/custom/home/Hero';
 import Products from '@/components/custom/home/Products';
 import StatsBanner from '@/components/custom/home/StatsBanner';
+import Partners from '@/components/custom/home/Partners';
 
 const ContactDynamic = dynamic(
   () => import('@/components/custom/home/ContactSection'),
@@ -80,6 +81,7 @@ export default function Home() {
       <Hero image={'../assets/heroSection.webp'} />
       <StatsBanner />
       <AboutDynamic />
+      <Partners />
       <Products />
       <ContactDynamic />
     </>

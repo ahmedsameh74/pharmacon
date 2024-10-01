@@ -68,7 +68,7 @@ export default function Navbar() {
   // };
 
   return (
-    <nav className="bg-[#DCF0FA] shadow-md">
+    <nav className="bg-[#DCF0FA] shadow-md fixed w-full z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Left part of the navbar */}
@@ -85,7 +85,8 @@ export default function Navbar() {
                   style={{ width: 'auto', height: 'auto' }}
                   width={100}
                   height={100}
-                  loading="lazy"
+                  loading="eager"
+                  priority={true}
                 />
               </Link>
             </div>
