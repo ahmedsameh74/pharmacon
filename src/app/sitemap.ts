@@ -15,6 +15,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     },
     {
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/assets/logo-icon.ico`,
+      lastModified: new Date(),
+      changeFrequency: 'always',
+      priority: 1
+    },
+    {
       url: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
