@@ -193,7 +193,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.firstName ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="john"
+                placeholder="First Name"
                 id="firstName"
               />
               {errors.firstName && (
@@ -213,7 +213,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.lastName ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="doe"
+                placeholder="last Name"
                 id="lastName"
               />
               {errors.lastName && (
