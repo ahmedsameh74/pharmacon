@@ -6,6 +6,7 @@ import { Cairo } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
+import Head from 'next/head';
 
 import Navbar from '@/components/custom/home/Navbar';
 import Footer from '@/components/custom/home/Footer';
@@ -19,9 +20,17 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/assets/logo-icon.ico?v=1',
+    icon: [
+      '/assets/logo-icon.ico',
+      '/assets/icon32_32.png',
+      '/assets/icon16_16.png'
+    ],
     apple: '/assets/blueLogo.png',
-    shortcut: '/assets/logo-icon.ico?v=1'
+    shortcut: [
+      '/assets/logo-icon.ico',
+      '/assets/icon32_32.png',
+      '/assets/icon16_16.png'
+    ]
   },
   manifest: '/manifest.webmanifest',
   keywords: [
@@ -52,6 +61,21 @@ export default async function RootLayout({
         name="google-site-verification"
         content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
       />
+      <Head>
+        <link rel="icon" href="/assets/logo-icon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/assets/icon32_32.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/assets/icon16_16.png"
+          sizes="16x16"
+          type="image/png"
+        />
+      </Head>
       <body
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
         className={`${cairo.className} bg-background text-foreground antialiased`}
