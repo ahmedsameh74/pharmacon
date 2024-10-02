@@ -81,7 +81,7 @@ export default function Navbar() {
               >
                 <Image
                   src="/assets/blueLogo.svg"
-                  alt="Pharmacon Logo"
+                  alt="PharmaconEG Logo"
                   style={{ width: 'auto', height: 'auto' }}
                   width={100}
                   height={100}
