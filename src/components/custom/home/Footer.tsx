@@ -127,6 +127,7 @@ export default function Footer() {
                   target="_blank"
                   className="text-md"
                   rel="noreferrer"
+                  aria-label="Facebook"
                 >
                   <FaFacebookF />
                 </a>
@@ -135,6 +136,7 @@ export default function Footer() {
                   target="_blank"
                   className="text-md"
                   rel="noreferrer"
+                  aria-label="Linkedin"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -143,6 +145,7 @@ export default function Footer() {
                   target="_blank"
                   className="text-md"
                   rel="noreferrer"
+                  aria-label="Youtube"
                 >
                   <FaYoutube />
                 </a>

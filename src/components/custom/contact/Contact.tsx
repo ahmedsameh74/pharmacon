@@ -193,7 +193,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.firstName ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="Ahmed"
+                placeholder="john"
                 id="firstName"
               />
               {errors.firstName && (
@@ -213,7 +213,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.lastName ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="Sameh"
+                placeholder="doe"
                 id="lastName"
               />
               {errors.lastName && (
@@ -236,7 +236,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.email ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="asameh1500@gmail.com"
+                placeholder="mail@example.com"
                 id="email"
               />
               {errors.email && (
@@ -256,7 +256,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.phone ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="+201094743313"
+                placeholder="+20123456789"
                 id="phone"
               />
               {errors.phone && (
