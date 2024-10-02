@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import { Metadata } from 'next';
 
 import Navbar from '@/components/custom/home/Navbar';
 import Footer from '@/components/custom/home/Footer';
@@ -15,6 +16,26 @@ const cairo = Cairo({
   subsets: ['latin'],
   display: 'swap'
 });
+
+export const metadata: Metadata = {
+  icons: {
+    icon: '/assets/logo-icon.ico',
+    apple: '/assets/blueLogo.png',
+    shortcut: '/assets/logo-icon.ico'
+  },
+  manifest: '/manifest.webmanifest',
+  keywords: [
+    'Pharmacon',
+    'PharmaconEG',
+    'EG',
+    'eg',
+    'Health',
+    'Quality',
+    'Products',
+    'Pharmacy',
+    'فارماكون'
+  ]
+};
 
 export default async function RootLayout({
   children,
