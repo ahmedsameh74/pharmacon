@@ -163,7 +163,7 @@ export default function Navbar() {
           </div> */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="mailto:demo@gmail.com"
+              href="mailto:info@pharmaconeg.com"
               className="text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >
               {t('contactNow')}
