@@ -32,7 +32,8 @@ export default function ProductsComponent() {
     // { name: t('cosmetics'), slug: 'Cosmetics' },
     // { name: t('skinCare'), slug: 'Skin Care' },
     // { name: t('women'), slug: 'For Woman' }
-    { name: 'antibiotic', slug: 'antibiotic' }
+    { name: 'antibiotic', slug: 'antibiotic' },
+    { name: 'acetylcysteine', slug: 'acetylcysteine' }
   ];
 
   // Fetch the products from the JSON file
