@@ -131,7 +131,7 @@ export default function ProductsComponent() {
                       width={160}
                       height={160}
                       loading="lazy"
-                      className="rounded-full object-cover border border-gray-200 p-1"
+                      className="rounded-full object-cover border border-gray-200 p-1 w-full h-full"
                     />
                   </div>
                   {/* Product Details */}
