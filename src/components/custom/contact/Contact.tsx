@@ -161,15 +161,15 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8`}>
+        <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8 relative z-20`}>
           {/* Social Links */}
-          <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer">
+          <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Facebook'>
             <FaFacebookF />
           </a>
-          <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer">
+          <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Linkedin'>
             <FaLinkedinIn />
           </a>
-          <a href="https://www.youtube.com/@pharmaconpharmaceuticals6630" target='_blank' className="text-2xl" rel="noreferrer">
+          <a href="https://www.youtube.com/@pharmaconpharmaceuticals6630" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Youtube'>
             <FaYoutube />
           </a>
         </div>
