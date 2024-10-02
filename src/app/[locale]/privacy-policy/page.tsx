@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Privacy Policy | Pharmacon',
   description: 'Because Health Deserves Quality',
   icons: {
-    icon: '../assets/logo icon.ico',
-    apple: '../assets/logo icon.ico'
+    icon: '../assets/logo-icon.ico',
+    apple: '../assets/logo-icon.ico'
   },
   manifest: '/manifest.webmanifest',
   keywords: [
