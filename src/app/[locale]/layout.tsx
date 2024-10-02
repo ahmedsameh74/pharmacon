@@ -19,9 +19,9 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   icons: {
-    icon: '/assets/logo-icon.ico',
+    icon: '/assets/logo-icon.ico?v=1',
     apple: '/assets/blueLogo.png',
-    shortcut: '/assets/logo-icon.ico'
+    shortcut: '/assets/logo-icon.ico?v=1'
   },
   manifest: '/manifest.webmanifest',
   keywords: [
