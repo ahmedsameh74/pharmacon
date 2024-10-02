@@ -19,10 +19,11 @@ const Partners = () => {
           <div className=" w-[150px] bg-white p-2 flex items-center justify-center">
             <Image
               alt="Lyomark logo"
-              src="/assets/lyomark.png"
+              src="/assets/Lyomark.png"
               width={100}
               height={100}
               loading="lazy"
+              className="w-full h-auto"
             />
           </div>
           <p className="text-base md:text-lg font-semibold">Lyomark</p>{' '}
@@ -36,6 +37,7 @@ const Partners = () => {
               width={150}
               height={150}
               loading="lazy"
+              className="w-full h-auto"
             />
           </div>
           <p className="text-base md:text-lg font-semibold">Bendalis</p>
@@ -48,6 +50,7 @@ const Partners = () => {
               width={150}
               height={150}
               loading="lazy"
+              className="w-full h-auto"
             />
           </div>
           <p className="text-base md:text-lg font-semibold">Zambon</p>
@@ -60,6 +63,7 @@ const Partners = () => {
             width={150}
             height={150}
             loading="lazy"
+            className="w-full h-auto"
           />
           {/* </div> */}
           <p className="text-base md:text-lg font-semibold">Biomedical</p>
@@ -72,6 +76,7 @@ const Partners = () => {
               width={150}
               height={150}
               loading="lazy"
+              className="w-full h-auto"
             />
           </div>
           <p className="text-base md:text-lg font-semibold">Rompharm</p>
@@ -80,10 +85,11 @@ const Partners = () => {
           <div className=" bg-[#01547E] p-2">
             <Image
               alt="Rompharm logo"
-              src="/assets/Biofactor.png"
+              src="/assets/biofactor.png"
               width={150}
               height={150}
               loading="lazy"
+              className="w-full h-auto"
             />
           </div>
           <p className="text-base md:text-lg font-semibold">Biofactor</p>
