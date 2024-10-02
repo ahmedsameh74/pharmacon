@@ -23,7 +23,7 @@ const AboutDynamic = dynamic(() => import('@/components/custom/home/About'), {
 // );
 
 export const metadata: Metadata = {
-  title: 'Pharmacon',
+  title: 'PharmaconEG',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '/assets/logo-icon.ico',
@@ -53,10 +53,10 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
-    siteName: 'Pharmacon',
+    siteName: 'PharmaconEG',
     images: [
       {
         url: '/assets/blueLogo.svg',
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
     images: ['/assets/blueLogo.svg']

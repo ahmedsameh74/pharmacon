@@ -42,12 +42,12 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const product = await getProduct(params.productId);
 
   return {
-    title: `${product.title} | Pharmacon`,
+    title: `${product.title} | PharmaconEG`,
     description: product.description,
     keywords: [
       product.title,
-      `${product.title} | Pharmacon`,
-      `${product.title} Pharmacon`,
+      `${product.title} | PharmaconEG`,
+      `${product.title} PharmaconEG`,
       'Pharmacon',
       'PharmaconEG',
       'EG',
@@ -64,7 +64,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       apple: '../../assets/logo-icon.ico'
     },
     openGraph: {
-      title: `${product.title} | Pharmacon`,
+      title: `${product.title} | PharmaconEG`,
       description: product.description,
       url: `${process.env.NEXT_PUBLIC_APP_URL}/products/${params.productId}`,
       type: 'article',
@@ -90,7 +90,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.title} | Pharmacon`,
+      title: `${product.title} | PharmaconEG`,
       description: product.description,
       images: [product.image]
     }
@@ -124,7 +124,7 @@ export default async function ProductPage({ params }: Params) {
               description: product.description,
               brand: {
                 '@type': 'Brand',
-                name: 'Pharmacon'
+                name: 'PharmaconEG'
               }
             })
           }}
