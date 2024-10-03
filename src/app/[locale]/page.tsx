@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   title: 'PharmaconEG',
   description: 'Because Health Deserves Quality',
   icons: {
-    icon: '/assets/logo-icon.ico',
+    icon: '/assets/favicon.ico',
     apple: '/assets/blueLogo.png'
   },
   manifest: '/manifest.webmanifest',

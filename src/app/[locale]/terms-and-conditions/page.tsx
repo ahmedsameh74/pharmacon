@@ -5,8 +5,8 @@ export const metadata: Metadata = {
   title: 'Terms & Conditions | PharmaconEG',
   description: 'Terms and Conditions for using PharmaconEG',
   icons: {
-    icon: '../assets/logo-icon.ico',
-    apple: '../assets/logo-icon.ico'
+    icon: '../assets/favicon.ico',
+    apple: '../assets/favicon.ico'
   },
   manifest: '/manifest.webmanifest',
   keywords: [

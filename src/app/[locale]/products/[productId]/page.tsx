@@ -60,8 +60,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       product.tags.join(', ')
     ],
     icons: {
-      icon: '../../assets/logo-icon.ico',
-      apple: '../../assets/logo-icon.ico'
+      icon: '../../assets/favicon.ico',
+      apple: '../../assets/favicon.ico'
     },
     openGraph: {
       title: `${product.title} | PharmaconEG`,
@@ -104,7 +104,7 @@ export default async function ProductPage({ params }: Params) {
   return (
     <>
       <Head>
-        {/* <link rel="preload" href="../../assets/logo-icon.ico" as="image" />
+        {/* <link rel="preload" href="../../assets/favicon.ico" as="image" />
         <link
           rel="preload"
           href="/fonts/Cairo-Regular.woff2"
