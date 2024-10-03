@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/assets/logo-icon.ico`,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/assets/favicon.ico`,
       lastModified: new Date(),
       changeFrequency: 'always',
       priority: 1

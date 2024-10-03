@@ -21,15 +21,17 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   icons: {
     icon: [
-      '/assets/logo-icon.ico',
+      '/assets/favicon.ico',
       '/assets/icon32_32.png',
       '/assets/icon16_16.png'
     ],
     apple: '/assets/blueLogo.png',
     shortcut: [
-      '/assets/logo-icon.ico',
+      '/assets/favicon.ico',
       '/assets/icon32_32.png',
-      '/assets/icon16_16.png'
+      '/assets/icon32_32.ico',
+      '/assets/icon16_16.png',
+      '/assets/icon16_16.ico'
     ]
   },
   manifest: '/manifest.webmanifest',
@@ -83,7 +85,7 @@ export default async function RootLayout({
         content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
       />
       <Head>
-        <link rel="icon" href="/assets/logo-icon.ico" sizes="any" />
+        <link rel="icon" href="/assets/favicon.ico" sizes="any" />
         <link
           rel="icon"
           href="/assets/icon32_32.png"

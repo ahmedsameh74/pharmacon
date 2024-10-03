@@ -37,8 +37,8 @@ export const metadata: Metadata = {
   title: 'About | PharmaconEG',
   description: 'Because Health Deserves Quality',
   icons: {
-    icon: '../assets/logo-icon.ico',
-    apple: '../assets/logo-icon.ico'
+    icon: '../assets/favicon.ico',
+    apple: '../assets/favicon.ico'
   },
   manifest: '/manifest.webmanifest',
   keywords: [

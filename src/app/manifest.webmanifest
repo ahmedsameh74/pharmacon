@@ -13,7 +13,7 @@
       "type": "image/png"
     },
 		{
-			"src": "assets/logo-icon.ico",
+			"src": "assets/icon32_32.ico",
 			"sizes": "32x32",
 			"type": "image/x-icon"
 		}
