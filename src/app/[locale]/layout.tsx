@@ -43,7 +43,22 @@ export const metadata: Metadata = {
     'Products',
     'Pharmacy',
     'فارماكون'
-  ]
+  ],
+  openGraph: {
+    title: 'PharmaconEG',
+    description: 'Because Health Deserves Quality',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
+    siteName: 'PharmaconEG',
+    images: [
+      {
+        url: '/assets/logo_1200_630.png',
+        width: 1200,
+        height: 600
+      }
+    ],
+    locale: 'en-US',
+    type: 'website'
+  }
 };
 
 export default async function RootLayout({
@@ -84,11 +99,11 @@ export default async function RootLayout({
           <Navbar />
           <div className="top-12 relative">
             {children}
-            <SpeedInsights />
-            <Analytics />
             <Footer />
           </div>
         </NextIntlClientProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

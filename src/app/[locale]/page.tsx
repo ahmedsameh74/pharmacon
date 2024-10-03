@@ -59,8 +59,8 @@ export const metadata: Metadata = {
     siteName: 'PharmaconEG',
     images: [
       {
-        url: '/assets/blueLogo.svg',
-        width: 800,
+        url: '/assets/logo_1200_630.png',
+        width: 1200,
         height: 600
       }
     ],
