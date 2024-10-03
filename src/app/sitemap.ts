@@ -1,6 +1,22 @@
+import { promises as fs } from 'fs';
+import path from 'path';
+
 import type { MetadataRoute } from 'next';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+import { Product } from './types/product';
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const filePath = path.join(process.cwd(), 'public', 'products.json'); // Adjust the path based on the location of your file
+  const fileContents = await fs.readFile(filePath, 'utf-8');
+
+  const products: Product[] = JSON.parse(fileContents);
+
+  const productUrls: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/products/${product.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'daily',
+    priority: 0.7
+  }));
   return [
     {
       url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
@@ -91,6 +107,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ar: `${process.env.NEXT_PUBLIC_SITE_URL}/ar/terms-and-conditions`
         }
       }
-    }
+    },
+    ...productUrls
   ];
 }
