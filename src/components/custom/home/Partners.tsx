@@ -33,7 +33,7 @@ const Partners = () => {
           {
             alt: 'Biomedical logo',
             src: '/assets/biomedical.jpg',
-            bgColor: ''
+            bgColor: 'bg-white'
           },
           {
             alt: 'Rompharm logo',
