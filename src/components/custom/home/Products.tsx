@@ -49,8 +49,8 @@ export default function Products() {
       <div
         className={`grid gap-4 w-full max-w-4xl px-4 mt-8 ${
           products?.length === 1
-            ? 'place-items-center'
-            : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'
+            ? 'grid-cols-1 justify-center place-items-center' // Center the single item
+            : 'grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3'
         }`}
       >
         {products

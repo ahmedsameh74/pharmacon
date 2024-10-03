@@ -23,14 +23,18 @@ const MedicineBox: React.FC<MedicineBoxProps> = ({
       <div className="relative w-full h-32 rounded-lg">
         {/* Trapezoid shape using pseudo-elements */}
         <div className="absolute inset-0 bg-[#01547E] rounded-3xl"></div>
-        <Image
-          src={imageUrl}
-          alt={medicineName}
-          width={200}
-          loading="lazy"
-          height={200}
-          className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[150px] h-[150px] object-contain rounded-lg"
-        />
+        <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[200px] h-[150px] flex justify-center items-center">
+          <div className="w-[150px] h-[150px] flex justify-center items-center overflow-hidden rounded-lg">
+            <Image
+              src={imageUrl}
+              alt={medicineName}
+              width={150}
+              height={150}
+              loading="lazy"
+              className="object-cover w-full h-full" // Force consistent size with object-cover
+            />
+          </div>
+        </div>
       </div>
 
       <Link
