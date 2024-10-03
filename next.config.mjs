@@ -12,6 +12,10 @@ const nextConfig = {
           {
             key: 'Cache-Control',
             value: 'no-store, must-revalidate'
+          },
+          {
+            key: 'Last-Modified',
+            value: new Date().toUTCString() // Dynamically set last modified time
           }
         ]
       }
