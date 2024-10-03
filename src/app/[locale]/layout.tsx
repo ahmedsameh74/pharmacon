@@ -58,6 +58,12 @@ export const metadata: Metadata = {
     ],
     locale: 'en-US',
     type: 'website'
+  },
+  twitter: {
+    title: 'PharmaconEG',
+    description: 'Because Health Deserves Quality',
+    card: 'summary_large_image',
+    images: ['/assets/logo_1200_630.png']
   }
 };
 

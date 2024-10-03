@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
-    images: ['/assets/blueLogo.svg']
+    images: ['/assets/logo_1200_630.png']
   }
 };
 
