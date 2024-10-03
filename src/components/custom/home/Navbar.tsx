@@ -68,7 +68,7 @@ export default function Navbar() {
   // };
 
   return (
-    <nav className="bg-[#DCF0FA] shadow-md">
+    <nav className="bg-[#fff] shadow-md fixed w-full z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Left part of the navbar */}
@@ -81,11 +81,12 @@ export default function Navbar() {
               >
                 <Image
                   src="/assets/blueLogo.svg"
-                  alt="Pharmacon Logo"
+                  alt="PharmaconEG Logo"
                   style={{ width: 'auto', height: 'auto' }}
                   width={100}
                   height={100}
-                  loading="lazy"
+                  loading="eager"
+                  priority={true}
                 />
               </Link>
             </div>
@@ -162,7 +163,7 @@ export default function Navbar() {
           </div> */}
           <div className="hidden md:flex items-center space-x-4">
             <Link
-              href="mailto:demo@gmail.com"
+              href="mailto:info@pharmaconeg.com"
               className="text-white bg-[#01547E] hover:bg-[#088bcd] px-4 py-2 rounded-md text-sm font-medium"
             >
               {t('contactNow')}

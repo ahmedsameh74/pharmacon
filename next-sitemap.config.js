@@ -18,6 +18,7 @@ const config = {
   additionalPaths: async (config) => {
     const locales = ['en', 'ar'];
     const pages = [
+      '/',
       '/products',
       '/about',
       '/contact',

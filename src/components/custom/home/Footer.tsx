@@ -1,6 +1,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaFacebookF, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 
 export default function Footer() {
   const locale = useLocale();
@@ -15,10 +16,10 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center md:items-start">
         {/* Left Section: Logo and Description */}
         <div className="flex flex-col items-center md:items-start mb-8 lg:mb-0">
-          <div className="mb-4 flex justify-center items-center">
+          <div className="mb-4 flex justify-center items-center bg-[#fff] p-2 rounded-sm">
             {/* Logo */}
             <Image
-              src="/assets/whiteLogo.svg"
+              src="/assets/blueLogo.svg"
               alt="Logo"
               className="w-auto h-auto"
               width={100}
@@ -68,7 +69,7 @@ export default function Footer() {
           {/* Column 2 */}
           <div>
             <ul
-              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
+              className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'} gap-4`}
             >
               <li>
                 <Link
@@ -86,42 +87,71 @@ export default function Footer() {
                   {t('privacyPolicy')}
                 </Link>
               </li>
-              {/* <li>
-                <Link href="/help" className="hover:underline">
-                  {t('helpCenter')}
-                </Link>
+              {/* <li className="flex flex-row gap-4 mt-2 items-center justify-center">
+                <a
+                  href="https://www.facebook.com/pharmaconEgypt"
+                  target="_blank"
+                  className="text-md"
+                  rel="noreferrer"
+                >
+                  <FaFacebookF />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/"
+                  target="_blank"
+                  className="text-md"
+                  rel="noreferrer"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/"
+                  target="_blank"
+                  className="text-md"
+                  rel="noreferrer"
+                >
+                  <FaYoutube />
+                </a>
               </li> */}
             </ul>
           </div>
 
           {/* Column 3 */}
-          {/* <div>
+          <div>
             <ul
               className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
-            > */}
-          {/* <li>
-                <Link
-                  href={`/${locale}/terms-and-conditions`}
-                  className="hover:underline"
+            >
+              <li className="flex flex-row gap-4 mt-2 items-center justify-center">
+                <a
+                  href="https://www.facebook.com/pharmaconEgypt"
+                  target="_blank"
+                  className="text-md"
+                  rel="noreferrer"
+                  aria-label="Facebook"
                 >
-                  {t('termsOfService')}
-                </Link>
+                  <FaFacebookF />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/"
+                  target="_blank"
+                  className="text-md"
+                  rel="noreferrer"
+                  aria-label="Linkedin"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  href="https://www.youtube.com/@pharmaconpharmaceuticals6630"
+                  target="_blank"
+                  className="text-md"
+                  rel="noreferrer"
+                  aria-label="Youtube"
+                >
+                  <FaYoutube />
+                </a>
               </li>
-              <li>
-                <Link
-                  href={`/${locale}/privacy-policy`}
-                  className="hover:underline"
-                >
-                  {t('privacyPolicy')}
-                </Link>
-              </li> */}
-          {/* <li>
-                <Link href="/cookies" className="hover:underline">
-                  {t('cookiePolicy')}
-                </Link>
-              </li> */}
-          {/* </ul>
-          </div> */}
+            </ul>
+          </div>
         </div>
       </div>
 

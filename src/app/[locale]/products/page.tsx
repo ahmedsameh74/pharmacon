@@ -4,11 +4,11 @@ import AboutHead from '@/components/custom/about/AboutHead';
 import ProductsComponent from '@/components/custom/products/Products';
 
 export const metadata: Metadata = {
-  title: 'Products | Pharmacon',
+  title: 'Products | PharmaconEG',
   description: 'Because Health Deserves Quality',
   icons: {
-    icon: '../assets/logo icon.ico',
-    apple: '../assets/logo icon.ico'
+    icon: '../assets/favicon.ico',
+    apple: '../assets/favicon.ico'
   },
   manifest: '/manifest.webmanifest',
   keywords: [
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_APP_URL}/products`,
-    siteName: 'Pharmacon',
+    siteName: 'PharmaconEG',
     images: [
       {
         url: '../assets/blueLogo.svg',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
     images: ['../assets/blueLogo.svg']

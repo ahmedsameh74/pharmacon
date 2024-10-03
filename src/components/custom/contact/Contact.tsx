@@ -9,7 +9,8 @@ import {
   FaMapMarkerAlt,
   // FaWhatsapp,
   FaFacebookF,
-  FaLinkedinIn
+  FaLinkedinIn,
+  FaYoutube
 } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -160,13 +161,16 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8`}>
+        <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8 relative z-20`}>
           {/* Social Links */}
-          <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer">
+          <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Facebook'>
             <FaFacebookF />
           </a>
-          <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer">
+          <a href="https://www.linkedin.com/company/pharmacon-pharmaceuticals/" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Linkedin'>
             <FaLinkedinIn />
+          </a>
+          <a href="https://www.youtube.com/@pharmaconpharmaceuticals6630" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Youtube'>
+            <FaYoutube />
           </a>
         </div>
       </div>
@@ -189,7 +193,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.firstName ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="Ahmed"
+                placeholder="First Name"
                 id="firstName"
               />
               {errors.firstName && (
@@ -209,7 +213,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.lastName ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="Sameh"
+                placeholder="last Name"
                 id="lastName"
               />
               {errors.lastName && (
@@ -232,7 +236,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.email ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="asameh1500@gmail.com"
+                placeholder="mail@example.com"
                 id="email"
               />
               {errors.email && (
@@ -252,7 +256,7 @@ export default function ContactSection() {
                 className={`w-full border-b-2 p-3 rounded-sm focus:outline-none focus:ring-2 ${
                   errors.phone ? 'border-red-500' : 'border-black'
                 }`}
-                placeholder="+201094743313"
+                placeholder="+20123456789"
                 id="phone"
               />
               {errors.phone && (

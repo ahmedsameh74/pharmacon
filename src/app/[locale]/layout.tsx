@@ -1,10 +1,12 @@
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import { Metadata } from 'next';
+import Head from 'next/head';
 
 import Navbar from '@/components/custom/home/Navbar';
 import Footer from '@/components/custom/home/Footer';
@@ -17,11 +19,20 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: 'Pharmacon',
-  description: 'Because Health Deserves Quality',
   icons: {
-    icon: '/assets/logo icon.ico',
-    apple: '/assets/blueLogo.png'
+    icon: [
+      '/assets/favicon.ico',
+      '/assets/icon32_32.png',
+      '/assets/icon16_16.png'
+    ],
+    apple: '/assets/blueLogo.png',
+    shortcut: [
+      '/assets/favicon.ico',
+      '/assets/icon32_32.png',
+      '/assets/icon32_32.ico',
+      '/assets/icon16_16.png',
+      '/assets/icon16_16.ico'
+    ]
   },
   manifest: '/manifest.webmanifest',
   keywords: [
@@ -35,26 +46,15 @@ export const metadata: Metadata = {
     'Pharmacy',
     'فارماكون'
   ],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  },
   openGraph: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
-    siteName: 'Pharmacon',
+    siteName: 'PharmaconEG',
     images: [
       {
-        url: '/assets/blueLogo.svg',
-        width: 800,
+        url: '/assets/logo_1200_630.png',
+        width: 1200,
         height: 600
       }
     ],
@@ -62,10 +62,10 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
-    images: ['/assets/blueLogo.svg']
+    images: ['/assets/logo_1200_630.png']
   }
 };
 
@@ -82,19 +82,36 @@ export default async function RootLayout({
     <html lang={locale}>
       <meta
         name="google-site-verification"
-        content="zeFFPMAlwtdB6-JRNEsunhx-99Bf53J8Gdhc-HynS1E"
+        content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
       />
+      <Head>
+        <link rel="icon" href="/assets/favicon.ico" sizes="any" />
+        <link
+          rel="icon"
+          href="/assets/icon32_32.png"
+          sizes="32x32"
+          type="image/png"
+        />
+        <link
+          rel="icon"
+          href="/assets/icon16_16.png"
+          sizes="16x16"
+          type="image/png"
+        />
+      </Head>
       <body
         dir={locale === 'ar' ? 'rtl' : 'ltr'}
         className={`${cairo.className} bg-background text-foreground antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
-          {children}
-          <SpeedInsights />
-          <Analytics />
-          <Footer />
+          <div className="top-12 relative">
+            {children}
+            <Footer />
+          </div>
         </NextIntlClientProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
