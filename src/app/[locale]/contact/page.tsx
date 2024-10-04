@@ -6,25 +6,7 @@ import ContactHeader from '@/components/custom/contact/ContactHeader';
 
 export const metadata: Metadata = {
   title: 'Contact Us | PharmaconEG',
-  description: 'Because Health Deserves Quality',
-  icons: {
-    icon: '../assets/favicon.ico',
-    apple: '../assets/favicon.ico'
-  },
-  manifest: '/manifest.webmanifest',
-  keywords: [
-    'Pharmacon',
-    'PharmaconEG',
-    'EG',
-    'eg',
-    'Health',
-    'Quality',
-    'Products',
-    'Pharmacy',
-    'Contact',
-    'Contact Us',
-    'فارماكون'
-  ],
+  keywords: ['Contact', 'Contact Us', 'Contact Pharmacon Egypt'],
   robots: {
     index: true,
     follow: true,
@@ -35,28 +17,28 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1
     }
-  },
-  openGraph: {
-    title: 'PharmaconEG',
-    description: 'Because Health Deserves Quality',
-    url: `${process.env.NEXT_PUBLIC_APP_URL}/contact`,
-    siteName: 'PharmaconEG',
-    images: [
-      {
-        url: '../assets/blueLogo.svg',
-        width: 400,
-        height: 200
-      }
-    ],
-    locale: 'en-US',
-    type: 'website'
-  },
-  twitter: {
-    title: 'PharmaconEG',
-    description: 'Because Health Deserves Quality',
-    card: 'summary_large_image',
-    images: ['../assets/blueLogo.svg']
   }
+  // openGraph: {
+  //   title: 'PharmaconEG',
+  //   description: 'Because Health Deserves Quality',
+  //   url: `${process.env.NEXT_PUBLIC_APP_URL}/contact`,
+  //   siteName: 'PharmaconEG',
+  //   images: [
+  //     {
+  //       url: '../assets/blueLogo.svg',
+  //       width: 400,
+  //       height: 200
+  //     }
+  //   ],
+  //   locale: 'en-US',
+  //   type: 'website'
+  // },
+  // twitter: {
+  //   title: 'PharmaconEG',
+  //   description: 'Because Health Deserves Quality',
+  //   card: 'summary_large_image',
+  //   images: ['../assets/blueLogo.svg']
+  // }
 };
 
 export default function ContactPage() {

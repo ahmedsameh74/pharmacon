@@ -48,21 +48,8 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
       product.title,
       `${product.title} | PharmaconEG`,
       `${product.title} PharmaconEG`,
-      'Pharmacon',
-      'PharmaconEG',
-      'EG',
-      'eg',
-      'Health',
-      'Quality',
-      'Products',
-      'Pharmacy',
-      'فارماكون',
       product.tags.join(', ')
     ],
-    icons: {
-      icon: '../../assets/favicon.ico',
-      apple: '../../assets/favicon.ico'
-    },
     openGraph: {
       title: `${product.title} | PharmaconEG`,
       description: product.description,
