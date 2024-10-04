@@ -23,12 +23,12 @@ const AboutDynamic = dynamic(() => import('@/components/custom/home/About'), {
 // );
 
 export const metadata: Metadata = {
-  title: 'PharmaconEG',
-  description: 'Because Health Deserves Quality',
-  icons: {
-    icon: '/assets/favicon.ico',
-    apple: '/assets/blueLogo.png'
-  },
+  // title: 'PharmaconEG',
+  // description: 'Because Health Deserves Quality',
+  // icons: {
+  //   icon: '/assets/favicon.ico',
+  //   apple: '/assets/blueLogo.png'
+  // },
   manifest: '/manifest.webmanifest',
   keywords: [
     'Pharmacon',
