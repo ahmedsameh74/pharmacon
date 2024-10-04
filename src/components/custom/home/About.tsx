@@ -29,7 +29,9 @@ export default function About() {
               width={300}
               height={300}
               loading="lazy"
-              className="rounded-lg"
+              className="rounded-lg object-contain"
+              placeholder="blur"
+              blurDataURL="/assets/drrr.png"
             />
           </div>
           <div className="p-4">
@@ -76,11 +78,13 @@ export default function About() {
             <Image
               src="/assets/pharma.png"
               alt="About"
-              style={{ width: 'auto', height: '296px' }}
+              style={{ width: 'auto', height: 'auto' }}
               width={300}
               height={300}
               loading="lazy"
-              className="rounded-lg object-cover"
+              className="rounded-lg object-contain"
+              placeholder="blur"
+              blurDataURL="/assets/pharma.png"
               // objectFit="cover"
             />
           </div>
