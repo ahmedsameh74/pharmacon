@@ -105,6 +105,44 @@ export default async function LocaleLayout({
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
+  const structeredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'PharmaconEG',
+    url: 'https://www.pharmaconeg.com',
+    logo: 'https://www.pharmaconeg.com/assets/logo_1200_630.png',
+    description: 'Because Health Deserves Quality',
+    sameAs: [
+      'https://www.facebook.com/pharmaconEgypt',
+      'https://www.instagram.com/pharmaconeg'
+    ],
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '30.065472, 31.3367497',
+      addressLocality: 'Cairo',
+      addressRegion: 'Cairo Governorate',
+      postalCode: '11865',
+      addressCountry: {
+        '@type': 'Country',
+        name: 'EG'
+      }
+    },
+    location: {
+      '@type': 'Place',
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 30.065472,
+        longitude: 31.3367497
+      }
+    },
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+201005883192',
+      contactType: 'Customer Service',
+      availableLanguage: ['English', 'Arabic']
+    }
+  };
+
   return (
     <html lang={locale}>
       <meta
@@ -134,37 +172,7 @@ export default async function LocaleLayout({
           id="structured-data"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org/',
-              '@type': 'Organization',
-              name: 'PharmaconEG',
-              url: 'https://www.pharmaconeg.com',
-              logo: 'https://www.pharmaconeg.com/assets/logo_1200_630.png',
-              description: 'Because Health Deserves Quality',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '30.065472, 31.3367497',
-                addressLocality: 'Cairo',
-                addressRegion: 'Cairo Governorate',
-                postalCode: '11865',
-                addressCountry: 'EG'
-              },
-              geo: {
-                '@type': 'GeoCoordinates',
-                latitude: 30.065472,
-                longitude: 31.3367497
-              },
-              contactPoint: {
-                '@type': 'ContactPoint',
-                telephone: '+201005883192',
-                contactType: 'Customer Service',
-                availableLanguage: ['English', 'Arabic']
-              },
-              sameAs: [
-                'https://www.facebook.com/pharmaconEgypt',
-                'https://www.instagram.com/pharmaconeg'
-              ]
-            })
+            __html: JSON.stringify(structeredData)
           }}
         />
         <NextIntlClientProvider messages={messages}>
