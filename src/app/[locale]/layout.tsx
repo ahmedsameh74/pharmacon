@@ -2,13 +2,19 @@ import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
-import { Analytics } from '@vercel/analytics/react';
+// import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 
 import Navbar from '@/components/custom/home/Navbar';
 
+const Analytics = dynamic(
+  () => import('@vercel/analytics/react').then((mod) => mod.Analytics),
+  {
+    ssr: false
+  }
+);
 const Footer = dynamic(() => import('@/components/custom/home/Footer'));
 
 const cairo = Cairo({
