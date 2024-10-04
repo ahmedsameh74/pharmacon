@@ -1,15 +1,15 @@
-// import type { Metadata } from 'next';
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 import Navbar from '@/components/custom/home/Navbar';
-import Footer from '@/components/custom/home/Footer';
+
+const Footer = dynamic(() => import('@/components/custom/home/Footer'));
 
 const cairo = Cairo({
   weight: ['400', '500', '600', '700'],
@@ -36,15 +36,26 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.webmanifest',
   keywords: [
-    'Pharmacon',
-    'PharmaconEG',
-    'EG',
-    'eg',
-    'Health',
-    'Quality',
-    'Products',
-    'Pharmacy',
-    'فارماكون'
+    'Pharmacon Egypt',
+    'Pharmacon health products',
+    'Pharmacon quality healthcare',
+    'healthcare products',
+    'pharmaceutical products',
+    'pharmacy services',
+    'pharmacy supplies',
+    'online pharmacy Egypt',
+    'buy health products online',
+    'medical supplies',
+    'health and wellness',
+    'quality pharmacy products',
+    'healthcare solutions',
+    'Pharmacon pharmacy',
+    'فارماكون',
+    'فارماكون مصر',
+    'منتجات الرعاية الصحية',
+    'منتجات طبية',
+    'خدمات الصيدلية',
+    'منتجات طبية عالية الجودة'
   ],
   openGraph: {
     title: 'PharmaconEG',
@@ -110,7 +121,7 @@ export default async function RootLayout({
             <Footer />
           </div>
         </NextIntlClientProvider>
-        <SpeedInsights />
+        {/* <SpeedInsights /> */}
         <Analytics />
       </body>
     </html>
