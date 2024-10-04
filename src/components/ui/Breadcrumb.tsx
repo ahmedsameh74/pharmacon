@@ -7,13 +7,13 @@ import { useTranslations } from 'next-intl'; // Import useTranslations for local
 
 const Breadcrumb = ({ titleColor }: { titleColor?: string }) => {
   const pathname = usePathname();
-  const locale = pathname.split('/')[1] || 'en'; // Extract locale from pathname
+  const locale = pathname?.split('/')[1] || 'en'; // Extract locale from pathname
   const t = useTranslations(); // Access translations for breadcrumbs
 
   const breadcrumbItems = useMemo(() => {
     // Remove locale and leading/trailing slashes
-    const paths = pathname.split('/').filter(Boolean).slice(1);
-    const breadcrumbs = paths.map((path, index) => {
+    const paths = pathname?.split('/').filter(Boolean).slice(1);
+    const breadcrumbs = paths?.map((path, index) => {
       const href = `/${locale}/${paths.slice(0, index + 1).join('/')}`;
 
       // Translate the breadcrumb label based on the path
@@ -23,7 +23,7 @@ const Breadcrumb = ({ titleColor }: { titleColor?: string }) => {
     });
 
     // Add localized 'Home' at the beginning
-    breadcrumbs.unshift({ href: `/${locale}`, label: t('home') });
+    breadcrumbs?.unshift({ href: `/${locale}`, label: t('home') });
 
     return breadcrumbs;
   }, [pathname, locale, t]);
@@ -31,7 +31,7 @@ const Breadcrumb = ({ titleColor }: { titleColor?: string }) => {
   return (
     <nav aria-label="Breadcrumb" className="text-sm">
       <ol className="flex space-x-4">
-        {breadcrumbItems.map((item, index) => (
+        {breadcrumbItems?.map((item, index) => (
           <li
             key={item.href}
             aria-current={

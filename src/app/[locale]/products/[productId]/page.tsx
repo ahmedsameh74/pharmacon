@@ -4,6 +4,7 @@ import path from 'path';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
+import { notFound } from 'next/navigation';
 // import Loader from '@/components/ui/Loader';
 //align stage with dev
 
@@ -31,7 +32,8 @@ async function getProduct(productId: string): Promise<Product> {
   const product = products.find((item) => item.id === Number(productId));
 
   if (!product) {
-    throw new Error(`Product with id ${productId} not found`);
+    // throw new Error(`Product with id ${productId} not found`);
+    return notFound();
   }
 
   return product;
