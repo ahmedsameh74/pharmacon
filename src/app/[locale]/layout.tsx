@@ -1,11 +1,12 @@
 import '../globals.css';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
 import { Cairo } from 'next/font/google';
 // import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
+import { ReactNode } from 'react';
 
 import Navbar from '@/components/custom/home/Navbar';
 
@@ -16,6 +17,11 @@ const Analytics = dynamic(
   }
 );
 const Footer = dynamic(() => import('@/components/custom/home/Footer'));
+
+type Props = {
+  children: ReactNode;
+  params: { locale: string };
+};
 
 const cairo = Cairo({
   weight: ['400', '500', '600', '700'],
@@ -91,13 +97,12 @@ export const metadata: Metadata = {
   }
 };
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
   params: { locale }
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+}: Props) {
+  // Enable static rendering
+  unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   return (
