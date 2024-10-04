@@ -1,17 +1,13 @@
 import { Metadata } from 'next';
 
 import AboutHead from '@/components/custom/about/AboutHead';
-import Form from '@/components/ui/Form';
+// import Form from '@/components/ui/Form';
+import CareersComp from '@/components/custom/careers/Careers';
 
 export const metadata: Metadata = {
-  title: 'About | PharmaconEG',
-  description: 'Because Health Deserves Quality',
-  icons: {
-    icon: '../assets/favicon.ico',
-    apple: '../assets/favicon.ico'
-  },
+  title: 'Careers | PharmaconEG',
   manifest: '/manifest.webmanifest',
-  keywords: ['About', 'Pharmacon About', 'About Us', 'About Pharmacon Egypt'],
+  keywords: ['Careers', 'Pharmacon Careers', 'Jobs', 'Careers Pharmacon Egypt'],
   robots: {
     index: true,
     follow: true,
@@ -38,12 +34,6 @@ export const metadata: Metadata = {
     locale: 'en-US',
     type: 'website'
   }
-  // twitter: {
-  //   title: 'PharmaconEG',
-  //   description: 'Because Health Deserves Quality',
-  //   card: 'summary_large_image',
-  //   images: ['../assets/blueLogo.svg']
-  // }
 };
 
 export default function Careers() {
@@ -54,7 +44,8 @@ export default function Careers() {
       <OurService />
       <WhoWeAreDynamic />
       <ContactSectionDynamic /> */}
-      <Form />
+      <CareersComp />
+      {/* <Form /> */}
     </>
   );
 }

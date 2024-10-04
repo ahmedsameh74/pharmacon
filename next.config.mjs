@@ -9,10 +9,10 @@ const nextConfig = {
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-store, must-revalidate'
-          },
+          // {
+          //   key: 'Cache-Control',
+          //   value: 'no-store, must-revalidate'
+          // },
           {
             key: 'Last-Modified',
             value: new Date().toUTCString() // Dynamically set last modified time
