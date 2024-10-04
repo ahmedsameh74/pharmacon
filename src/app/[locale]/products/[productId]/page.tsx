@@ -29,7 +29,9 @@ async function getProduct(productId: string): Promise<Product> {
   const fileContents = await fs.readFile(filePath, 'utf-8');
 
   const products: Product[] = JSON.parse(fileContents);
-  const product = products.find((item) => item.id === Number(productId));
+  const product = products.find(
+    (item) => item.title.toLocaleLowerCase() === productId.toLocaleLowerCase()
+  );
 
   if (!product) {
     // throw new Error(`Product with id ${productId} not found`);

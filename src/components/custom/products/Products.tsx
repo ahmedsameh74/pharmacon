@@ -143,7 +143,7 @@ export default function ProductsComponent() {
                       {product.description.slice(0, 100).concat('...')}
                     </p>
                     <Link
-                      href={`products/${product.id}`}
+                      href={`products/${product.title}`}
                       className="text-sm text-[#01547E] inline-flex items-center hover:underline"
                     >
                       {t('learnMore')}
