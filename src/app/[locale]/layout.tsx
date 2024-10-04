@@ -114,7 +114,8 @@ export default async function LocaleLayout({
     description: 'Because Health Deserves Quality',
     sameAs: [
       'https://www.facebook.com/pharmaconEgypt',
-      'https://www.instagram.com/pharmaconeg'
+      'https://www.instagram.com/pharmaconeg',
+      'https://www.linkedin.com/company/pharmacon-pharmaceuticals/'
     ],
     address: {
       '@type': 'PostalAddress',
