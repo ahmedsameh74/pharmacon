@@ -2,11 +2,11 @@ import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | Pharmacon',
-  description: 'Terms and Conditions for using Pharmacon',
+  title: 'Terms & Conditions | PharmaconEG',
+  description: 'Terms and Conditions for using PharmaconEG',
   icons: {
-    icon: '../assets/logo icon.ico',
-    apple: '../assets/logo icon.ico'
+    icon: '../assets/favicon.ico',
+    apple: '../assets/favicon.ico'
   },
   manifest: '/manifest.webmanifest',
   keywords: [
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'Pharmacon',
-    description: 'Terms and Conditions for using Pharmacon',
-    url: 'https://pharmaconeg-dev.vercel.app/',
-    siteName: 'Pharmacon',
+    title: 'PharmaconEG',
+    description: 'Terms and Conditions for using PharmaconEG',
+    url: 'https://PharmaconEGeg-dev.vercel.app/',
+    siteName: 'PharmaconEG',
     images: [
       {
         url: '../assets/blueLogo.svg',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'Pharmacon',
-    description: 'Terms and Conditions for using Pharmacon',
+    title: 'PharmaconEG',
+    description: 'Terms and Conditions for using PharmaconEG',
     card: 'summary_large_image',
     images: ['../assets/blueLogo.svg']
   }

@@ -23,7 +23,8 @@ export default function Hero({ image }: { image: string }) {
             {/* Font size adjusted */}
           </div>
           <p className="text-2xl md:text-4xl lg:text-6xl mb-6 w-full md:w-2/3 text-start">
-            {t('heroDesc')}
+            {/* {t('heroDesc')} */}A global network of excellence, dedicated to
+            providing innovative healthcare solutions
           </p>{' '}
           {/* Text adjusted for various screens */}
           <p className="text-sm md:text-lg lg:text-xl font-light w-full md:w-3/4 text-start">

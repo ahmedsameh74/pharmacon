@@ -23,7 +23,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div className="flex justify-center">
             <Image
-              src="/assets/dr.png"
+              src="/assets/drrr.png"
               alt="About"
               style={{ width: 'auto', height: 'auto' }}
               width={300}
@@ -55,32 +55,33 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div className="p-4">
             <h1 className="text-2xl md:text-4xl font-bold text-[#01547E] mb-4">
-              {t('NotJust')}
+              Global Innovation, Local Care
             </h1>
             <p className="text-gray-600 mb-6">
-              Our mission is to have a role in improving quality of life in the
-              community through providing access to affordable high-quality
-              pharmaceutical solutions. To recruit and develop high caliber
-              employees who share our values and beliefs. And to work wit...
+              Our collaborations with global pharmaceutical, biological and
+              medical device leaders from Germany, Switzerland, Italy, Romania,
+              and other regions enable us to provide you with cutting-edge
+              healthcare solutions. We offer Egyptian patients access to the
+              most advanced healthcare technologies.
             </p>
             <Link
               href={`/${locale}/about`}
               className="bg-white hover:bg-[#01547E] mt-2 text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
-              {/* {t('learnMore')} */}
               More About Us
             </Link>
           </div>
 
           <div className="flex justify-center">
             <Image
-              src="/assets/dr.png"
+              src="/assets/pharma.png"
               alt="About"
-              style={{ width: 'auto', height: 'auto' }}
+              style={{ width: 'auto', height: '296px' }}
               width={300}
               height={300}
               loading="lazy"
-              className="rounded-lg"
+              className="rounded-lg object-cover"
+              // objectFit="cover"
             />
           </div>
         </div>

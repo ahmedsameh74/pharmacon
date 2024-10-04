@@ -34,25 +34,14 @@ const WhoWeAreDynamic = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: 'About | Pharmacon',
+  title: 'About | PharmaconEG',
   description: 'Because Health Deserves Quality',
   icons: {
-    icon: '../assets/logo icon.ico',
-    apple: '../assets/logo icon.ico'
+    icon: '../assets/favicon.ico',
+    apple: '../assets/favicon.ico'
   },
   manifest: '/manifest.webmanifest',
-  keywords: [
-    'Pharmacon',
-    'PharmaconEG',
-    'EG',
-    'eg',
-    'Health',
-    'Quality',
-    'Products',
-    'Pharmacy',
-    'About',
-    'فارماكون'
-  ],
+  keywords: ['About', 'Pharmacon About', 'About Us', 'About Pharmacon Egypt'],
   robots: {
     index: true,
     follow: true,
@@ -65,10 +54,10 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'Pharmacon',
+    title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_APP_URL}/about`,
-    siteName: 'Pharmacon',
+    siteName: 'PharmaconEG',
     images: [
       {
         url: '../assets/blueLogo.svg',
@@ -78,13 +67,13 @@ export const metadata: Metadata = {
     ],
     locale: 'en-US',
     type: 'website'
-  },
-  twitter: {
-    title: 'Pharmacon',
-    description: 'Because Health Deserves Quality',
-    card: 'summary_large_image',
-    images: ['../assets/blueLogo.svg']
   }
+  // twitter: {
+  //   title: 'PharmaconEG',
+  //   description: 'Because Health Deserves Quality',
+  //   card: 'summary_large_image',
+  //   images: ['../assets/blueLogo.svg']
+  // }
 };
 
 export default function About() {

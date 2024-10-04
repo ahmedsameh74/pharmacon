@@ -1,5 +1,5 @@
 {
-  "name": "pharmacon",
+  "name": "pharmaconeg",
   "version": "0.1.0",
   "private": true,
   "author": "Ahmed Sameh",
@@ -8,7 +8,7 @@
     "build": "next build",
     "//postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.mjs --fix",
     "mail": "node server.js"
   },
   "dependencies": {

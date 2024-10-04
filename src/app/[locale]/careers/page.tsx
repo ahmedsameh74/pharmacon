@@ -1,27 +1,17 @@
 import { Metadata } from 'next';
 
 import AboutHead from '@/components/custom/about/AboutHead';
-import ProductsComponent from '@/components/custom/products/Products';
+import Form from '@/components/ui/Form';
 
 export const metadata: Metadata = {
-  title: 'Products | PharmaconEG',
+  title: 'About | PharmaconEG',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/favicon.ico',
     apple: '../assets/favicon.ico'
   },
   manifest: '/manifest.webmanifest',
-  keywords: [
-    'Pharmacon',
-    'PharmaconEG',
-    'EG',
-    'eg',
-    'Health',
-    'Quality',
-    'Pharmacy',
-    'Products',
-    'فارماكون'
-  ],
+  keywords: ['About', 'Pharmacon About', 'About Us', 'About Pharmacon Egypt'],
   robots: {
     index: true,
     follow: true,
@@ -36,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'PharmaconEG',
     description: 'Because Health Deserves Quality',
-    url: `${process.env.NEXT_PUBLIC_APP_URL}/products`,
+    url: `${process.env.NEXT_PUBLIC_APP_URL}/about`,
     siteName: 'PharmaconEG',
     images: [
       {
@@ -47,20 +37,24 @@ export const metadata: Metadata = {
     ],
     locale: 'en-US',
     type: 'website'
-  },
-  twitter: {
-    title: 'PharmaconEG',
-    description: 'Because Health Deserves Quality',
-    card: 'summary_large_image',
-    images: ['../assets/blueLogo.svg']
   }
+  // twitter: {
+  //   title: 'PharmaconEG',
+  //   description: 'Because Health Deserves Quality',
+  //   card: 'summary_large_image',
+  //   images: ['../assets/blueLogo.svg']
+  // }
 };
 
-export default function Products() {
+export default function Careers() {
   return (
     <>
-      <AboutHead image={'../../assets/products.webp'} title={'products'} />
-      <ProductsComponent />
+      <AboutHead image={'../../assets/aboutUsSection.webp'} title={'careers'} />
+      {/* <StatsBanner />
+      <OurService />
+      <WhoWeAreDynamic />
+      <ContactSectionDynamic /> */}
+      <Form />
     </>
   );
 }

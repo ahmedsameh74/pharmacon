@@ -1,22 +1,13 @@
 /* eslint-disable prettier/prettier */
 'use client';
 import axios from 'axios';
-import { useLocale, useTranslations } from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import {
-  // FaPhoneAlt,
-  FaEnvelope,
-  FaMapMarkerAlt,
-  // FaWhatsapp,
-  FaFacebookF,
-  FaLinkedinIn,
-  FaYoutube
-} from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export default function ContactSection() {
-  const locale = useLocale();
+export default function Form() {
+  // const locale = useLocale();
   const t = useTranslations()
   const [formData, setFormData] = useState({
     firstName: '',
@@ -129,10 +120,10 @@ export default function ContactSection() {
   };
 
   return (
-    <div className="container mx-auto px-6 lg:px-0 py-12 lg:py-12 flex flex-col lg:flex-row">
+    <div className="container mx-auto px-6 lg:px-0 py-12 lg:py-12 flex flex-row items-center justify-center lg:flex-row">
       {/* Left Column - Contact Information */}
-      <div className="relative bg-[#01547E] text-white p-10 lg:w-1/2 rounded-l-lg flex flex-col justify-between space-y-8">
-        {/* Circles background */}
+      {/* <div className="relative bg-[#01547E] text-white p-10 lg:w-1/2 rounded-l-lg flex flex-col justify-between space-y-8">
+        
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute w-60 h-60 bg-white opacity-10 rounded-full bottom-[-40px] right-[-40px]"></div>
           <div className="absolute w-40 h-40 bg-white opacity-10 rounded-full bottom-20 right-20"></div>
@@ -141,14 +132,13 @@ export default function ContactSection() {
         <div className="relative">
           <h2 className="text-3xl font-semibold mb-8">{t('contactInfo')}</h2>
           <div className="space-y-6">
-            {/* Email */}
+
             <a href="mailto:info@pharmaconeg.com" className="flex items-center">
               <div className="text-xl">
                 <FaEnvelope className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               </div>
               <p>info@pharmaconeg.com</p>
             </a>
-            {/* Address */}
             <div className="flex items-center">
               <div className="text-xl">
                 <FaMapMarkerAlt className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
@@ -162,7 +152,7 @@ export default function ContactSection() {
         </div>
 
         <div className={`flex ${locale === 'ar' ? 'space-x-reverse space-x-4' : 'space-x-4'} mt-8 relative z-20`}>
-          {/* Social Links */}
+          
           <a href="https://www.facebook.com/pharmaconEgypt" target='_blank' className="text-2xl" rel="noreferrer" aria-label='Facebook'>
             <FaFacebookF />
           </a>
@@ -173,11 +163,11 @@ export default function ContactSection() {
             <FaYoutube />
           </a>
         </div>
-      </div>
+      </div> */}
 
 
       {/* Right Column - Contact Form */}
-      <div className="bg-white shadow-lg rounded-r-lg lg:w-1/2 p-10">
+      <div className="bg-white shadow-lg rounded-r-lg  p-10 ">
         <form className="space-y-6" onSubmit={handleSubmit}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
