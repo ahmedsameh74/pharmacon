@@ -61,7 +61,7 @@ export default function Products() {
               medicineName={product.title}
               description={product.tags.join(', ')}
               imageUrl={product.image}
-              id={product.id}
+              id={product.title}
             />
           ))}
       </div>
