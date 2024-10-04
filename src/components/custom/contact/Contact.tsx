@@ -138,26 +138,29 @@ export default function ContactSection() {
           <div className="absolute w-40 h-40 bg-white opacity-10 rounded-full bottom-20 right-20"></div>
         </div>
 
-        <div className="relative">
+        <div className="relative" aria-label='Contact Info'>
           <h2 className="text-3xl font-semibold mb-8">{t('contactInfo')}</h2>
           <div className="space-y-6">
             {/* Email */}
-            <a href="mailto:info@pharmaconeg.com" className="flex items-center">
+            <a href="mailto:info@pharmaconeg.com" className="flex items-center" aria-label='Email'>
               <div className="text-xl">
                 <FaEnvelope className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               </div>
               <p>info@pharmaconeg.com</p>
             </a>
             {/* Address */}
-            <div className="flex items-center">
+            <a className="flex items-center" aria-label='Address' target='_blank'                 href="https://www.google.com/maps/place/Pharmacon+Egypt/@30.065472,31.3367497,18.11z/data=!4m14!1m7!3m6!1s0x14583e6c63fee8a1:0xef8fcd2e8531ab80!2sDar+Al+Hekma+Hospital!8m2!3d30.0658248!4d31.337984!16s%2Fg%2F11c2nlhbfy!3m5!1s0x14583f227c51556f:0xdf9d3a034d1ea797!8m2!3d30.0664724!4d31.3380162!16s%2Fg%2F11lc93dqlc?entry=ttu&g_ep=EgoyMDI0MTAwMS4wIKXMDSoASAFQAw%3D%3D" rel="noreferrer"
+            >
               <div className="text-xl">
                 <FaMapMarkerAlt className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
               </div>
-              <p>
-          2 Mohamed Abdelhalim Abdullah, From Hassanen Hekal St, From Abbas El Akkad St,
-          Beside Dar El Hekma Hospital, 5th Floor, Cairo, Egypt
+              <p
+                
+              >
+            2 Mohamed Abdelhalim Abdullah, From Hassanen Hekal St, From Abbas El Akkad St,
+            Beside Dar El Hekma Hospital, 5th Floor, Cairo, Egypt
               </p>
-            </div>
+            </a>
           </div>
         </div>
 
