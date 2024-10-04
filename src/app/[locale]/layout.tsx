@@ -19,6 +19,11 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
+  title: 'Pharmacon Egypt',
+  description: 'Because Health Deserves Quality',
+  viewport: 'width=device-width, initial-scale=1',
+  category: 'Pharmacy',
+  authors: [{ name: 'Pharmacon Egypt', url: 'https://www.pharmaconeg.com' }],
   icons: {
     icon: [
       '/assets/favicon.ico',
