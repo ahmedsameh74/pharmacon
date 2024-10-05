@@ -45,7 +45,7 @@ export default function About() {
               market since 2004. Our aim is to improve...
             </p>
             <Link
-              href={`/${locale}/about`}
+              href={`/${locale}/about-us`}
               className="bg-white hover:bg-[#01547E] text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
               {/* {t('learnMore')} */}
@@ -67,7 +67,7 @@ export default function About() {
               most advanced healthcare technologies.
             </p>
             <Link
-              href={`/${locale}/about`}
+              href={`/${locale}/about-us`}
               className="bg-white hover:bg-[#01547E] mt-2 text-[#01547E] hover:text-white border border-[#01547E] px-4 py-2 rounded-lg transition duration-300"
             >
               More About Us

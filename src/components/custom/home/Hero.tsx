@@ -1,14 +1,23 @@
 import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/legacy/image';
 
 export default function Hero({ image }: { image: string }) {
   const t = useTranslations();
   const locale = useLocale();
   return (
-    <section
-      className="relative w-full h-[75vh] bg-cover bg-center flex items-center justify-start"
-      style={{ backgroundImage: `url(${image})` }}
-    >
+    <section className="relative w-full h-[75vh] flex items-center justify-start">
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src={image}
+          alt="Hero background"
+          layout="fill"
+          objectPosition="center"
+          priority
+          className="object-cover w-full h-full"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      </div>
       <div className="relative z-10 text-left text-white px-4 md:px-16 flex items-center">
         {/* Text Content */}
         <div>
