@@ -2,6 +2,7 @@
 // import ContactSection from '@/components/custom/home/ContactSection';
 import dynamic from 'next/dynamic';
 import { Metadata } from 'next';
+import Head from 'next/head';
 
 import Hero from '@/components/custom/home/Hero';
 import Products from '@/components/custom/home/Products';
@@ -78,6 +79,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
+      <Head>
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL}`} />
+      </Head>
       <Hero image={'/assets/dr2.webp'} />
       <StatsBanner />
       <AboutDynamic />
