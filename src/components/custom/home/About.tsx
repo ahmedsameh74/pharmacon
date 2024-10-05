@@ -39,7 +39,7 @@ export default function About() {
               {t('NotJust')}
             </h1>
             <p className="text-gray-600 mb-6">
-              Pharmacon is Germany -Egyptian promising pharmaceutical company
+              Pharmacon is Germany - Egyptian promising pharmaceutical company
               dedicated to promote under license high quality products in the
               Egyptian market. Pharmacon founded in the Egyptian pharmaceutical
               market since 2004. Our aim is to improve...
