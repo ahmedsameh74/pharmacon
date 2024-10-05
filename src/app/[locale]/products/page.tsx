@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Head from 'next/head';
 
 import AboutHead from '@/components/custom/about/AboutHead';
 import ProductsComponent from '@/components/custom/products/Products';
@@ -59,6 +60,12 @@ export const metadata: Metadata = {
 export default function Products() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_APP_URL}/products`}
+        />
+      </Head>
       <AboutHead image={'../../assets/products.webp'} title={'products'} />
       <ProductsComponent />
     </>
