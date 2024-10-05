@@ -38,7 +38,7 @@ export default function Footer() {
               className={`text-center ${locale === 'en' ? 'lg:text-left' : 'lg:text-right'}`}
             >
               <li>
-                <Link href={`/${locale}/about`} className="hover:underline">
+                <Link href={`/${locale}/about-us`} className="hover:underline">
                   {t('aboutUs')}
                 </Link>
               </li>
