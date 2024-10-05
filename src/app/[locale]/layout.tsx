@@ -32,7 +32,8 @@ const cairo = Cairo({
 
 export const metadata: Metadata = {
   title: 'Pharmacon Egypt',
-  description: 'Because Health Deserves Quality',
+  description:
+    'Pharmacon is Germany - Egyptian promising pharmaceutical company dedicated to promote under license high quality products in the Egyptian market. Pharmacon founded in the Egyptian pharmaceutical market since 2004.',
   viewport: 'width=device-width, initial-scale=1',
   category: 'Pharmacy',
   authors: [{ name: 'Pharmacon Egypt', url: 'https://www.pharmaconeg.com' }],
@@ -54,6 +55,8 @@ export const metadata: Metadata = {
   manifest: '/manifest.webmanifest',
   keywords: [
     'Pharmacon Egypt',
+    'Pharmacon',
+    'Because Health Deserves Quality',
     'Pharmacon health products',
     'Pharmacon quality healthcare',
     'healthcare products',
