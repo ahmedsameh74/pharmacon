@@ -37,6 +37,17 @@ export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
   category: 'Pharmacy',
   authors: [{ name: 'Pharmacon Egypt', url: 'https://www.pharmaconeg.com' }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
   icons: {
     icon: [
       '/assets/favicon.ico',
@@ -55,7 +66,12 @@ export const metadata: Metadata = {
   manifest: '/manifest.webmanifest',
   keywords: [
     'Pharmacon Egypt',
+    'Pharmacon Eg',
+    'PharmaconEg',
+    'Pharmacon Egy',
+    'PharmaconEgy',
     'Pharmacon',
+    'Pharmacon Pharmaceuticals',
     'Because Health Deserves Quality',
     'Pharmacon health products',
     'Pharmacon quality healthcare',
@@ -75,7 +91,27 @@ export const metadata: Metadata = {
     'منتجات الرعاية الصحية',
     'منتجات طبية',
     'خدمات الصيدلية',
-    'منتجات طبية عالية الجودة'
+    'منتجات طبية عالية الجودة',
+    'pharmacy health products',
+    'pharmaceutical healthcare solutions',
+    'Egyptian pharmaceutical company',
+    'licensed pharmaceutical products',
+    'healthcare innovations',
+    'buy pharmacy products online',
+    'pharmaceutical distribution in Egypt',
+    'pharmaceutical company Egypt',
+    'online health services Egypt',
+    'pharmacy products for health',
+    'medical equipment supplies',
+    'health and pharmaceutical excellence',
+    'Pharmacon pharmacy online',
+    'pharmacy solutions Egypt',
+    'trusted pharmacy services',
+    'pharmaceutical expertise',
+    'Pharmacon Egypt online pharmacy',
+    'الصيدلية اونلاين',
+    'أدوية فارماكون',
+    'مستحضرات صيدلانية مصر'
   ],
   openGraph: {
     title: 'PharmaconEG',
