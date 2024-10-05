@@ -56,7 +56,7 @@ export default function Navbar() {
 
   const menuItems = [
     { name: t('home'), href: `/${selectedLocale}/` },
-    { name: t('aboutUs'), href: `/${selectedLocale}/about` },
+    { name: t('aboutUs'), href: `/${selectedLocale}/about-us` },
     { name: t('products'), href: `/${selectedLocale}/products` },
     { name: t('contactUs'), href: `/${selectedLocale}/contact` }
   ];
