@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Head from 'next/head';
 
 import ContactSection from '@/components/custom/contact/Contact';
 // import Breadcrumb from '@/components/ui/Breadcrumb';
@@ -44,6 +45,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_APP_URL}/contact`}
+        />
+      </Head>
       <ContactHeader />
       <ContactSection />
     </>
