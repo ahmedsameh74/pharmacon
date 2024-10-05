@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
+import Head from 'next/head';
 
 import AboutHead from '@/components/custom/about/AboutHead';
 import StatsBanner from '@/components/custom/home/StatsBanner';
@@ -79,6 +80,12 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
+      <Head>
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_APP_URL}/about-us`}
+        />
+      </Head>
       <AboutHead image={'../../assets/aboutUsSection.webp'} title={'about'} />
       <StatsBanner />
       <OurService />

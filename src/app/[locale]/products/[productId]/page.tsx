@@ -103,7 +103,10 @@ export default async function ProductPage({ params }: Params) {
           type="font/woff2"
           crossOrigin="anonymous"
         /> */}
-
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_APP_URL}/products/${product.title}`}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
