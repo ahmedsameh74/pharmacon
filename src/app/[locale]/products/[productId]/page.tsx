@@ -51,11 +51,13 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     keywords: [
       product.title,
       `${product.title} | PharmaconEG`,
+      `${product.title} | Pharmacon Egypt`,
       `${product.title} PharmaconEG`,
+      `${product.title} Pharmacon Egypt`,
       product.tags.join(', ')
     ],
     openGraph: {
-      title: `${product.title} | PharmaconEG`,
+      title: `${product.title} | Pharmacon Egypt`,
       description: product.description,
       url: `${process.env.NEXT_PUBLIC_APP_URL}/products/${params.productId}`,
       type: 'article',
@@ -81,7 +83,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.title} | PharmaconEG`,
+      title: `${product.title} | Pharmacon Egypt`,
       description: product.description,
       images: [product.image]
     }
