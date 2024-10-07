@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_APP_URL}/about`,
     siteName: 'PharmaconEG',
