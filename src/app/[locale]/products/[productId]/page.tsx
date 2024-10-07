@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   const product = await getProduct(params.productId);
 
   return {
-    title: `${product.title} | PharmaconEG`,
+    title: `${product.title} | Pharmacon Egypt`,
     description: product.description,
     keywords: [
       product.title,

@@ -35,7 +35,7 @@ const WhoWeAreDynamic = dynamic(
 );
 
 export const metadata: Metadata = {
-  title: 'About | PharmaconEG',
+  title: 'About | Pharmacon Egypt',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/favicon.ico',
