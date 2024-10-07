@@ -197,7 +197,7 @@ export const metadata: Metadata = {
     'Zambon'
   ],
   openGraph: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
     siteName: 'PharmaconEG',
@@ -212,7 +212,7 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
     images: ['/assets/logo_1200_630.png']
