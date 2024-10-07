@@ -34,7 +34,7 @@ export default function Products() {
     fetchProducts();
   }, []);
   return (
-    <div className="w-full bg-[#DCF0FA] py-12 flex flex-col md:flex-col justify-center items-center space-y-6 md:space-y-12 md:space-x-12">
+    <div className="w-full bg-[#DCF0FA] py-12 flex flex-col md:flex-col justify-center items-center space-y-6 md:space-y-12">
       <div className="flex items-center flex-col text-center">
         <p className="text-base md:text-lg font-semibold text-[#11546E] mb-2">
           {t('products')}
@@ -47,10 +47,10 @@ export default function Products() {
         </p>
       </div>
       <div
-        className={`grid gap-4 w-full max-w-4xl px-4 mt-8 ${
+        className={`grid gap-2 w-full max-w-4xl px-4 mt-8 ${
           products?.length === 1
             ? 'grid-cols-1 justify-center place-items-center' // Center the single item
-            : 'grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3'
+            : 'grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-3'
         }`}
       >
         {products
