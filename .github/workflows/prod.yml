@@ -36,6 +36,9 @@ jobs:
       - name: Build
         run: npm run build  # Or `yarn build` if you use Yarn
 
+      - name: indexNow
+        run: npm run indexnow
+
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v20
         with:
