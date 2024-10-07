@@ -37,14 +37,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 1
     },
     {
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/about`,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/about-us`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
       alternates: {
         languages: {
-          en: `${process.env.NEXT_PUBLIC_SITE_URL}/en/about`,
-          ar: `${process.env.NEXT_PUBLIC_SITE_URL}/ar/about`
+          en: `${process.env.NEXT_PUBLIC_SITE_URL}/en/about-us`,
+          ar: `${process.env.NEXT_PUBLIC_SITE_URL}/ar/about-us`
         }
       }
     },
