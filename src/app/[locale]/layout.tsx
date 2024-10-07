@@ -273,6 +273,7 @@ export default async function LocaleLayout({
         name="google-site-verification"
         content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
       />
+      <meta name="msvalidate.01" content="78226DAED18F7A9A397A8E25B1B861C5" />
       <Head>
         <link rel="icon" href="/assets/favicon.ico" sizes="any" />
         <link
