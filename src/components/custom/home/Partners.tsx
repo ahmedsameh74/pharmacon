@@ -12,7 +12,7 @@ const Partners = () => {
         Our Partners
       </h1> */}
       <div
-        className={`flex flex-col md:flex-row gap-[70px] justify-center items-center space-y-6 md:space-y-0 ${locale === 'en' ? 'md:space-x-12' : 'md:space-x-reverse md:space-x-12'} px-2`}
+        className={`flex flex-col md:flex-row md:flex-wrap gap-[70px] justify-center items-center space-y-6 md:space-y-0 ${locale === 'en' ? 'md:space-x-12' : 'md:space-x-reverse md:space-x-12'} px-2 md:px-0`}
       >
         {[
           {
