@@ -269,12 +269,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <meta
-        name="google-site-verification"
-        content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
-      />
-      <meta name="msvalidate.01" content="78226DAED18F7A9A397A8E25B1B861C5" />
       <Head>
+        <meta
+          name="google-site-verification"
+          content="ZGdt9gveuJPMGerJgwkQskPy1WdFlR-l5jW_tzvIlj4"
+        />
+        <meta name="msvalidate.01" content="78226DAED18F7A9A397A8E25B1B861C5" />
         <link rel="icon" href="/assets/favicon.ico" sizes="any" />
         <link
           rel="icon"
@@ -288,11 +288,6 @@ export default async function LocaleLayout({
           sizes="16x16"
           type="image/png"
         />
-      </Head>
-      <body
-        dir={locale === 'ar' ? 'rtl' : 'ltr'}
-        className={`${cairo.className} bg-background text-foreground antialiased`}
-      >
         <script
           id="structured-data"
           type="application/ld+json"
@@ -300,6 +295,11 @@ export default async function LocaleLayout({
             __html: JSON.stringify(structeredData)
           }}
         />
+      </Head>
+      <body
+        dir={locale === 'ar' ? 'rtl' : 'ltr'}
+        className={`${cairo.className} bg-background text-foreground antialiased`}
+      >
         <NextIntlClientProvider messages={messages}>
           <Navbar />
           <div className="top-12 relative m-0 p-0">
