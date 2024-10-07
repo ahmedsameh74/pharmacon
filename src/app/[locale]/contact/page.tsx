@@ -6,7 +6,7 @@ import ContactSection from '@/components/custom/contact/Contact';
 import ContactHeader from '@/components/custom/contact/ContactHeader';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | PharmaconEG',
+  title: 'Contact Us | Pharmacon Egypt',
   keywords: ['Contact', 'Contact Us', 'Contact Pharmacon Egypt'],
   robots: {
     index: true,
