@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Because Health Deserves Quality',
     url: `${process.env.NEXT_PUBLIC_APP_URL}/products`,
     siteName: 'PharmaconEG',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Because Health Deserves Quality',
     card: 'summary_large_image',
     images: ['../assets/blueLogo.svg']

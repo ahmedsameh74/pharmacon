@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Terms and Conditions for using PharmaconEG',
     url: 'https://PharmaconEGeg-dev.vercel.app/',
     siteName: 'PharmaconEG',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: 'website'
   },
   twitter: {
-    title: 'PharmaconEG',
+    title: 'Pharmacon Egypt',
     description: 'Terms and Conditions for using PharmaconEG',
     card: 'summary_large_image',
     images: ['../assets/blueLogo.svg']
