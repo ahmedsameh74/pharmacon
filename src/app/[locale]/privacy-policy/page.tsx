@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | PharmaconEG',
+  title: 'Privacy Policy | Pharmacon Egypt',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/favicon.ico',

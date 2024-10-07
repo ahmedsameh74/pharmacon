@@ -5,7 +5,7 @@ import AboutHead from '@/components/custom/about/AboutHead';
 import ProductsComponent from '@/components/custom/products/Products';
 
 export const metadata: Metadata = {
-  title: 'Products | PharmaconEG',
+  title: 'Products | Pharmacon Egypt',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/favicon.ico',

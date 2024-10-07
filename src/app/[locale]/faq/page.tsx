@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import Accordion from '@/components/ui/Accordion';
 
 export const metadata: Metadata = {
-  title: 'FAQ | PharmaconEG',
+  title: 'FAQ | Pharmacon Egypt',
   description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/favicon.ico',

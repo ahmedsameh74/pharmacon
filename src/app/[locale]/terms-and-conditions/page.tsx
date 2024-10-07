@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
-  title: 'Terms & Conditions | PharmaconEG',
+  title: 'Terms & Conditions | Pharmacon Egypt',
   description: 'Terms and Conditions for using PharmaconEG',
   icons: {
     icon: '../assets/favicon.ico',
