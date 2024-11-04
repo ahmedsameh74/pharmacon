@@ -149,7 +149,7 @@ export default function ContactSection() {
               <p>info@pharmaconeg.com</p>
             </a>
             {/* Address */}
-            <a className="flex items-center" aria-label='Address' target='_blank'                 href="https://www.google.com/maps/place/Pharmacon+Egypt/@30.065472,31.3367497,18.11z/data=!4m14!1m7!3m6!1s0x14583e6c63fee8a1:0xef8fcd2e8531ab80!2sDar+Al+Hekma+Hospital!8m2!3d30.0658248!4d31.337984!16s%2Fg%2F11c2nlhbfy!3m5!1s0x14583f227c51556f:0xdf9d3a034d1ea797!8m2!3d30.0664724!4d31.3380162!16s%2Fg%2F11lc93dqlc?entry=ttu&g_ep=EgoyMDI0MTAwMS4wIKXMDSoASAFQAw%3D%3D" rel="noreferrer"
+            <a className="flex items-center" aria-label='Address' target='_blank'                 href="https://www.google.com/maps/place/Mohammed+Abd+El-Haleem+Abd+Allah,+Al+Mintaqah+as+S%C4%81disah,+Nasr+City,+Cairo+Governorate/@30.0663258,31.338333,19.62z/data=!4m6!3m5!1s0x14583e6cf3dfea97:0x5d4501fff003c644!8m2!3d30.0663299!4d31.3388311!16s%2Fg%2F1tflv5c0?hl=en&entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" rel="noreferrer"
             >
               <div className="text-xl">
                 <FaMapMarkerAlt className={`${locale === 'ar' ? 'ml-4' : 'mr-4'}`} />
