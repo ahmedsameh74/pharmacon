@@ -31,7 +31,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: 'Pharmacon Egypt',
+  title: 'Home | Pharmacon Egypt',
   description:
     'Pharmacon is Germany - Egyptian promising pharmaceutical company dedicated to promote under license high quality products in the Egyptian market. Pharmacon founded in the Egyptian pharmaceutical market since 2004.',
   viewport: 'width=device-width, initial-scale=1',
