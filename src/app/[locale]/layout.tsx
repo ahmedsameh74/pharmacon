@@ -136,6 +136,7 @@ export const metadata: Metadata = {
     'Enable',
     'European excellence',
     'Experience',
+    'Fluimucil',
     'Feedback',
     'Founded',
     'Free healthcare',
@@ -223,14 +224,13 @@ export default async function LocaleLayout({
   children,
   params: { locale }
 }: Props) {
-  // Enable static rendering
   unstable_setRequestLocale(locale);
   const messages = await getMessages();
 
   const structeredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'PharmaconEG',
+    name: 'Pharmacon Egypt',
     url: 'https://www.pharmaconeg.com',
     logo: 'https://www.pharmaconeg.com/assets/logo_1200_630.png',
     description: 'Because Health Deserves Quality',
