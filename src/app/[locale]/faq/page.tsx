@@ -5,7 +5,7 @@ import Accordion from '@/components/ui/Accordion';
 
 export const metadata: Metadata = {
   title: 'FAQ | Pharmacon Egypt',
-  description: 'Because Health Deserves Quality',
+  // description: 'Because Health Deserves Quality',
   icons: {
     icon: '../assets/favicon.ico',
     apple: '../assets/favicon.ico'
